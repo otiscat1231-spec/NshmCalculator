@@ -33,3 +33,7 @@ bld/
 .idea
 /NshmCalculator.sln.DotSettings.user
 /NshmCalculator.MudClient/NshmCalculator.MudClient.csproj.user
+
+# Local validation output
+TestResults/
+*.log

@@ -1,0 +1,47 @@
+@using System.Text.Json
+@using NshmCalculator.Shared.Research
+@using NshmCalculator.Shared.Models.CalculatorModel.FormulaParam.Params
+@using NshmCalculator.MudClient.Resources
+<MudPaper Class="pa-4">
+    <MudText Typo="Typo.h6">@Title · @Profile.Name</MudText>
+    <MudTextField T="string" Label="Build ID" @bind-Value="Build.BuildId" />
+    <MudTextField T="string" Label="技能循環 ID（尚未確認可留空）" @bind-Value="Build.RotationId" />
+    <MudGrid Class="mt-2">
+        @foreach (var input in TwPveText.CommonInputs)
+        {
+            if (Build.Parameters.TryGetValue(input.Code, out var parameter))
+            {
+                <MudItem xs="12" sm="6"><MudNumericField T="double" Label="@input.Label" @bind-Value="parameter.NumberValue" /></MudItem>
+            }
+        }
+    </MudGrid>
+    <MudExpansionPanels Class="mt-4"><MudExpansionPanel Text="進階設定：完整 Legacy 參數">
+        <MudText Typo="Typo.body2">包含目標、技能占比、神器、內功、特質等全部模型輸入。職業欄由流派選擇控制。</MudText>
+        <MudButton OnClick="LoadJson">載入目前參數</MudButton>
+        <MudTextField T="string" Label="完整參數 JSON" Lines="10" @bind-Value="_json" />
+        <MudButton OnClick="ApplyJson">套用參數</MudButton>
+        @if (_error is not null) { <MudAlert Severity="Severity.Error">@_error</MudAlert> }
+    </MudExpansionPanel></MudExpansionPanels>
+</MudPaper>
+@code {
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public ResearchBuild Build { get; set; } = new();
+    [Parameter] public ProfessionProfile Profile { get; set; } = new();
+    private string _json = "";
+    private string? _error;
+    private void LoadJson() => _json = JsonSerializer.Serialize(Build.Parameters, new JsonSerializerOptions { WriteIndented = true });
+    private void ApplyJson()
+    {
+        try
+        {
+            var values = JsonSerializer.Deserialize<Dictionary<string, ParamValue>>(_json)
+                ?? throw new ArgumentException("參數不能為空");
+            if (values.Values.Any(v => v is null)) throw new ArgumentException("參數值不能為null");
+            if (Build.Parameters.Keys.Except(values.Keys).Any()) throw new ArgumentException("請保留完整參數欄位");
+            values["KG_001"] = new ParamValue { NumberMode = false, StringValue = Build.LegacyMode };
+            Build.Parameters = values;
+            _error = null;
+        }
+        catch (Exception ex) { _error = ex.Message; }
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "DefaultProfessionId": "LY",
+  "MasterSheetUrl": "",
+  "Professions": [
+    {
+      "Id": "LY",
+      "Name": "龍吟",
+      "LegacyModes": {
+        "龙吟": "龍吟"
+      },
+      "GoldenDatasetIds": [],
+      "ValidationStatus": "待驗證；未建立實測基準"
+    },
+    {
+      "Id": "TY",
+      "Name": "鐵衣",
+      "LegacyModes": {
+        "破铁衣": "鐵衣・破",
+        "御铁衣": "鐵衣・御"
+      },
+      "GoldenDatasetIds": [],
+      "ValidationStatus": "待驗證；校準僅作用於對應流派"
+    }
+  ],
+  "DataPacks": [
+    {
+      "Id": "TW-candidate",
+      "Server": "台服",
+      "Platform": "手遊",
+      "GameVersion": "目前版本待確認",
+      "DataVersion": "TW-candidate-1",
+      "ModelVersion": "upstream-d831d871",
+      "TargetDataVersion": "Repo候選；未套台服實測",
+      "CalibrationVersion": "未校準",
+      "ConfigPath": "data/pve/legacy/config_pve_original.json",
+      "Source": "dellbeat/NshmCalculator",
+      "Note": "台服研究骨架沿用 Legacy 4.0.0.3；數值尚非台服已確認公式。"
+    },
+    {
+      "Id": "Legacy",
+      "Server": "來源伺服器待考",
+      "Platform": "Repo PVE",
+      "GameVersion": "Repo 4.0.0.3，非台服版本號",
+      "DataVersion": "d831d871",
+      "ModelVersion": "upstream-d831d871",
+      "TargetDataVersion": "原 Repo 目標參數",
+      "CalibrationVersion": "無實測校準",
+      "ConfigPath": "data/pve/legacy/config_pve_original.json",
+      "Source": "https://github.com/dellbeat/NshmCalculator/tree/d831d871f3d05894afd645da640a5ce17051316c",
+      "Note": "完整保留原版資料與計算結果，僅作候選母模型。"
+    }
+  ]
+}
