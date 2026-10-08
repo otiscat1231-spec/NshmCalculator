@@ -1,0 +1,5051 @@
+[
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 31,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 144,
+    "LevelRecordId": "AL-ROOT-U02-L01"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 62,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 145,
+    "LevelRecordId": "AL-ROOT-U02-L02"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 93,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 146,
+    "LevelRecordId": "AL-ROOT-U02-L03"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 124,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 147,
+    "LevelRecordId": "AL-ROOT-U02-L04"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 155,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 148,
+    "LevelRecordId": "AL-ROOT-U02-L05"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 186,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 149,
+    "LevelRecordId": "AL-ROOT-U02-L06"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 217,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 150,
+    "LevelRecordId": "AL-ROOT-U02-L07"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 248,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 151,
+    "LevelRecordId": "AL-ROOT-U02-L08"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 279,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 152,
+    "LevelRecordId": "AL-ROOT-U02-L09"
+  },
+  {
+    "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 310,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 153,
+    "LevelRecordId": "AL-ROOT-U02-L10"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 24,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 4,
+    "LevelRecordId": "AL-M02-L01"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 48,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 5,
+    "LevelRecordId": "AL-M02-L02"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 72,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 6,
+    "LevelRecordId": "AL-M02-L03"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 7,
+    "LevelRecordId": "AL-M02-L04"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 120,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 8,
+    "LevelRecordId": "AL-M02-L05"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 9,
+    "LevelRecordId": "AL-M02-L06"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 168,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 10,
+    "LevelRecordId": "AL-M02-L07"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 11,
+    "LevelRecordId": "AL-M02-L08"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 216,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 12,
+    "LevelRecordId": "AL-M02-L09"
+  },
+  {
+    "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 240,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 13,
+    "LevelRecordId": "AL-M02-L10"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 29,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 29,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 134,
+    "LevelRecordId": "AL-ROOT-U01-L01"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 58,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 58,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 135,
+    "LevelRecordId": "AL-ROOT-U01-L02"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 87,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 87,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 136,
+    "LevelRecordId": "AL-ROOT-U01-L03"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 116,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 116,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 137,
+    "LevelRecordId": "AL-ROOT-U01-L04"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 145,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 145,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 138,
+    "LevelRecordId": "AL-ROOT-U01-L05"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 174,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 174,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 139,
+    "LevelRecordId": "AL-ROOT-U01-L06"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 203,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 203,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 140,
+    "LevelRecordId": "AL-ROOT-U01-L07"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 232,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 232,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 141,
+    "LevelRecordId": "AL-ROOT-U01-L08"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 261,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 261,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 142,
+    "LevelRecordId": "AL-ROOT-U01-L09"
+  },
+  {
+    "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "命中",
+        "value": 290,
+        "unit": "點"
+      },
+      {
+        "type": "格擋",
+        "value": 290,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 143,
+    "LevelRecordId": "AL-ROOT-U01-L10"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 24,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 154,
+    "LevelRecordId": "AL-ROOT-D01-L01"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 48,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 155,
+    "LevelRecordId": "AL-ROOT-D01-L02"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 72,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 156,
+    "LevelRecordId": "AL-ROOT-D01-L03"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 157,
+    "LevelRecordId": "AL-ROOT-D01-L04"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 120,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 158,
+    "LevelRecordId": "AL-ROOT-D01-L05"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 159,
+    "LevelRecordId": "AL-ROOT-D01-L06"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 168,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 160,
+    "LevelRecordId": "AL-ROOT-D01-L07"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 161,
+    "LevelRecordId": "AL-ROOT-D01-L08"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 216,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 162,
+    "LevelRecordId": "AL-ROOT-D01-L09"
+  },
+  {
+    "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 240,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 163,
+    "LevelRecordId": "AL-ROOT-D01-L10"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 31,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 25,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 114,
+    "LevelRecordId": "AL-M02-D01-L01"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 62,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 50,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 115,
+    "LevelRecordId": "AL-M02-D01-L02"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 93,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 75,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 116,
+    "LevelRecordId": "AL-M02-D01-L03"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 124,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 100,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 117,
+    "LevelRecordId": "AL-M02-D01-L04"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 155,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 125,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 118,
+    "LevelRecordId": "AL-M02-D01-L05"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 186,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 119,
+    "LevelRecordId": "AL-M02-D01-L06"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 217,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 175,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 120,
+    "LevelRecordId": "AL-M02-D01-L07"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 248,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 121,
+    "LevelRecordId": "AL-M02-D01-L08"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 279,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 225,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 122,
+    "LevelRecordId": "AL-M02-D01-L09"
+  },
+  {
+    "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 310,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 250,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 123,
+    "LevelRecordId": "AL-M02-D01-L10"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 72,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 25,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 124,
+    "LevelRecordId": "AL-M03-U01-L01"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 50,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 125,
+    "LevelRecordId": "AL-M03-U01-L02"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 216,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 75,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 126,
+    "LevelRecordId": "AL-M03-U01-L03"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 288,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 100,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 127,
+    "LevelRecordId": "AL-M03-U01-L04"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 360,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 125,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 128,
+    "LevelRecordId": "AL-M03-U01-L05"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 432,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 129,
+    "LevelRecordId": "AL-M03-U01-L06"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 504,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 175,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 130,
+    "LevelRecordId": "AL-M03-U01-L07"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 576,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 131,
+    "LevelRecordId": "AL-M03-U01-L08"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 648,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 225,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 132,
+    "LevelRecordId": "AL-M03-U01-L09"
+  },
+  {
+    "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "破防",
+        "value": 720,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 250,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 133,
+    "LevelRecordId": "AL-M03-U01-L10"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 31,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 73,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 164,
+    "LevelRecordId": "AL-ROOT-D02-L01"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 62,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 146,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 165,
+    "LevelRecordId": "AL-ROOT-D02-L02"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 93,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 219,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 166,
+    "LevelRecordId": "AL-ROOT-D02-L03"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 124,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 292,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 167,
+    "LevelRecordId": "AL-ROOT-D02-L04"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 155,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 365,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 168,
+    "LevelRecordId": "AL-ROOT-D02-L05"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 186,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 438,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 169,
+    "LevelRecordId": "AL-ROOT-D02-L06"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 217,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 511,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 170,
+    "LevelRecordId": "AL-ROOT-D02-L07"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 248,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 584,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 171,
+    "LevelRecordId": "AL-ROOT-D02-L08"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 279,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 657,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 172,
+    "LevelRecordId": "AL-ROOT-D02-L09"
+  },
+  {
+    "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 310,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 730,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 173,
+    "LevelRecordId": "AL-ROOT-D02-L10"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 50,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 90,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 54,
+    "LevelRecordId": "AL-CORE-U01-L01"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 100,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 180,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 55,
+    "LevelRecordId": "AL-CORE-U01-L02"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 150,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 270,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 56,
+    "LevelRecordId": "AL-CORE-U01-L03"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 200,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 360,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 57,
+    "LevelRecordId": "AL-CORE-U01-L04"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 250,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 450,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 58,
+    "LevelRecordId": "AL-CORE-U01-L05"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 300,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 540,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 59,
+    "LevelRecordId": "AL-CORE-U01-L06"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 350,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 630,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 60,
+    "LevelRecordId": "AL-CORE-U01-L07"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 400,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 720,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 61,
+    "LevelRecordId": "AL-CORE-U01-L08"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 450,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 810,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 62,
+    "LevelRecordId": "AL-CORE-U01-L09"
+  },
+  {
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 500,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 900,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 63,
+    "LevelRecordId": "AL-CORE-U01-L10"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 10,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1280,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 29,
+    "LevelRecordId": "AL-M05-L01"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 20,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2560,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 30,
+    "LevelRecordId": "AL-M05-L02"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 30,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3840,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 31,
+    "LevelRecordId": "AL-M05-L03"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 40,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5120,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 32,
+    "LevelRecordId": "AL-M05-L04"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 50,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 33,
+    "LevelRecordId": "AL-M05-L05"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 60,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7680,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 34,
+    "LevelRecordId": "AL-M05-L06"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 70,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8960,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 35,
+    "LevelRecordId": "AL-M05-L07"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 80,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 10240,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 36,
+    "LevelRecordId": "AL-M05-L08"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 90,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 11520,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 37,
+    "LevelRecordId": "AL-M05-L09"
+  },
+  {
+    "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 100,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 12800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 38,
+    "LevelRecordId": "AL-M05-L10"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 24,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 39,
+    "LevelRecordId": "AL-M06-L01"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 48,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 40,
+    "LevelRecordId": "AL-M06-L02"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 72,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 41,
+    "LevelRecordId": "AL-M06-L03"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 42,
+    "LevelRecordId": "AL-M06-L04"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 120,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 43,
+    "LevelRecordId": "AL-M06-L05"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 44,
+    "LevelRecordId": "AL-M06-L06"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 168,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 45,
+    "LevelRecordId": "AL-M06-L07"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 46,
+    "LevelRecordId": "AL-M06-L08"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 216,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 47,
+    "LevelRecordId": "AL-M06-L09"
+  },
+  {
+    "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "會心",
+        "value": 240,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 48,
+    "LevelRecordId": "AL-M06-L10"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 48,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 80,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 204,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L01"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 160,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 205,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L02"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 240,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 206,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L03"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 320,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 207,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L04"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 240,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 208,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L05"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 288,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 480,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 209,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L06"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 336,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 560,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 210,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L07"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 384,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 640,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 211,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L08"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 432,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 720,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 212,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L09"
+  },
+  {
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "攻擊力",
+        "value": 480,
+        "unit": "點"
+      },
+      {
+        "type": "首領抵禦",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 213,
+    "LevelRecordId": "AL-ART-9363b1bd-442a-429b-95d1-be076bb4b2a3-L10"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 50,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 30,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 84,
+    "LevelRecordId": "AL-CORE-D01-L01"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 100,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 60,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 85,
+    "LevelRecordId": "AL-CORE-D01-L02"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 150,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 90,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 86,
+    "LevelRecordId": "AL-CORE-D01-L03"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 200,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 120,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 87,
+    "LevelRecordId": "AL-CORE-D01-L04"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 250,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 88,
+    "LevelRecordId": "AL-CORE-D01-L05"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 300,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 180,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 89,
+    "LevelRecordId": "AL-CORE-D01-L06"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 350,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 210,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 90,
+    "LevelRecordId": "AL-CORE-D01-L07"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 400,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 240,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 91,
+    "LevelRecordId": "AL-CORE-D01-L08"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 450,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 270,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 92,
+    "LevelRecordId": "AL-CORE-D01-L09"
+  },
+  {
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "全技能增強",
+        "value": 500,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 300,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 93,
+    "LevelRecordId": "AL-CORE-D01-L10"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 25,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 14,
+    "LevelRecordId": "AL-M03-L01"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 50,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 1600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 15,
+    "LevelRecordId": "AL-M03-L02"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 75,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 2400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 16,
+    "LevelRecordId": "AL-M03-L03"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 100,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 3200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 17,
+    "LevelRecordId": "AL-M03-L04"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 125,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 18,
+    "LevelRecordId": "AL-M03-L05"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 150,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 4800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 19,
+    "LevelRecordId": "AL-M03-L06"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 175,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 5600,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 20,
+    "LevelRecordId": "AL-M03-L07"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 200,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 6400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 21,
+    "LevelRecordId": "AL-M03-L08"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 225,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 7200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 22,
+    "LevelRecordId": "AL-M03-L09"
+  },
+  {
+    "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 250,
+        "unit": "點"
+      },
+      {
+        "type": "氣血上限",
+        "value": 8000,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 23,
+    "LevelRecordId": "AL-M03-L10"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 25,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 25,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 64,
+    "LevelRecordId": "AL-CORE-U02-L01"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 50,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 50,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 65,
+    "LevelRecordId": "AL-CORE-U02-L02"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 75,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 75,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 66,
+    "LevelRecordId": "AL-CORE-U02-L03"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 100,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 100,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 67,
+    "LevelRecordId": "AL-CORE-U02-L04"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 125,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 125,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 68,
+    "LevelRecordId": "AL-CORE-U02-L05"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 150,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 69,
+    "LevelRecordId": "AL-CORE-U02-L06"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 175,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 175,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 70,
+    "LevelRecordId": "AL-CORE-U02-L07"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 200,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 71,
+    "LevelRecordId": "AL-CORE-U02-L08"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 225,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 225,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 72,
+    "LevelRecordId": "AL-CORE-U02-L09"
+  },
+  {
+    "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "忽視元素抗性",
+        "value": 250,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 250,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 73,
+    "LevelRecordId": "AL-CORE-U02-L10"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 31,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 25,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 94,
+    "LevelRecordId": "AL-CORE-D02-L01"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 62,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 50,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 95,
+    "LevelRecordId": "AL-CORE-D02-L02"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 93,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 75,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 96,
+    "LevelRecordId": "AL-CORE-D02-L03"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 124,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 100,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 97,
+    "LevelRecordId": "AL-CORE-D02-L04"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 155,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 125,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 98,
+    "LevelRecordId": "AL-CORE-D02-L05"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 186,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 99,
+    "LevelRecordId": "AL-CORE-D02-L06"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 217,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 175,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 100,
+    "LevelRecordId": "AL-CORE-D02-L07"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 248,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 101,
+    "LevelRecordId": "AL-CORE-D02-L08"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 279,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 225,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 102,
+    "LevelRecordId": "AL-CORE-D02-L09"
+  },
+  {
+    "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "元素攻擊",
+        "value": 310,
+        "unit": "點"
+      },
+      {
+        "type": "全元素抗性",
+        "value": 250,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 103,
+    "LevelRecordId": "AL-CORE-D02-L10"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 48,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 80,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 184,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L01"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 160,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 185,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L02"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 144,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 240,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 186,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L03"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 320,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 187,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L04"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 240,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 188,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L05"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 288,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 480,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 189,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L06"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 336,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 560,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 190,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L07"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 384,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 640,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 191,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L08"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 432,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 720,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 192,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L09"
+  },
+  {
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "攻擊",
+        "value": 480,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 800,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 193,
+    "LevelRecordId": "AL-ART-7bee77af-49be-4800-9ac5-a7c900421da6-L10"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 1,
+    "RawCumulative": {
+      "命中": 62,
+      "氣血上限": 1500
+    },
+    "SourceRow": 256,
+    "LevelRecordId": "AL-BLUE-N01-L1"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 2,
+    "RawCumulative": {
+      "命中": 124,
+      "氣血上限": 3000
+    },
+    "SourceRow": 259,
+    "LevelRecordId": "AL-BLUE-N01-L2"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 3,
+    "RawCumulative": {
+      "命中": 186,
+      "氣血上限": 4500
+    },
+    "SourceRow": 262,
+    "LevelRecordId": "AL-BLUE-N01-L3"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 4,
+    "RawCumulative": {
+      "命中": 248,
+      "氣血上限": 6000
+    },
+    "SourceRow": 265,
+    "LevelRecordId": "AL-BLUE-N01-L4"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 5,
+    "RawCumulative": {
+      "命中": 310,
+      "氣血上限": 7500
+    },
+    "SourceRow": 268,
+    "LevelRecordId": "AL-BLUE-N01-L5"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 6,
+    "RawCumulative": {
+      "命中": 372,
+      "氣血上限": 9000
+    },
+    "SourceRow": 271,
+    "LevelRecordId": "AL-BLUE-N01-L6"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 7,
+    "RawCumulative": {
+      "命中": 434,
+      "氣血上限": 10500
+    },
+    "SourceRow": 274,
+    "LevelRecordId": "AL-BLUE-N01-L7"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 8,
+    "RawCumulative": {
+      "命中": 496,
+      "氣血上限": 12000
+    },
+    "SourceRow": 277,
+    "LevelRecordId": "AL-ART-02385d00-faf7-49c8-b6ba-28984900a6f3-L8"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 9,
+    "RawCumulative": {
+      "命中": 558,
+      "氣血上限": 13500
+    },
+    "SourceRow": 278,
+    "LevelRecordId": "AL-ART-02385d00-faf7-49c8-b6ba-28984900a6f3-L9"
+  },
+  {
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Level": 10,
+    "RawCumulative": {
+      "命中": 620,
+      "氣血上限": 15000
+    },
+    "SourceRow": 279,
+    "LevelRecordId": "AL-ART-02385d00-faf7-49c8-b6ba-28984900a6f3-L10"
+  },
+  {
+    "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "流派技能傷害提升",
+        "value": 1,
+        "unit": "%"
+      },
+      {
+        "type": "受到流派技能傷害降低",
+        "value": 1,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 49,
+    "LevelRecordId": "AL-M07-L01"
+  },
+  {
+    "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "流派技能傷害提升",
+        "value": 2,
+        "unit": "%"
+      },
+      {
+        "type": "受到流派技能傷害降低",
+        "value": 2,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 50,
+    "LevelRecordId": "AL-M07-L02"
+  },
+  {
+    "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "流派技能傷害提升",
+        "value": 3,
+        "unit": "%"
+      },
+      {
+        "type": "受到流派技能傷害降低",
+        "value": 3,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 51,
+    "LevelRecordId": "AL-M07-L03"
+  },
+  {
+    "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "流派技能傷害提升",
+        "value": 4,
+        "unit": "%"
+      },
+      {
+        "type": "受到流派技能傷害降低",
+        "value": 4,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 52,
+    "LevelRecordId": "AL-M07-L04"
+  },
+  {
+    "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "流派技能傷害提升",
+        "value": 5,
+        "unit": "%"
+      },
+      {
+        "type": "受到流派技能傷害降低",
+        "value": 5,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 53,
+    "LevelRecordId": "AL-M07-L05"
+  },
+  {
+    "NodeId": "ART-8900a962-1302-46c0-b173-884a85b492e9",
+    "Level": 1,
+    "RawCumulative": [],
+    "SourceRow": 3,
+    "LevelRecordId": "AL-ROOT-L-L1"
+  },
+  {
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "五維",
+        "cumulativeIncrement": 9,
+        "unit": "點",
+        "interpretation": "五維顯示增量；各維實際映射待核"
+      }
+    ],
+    "SourceRow": 24,
+    "LevelRecordId": "AL-CORE-L01"
+  },
+  {
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "五維",
+        "cumulativeIncrement": 18,
+        "unit": "點",
+        "interpretation": "五維顯示增量；各維實際映射待核"
+      }
+    ],
+    "SourceRow": 25,
+    "LevelRecordId": "AL-CORE-L02"
+  },
+  {
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "五維",
+        "cumulativeIncrement": 27,
+        "unit": "點",
+        "interpretation": "五維顯示增量；各維實際映射待核"
+      }
+    ],
+    "SourceRow": 26,
+    "LevelRecordId": "AL-CORE-L03"
+  },
+  {
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "五維",
+        "cumulativeIncrement": 36,
+        "unit": "點",
+        "interpretation": "五維顯示增量；各維實際映射待核"
+      }
+    ],
+    "SourceRow": 27,
+    "LevelRecordId": "AL-CORE-L04"
+  },
+  {
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "五維",
+        "cumulativeIncrement": 45,
+        "unit": "點",
+        "interpretation": "五維顯示增量；各維實際映射待核"
+      },
+      {
+        "type": "流派克制與首領克制",
+        "trigger": "level==5",
+        "formula": "SUM(五維值)*0.10",
+        "value": "dynamic",
+        "unit": "克制點（遊戲取整規則待核）",
+        "condition": "此節點達滿級時啟用",
+        "notPerLevel": true
+      }
+    ],
+    "SourceRow": 28,
+    "LevelRecordId": "AL-CORE-L05"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-L",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "吟風傷害提升",
+        "value": 2,
+        "unit": "%"
+      },
+      {
+        "type": "劍氣對怪物額外傷害",
+        "value": 7,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 74,
+    "LevelRecordId": "AL-CORE-U03-L-L01"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-L",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "吟風傷害提升",
+        "value": 4,
+        "unit": "%"
+      },
+      {
+        "type": "劍氣對怪物額外傷害",
+        "value": 14,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 75,
+    "LevelRecordId": "AL-CORE-U03-L-L02"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-L",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "吟風傷害提升",
+        "value": 6,
+        "unit": "%"
+      },
+      {
+        "type": "劍氣對怪物額外傷害",
+        "value": 21,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 76,
+    "LevelRecordId": "AL-CORE-U03-L-L03"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-L",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "吟風傷害提升",
+        "value": 8,
+        "unit": "%"
+      },
+      {
+        "type": "劍氣對怪物額外傷害",
+        "value": 28,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 77,
+    "LevelRecordId": "AL-CORE-U03-L-L04"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-L",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "吟風傷害提升",
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "type": "劍氣對怪物額外傷害",
+        "value": 35,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 78,
+    "LevelRecordId": "AL-CORE-U03-L-L05"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-R",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "誅邪傷害提升",
+        "value": 2,
+        "unit": "%"
+      },
+      {
+        "type": "劍意追擊傷害提升",
+        "value": 2,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 79,
+    "LevelRecordId": "AL-CORE-U03-R-L01"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-R",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "誅邪傷害提升",
+        "value": 4,
+        "unit": "%"
+      },
+      {
+        "type": "劍意追擊傷害提升",
+        "value": 4,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 80,
+    "LevelRecordId": "AL-CORE-U03-R-L02"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-R",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "誅邪傷害提升",
+        "value": 6,
+        "unit": "%"
+      },
+      {
+        "type": "劍意追擊傷害提升",
+        "value": 6,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 81,
+    "LevelRecordId": "AL-CORE-U03-R-L03"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-R",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "誅邪傷害提升",
+        "value": 8,
+        "unit": "%"
+      },
+      {
+        "type": "劍意追擊傷害提升",
+        "value": 8,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 82,
+    "LevelRecordId": "AL-CORE-U03-R-L04"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-U03-R",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "誅邪傷害提升",
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "type": "劍意追擊傷害提升",
+        "value": 10,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 83,
+    "LevelRecordId": "AL-CORE-U03-R-L05"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "減傷比例",
+        "value": 20,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 104,
+    "LevelRecordId": "AL-CORE-D03-L-L01"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "減傷比例",
+        "value": 30,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 105,
+    "LevelRecordId": "AL-CORE-D03-L-L02"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "減傷比例",
+        "value": 40,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 106,
+    "LevelRecordId": "AL-CORE-D03-L-L03"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "減傷比例",
+        "value": 50,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 107,
+    "LevelRecordId": "AL-CORE-D03-L-L04"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "減傷比例",
+        "value": 60,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 108,
+    "LevelRecordId": "AL-CORE-D03-L-L05"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-R",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "怪物額外傷害",
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "type": "護盾血量百分比",
+        "value": 2,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 109,
+    "LevelRecordId": "AL-CORE-D03-R-L01"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-R",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "怪物額外傷害",
+        "value": 20,
+        "unit": "%"
+      },
+      {
+        "type": "護盾血量百分比",
+        "value": 4,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 110,
+    "LevelRecordId": "AL-CORE-D03-R-L02"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-R",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "怪物額外傷害",
+        "value": 30,
+        "unit": "%"
+      },
+      {
+        "type": "護盾血量百分比",
+        "value": 6,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 111,
+    "LevelRecordId": "AL-CORE-D03-R-L03"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-R",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "怪物額外傷害",
+        "value": 40,
+        "unit": "%"
+      },
+      {
+        "type": "護盾血量百分比",
+        "value": 8,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 112,
+    "LevelRecordId": "AL-CORE-D03-R-L04"
+  },
+  {
+    "NodeId": "ART-SLOT-CORE-D03-R",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "怪物額外傷害",
+        "value": 50,
+        "unit": "%"
+      },
+      {
+        "type": "護盾血量百分比",
+        "value": 10,
+        "unit": "%"
+      }
+    ],
+    "SourceRow": 113,
+    "LevelRecordId": "AL-CORE-D03-R-L05"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 32,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 55,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 174,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L01"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 64,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 110,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 175,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L02"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 165,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 176,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L03"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 128,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 220,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 177,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L04"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 160,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 275,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 178,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L05"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 330,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 179,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L06"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 224,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 385,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 180,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L07"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 256,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 440,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 181,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L08"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 288,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 495,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 182,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L09"
+  },
+  {
+    "NodeId": "ART-COM-WANJUN",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 320,
+        "unit": "點"
+      },
+      {
+        "type": "流派抵禦",
+        "value": 550,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 183,
+    "LevelRecordId": "AL-ART-COM-WANJUN-L10"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 1,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 32,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 50,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 194,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L01"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 2,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 64,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 100,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 195,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L02"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 3,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 96,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 150,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 196,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L03"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 4,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 128,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 200,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 197,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L04"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 5,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 160,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 250,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 198,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L05"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 6,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 192,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 300,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 199,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L06"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 7,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 224,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 350,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 200,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L07"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 8,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 256,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 400,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 201,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L08"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 9,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 288,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 450,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 202,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L09"
+  },
+  {
+    "NodeId": "ART-COM-FENGHUA",
+    "Level": 10,
+    "RawCumulative": [
+      {
+        "type": "會心抗性",
+        "value": 320,
+        "unit": "點"
+      },
+      {
+        "type": "防禦",
+        "value": 500,
+        "unit": "點"
+      }
+    ],
+    "SourceRow": 203,
+    "LevelRecordId": "AL-ART-COM-FENGHUA-L10"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 1,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 90,
+        "流派抵禦": 230,
+        "條件額外流派抵禦": 45
+      },
+      "酣歌劍起": {
+        "流派克制": 230,
+        "流派抵禦": 90,
+        "條件額外流派克制": 45
+      }
+    },
+    "SourceRow": 214,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 2,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 180,
+        "流派抵禦": 460,
+        "條件額外流派抵禦": 90
+      },
+      "酣歌劍起": {
+        "流派克制": 460,
+        "流派抵禦": 180,
+        "條件額外流派克制": 90
+      }
+    },
+    "SourceRow": 215,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 3,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 270,
+        "流派抵禦": 690,
+        "條件額外流派抵禦": 135
+      },
+      "酣歌劍起": {
+        "流派克制": 690,
+        "流派抵禦": 270,
+        "條件額外流派克制": 135
+      }
+    },
+    "SourceRow": 216,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 4,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 360,
+        "流派抵禦": 920,
+        "條件額外流派抵禦": 180
+      },
+      "酣歌劍起": {
+        "流派克制": 920,
+        "流派抵禦": 360,
+        "條件額外流派克制": 180
+      }
+    },
+    "SourceRow": 217,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 5,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 450,
+        "流派抵禦": 1150,
+        "條件額外流派抵禦": 225
+      },
+      "酣歌劍起": {
+        "流派克制": 1150,
+        "流派抵禦": 450,
+        "條件額外流派克制": 225
+      }
+    },
+    "SourceRow": 218,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 6,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 540,
+        "流派抵禦": 1380,
+        "條件額外流派抵禦": 270
+      },
+      "酣歌劍起": {
+        "流派克制": 1380,
+        "流派抵禦": 540,
+        "條件額外流派克制": 270
+      }
+    },
+    "SourceRow": 219,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-PVP01",
+    "Level": 7,
+    "RawCumulative": {
+      "持盾千鈞": {
+        "流派克制": 630,
+        "流派抵禦": 1610,
+        "條件額外流派抵禦": 315
+      },
+      "酣歌劍起": {
+        "流派克制": 1610,
+        "流派抵禦": 630,
+        "條件額外流派克制": 315
+      }
+    },
+    "SourceRow": 220,
+    "LevelRecordId": "AL-COM-SEL-PVP01-L7"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 1,
+    "RawCumulative": {
+      "流派克制": 170,
+      "氣血上限": 1500,
+      "指定流派克制百分比": 1.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 221,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 2,
+    "RawCumulative": {
+      "流派克制": 340,
+      "氣血上限": 3000,
+      "指定流派克制百分比": 3,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 222,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 3,
+    "RawCumulative": {
+      "流派克制": 510,
+      "氣血上限": 4500,
+      "指定流派克制百分比": 4.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 223,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 4,
+    "RawCumulative": {
+      "流派克制": 680,
+      "氣血上限": 6000,
+      "指定流派克制百分比": 6,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 224,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 5,
+    "RawCumulative": {
+      "流派克制": 850,
+      "氣血上限": 7500,
+      "指定流派克制百分比": 7.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 225,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 6,
+    "RawCumulative": {
+      "流派克制": 1020,
+      "氣血上限": 9000,
+      "指定流派克制百分比": 9,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 226,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-MINGGE",
+    "Level": 7,
+    "RawCumulative": {
+      "流派克制": 1190,
+      "氣血上限": 10500,
+      "指定流派克制百分比": 10.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 227,
+    "LevelRecordId": "AL-COM-SEL-MINGGE-L7"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 1,
+    "RawCumulative": {
+      "流派抵禦": 320,
+      "指定流派抵禦百分比": 1.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 228,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 2,
+    "RawCumulative": {
+      "流派抵禦": 640,
+      "指定流派抵禦百分比": 3,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 229,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 3,
+    "RawCumulative": {
+      "流派抵禦": 960,
+      "指定流派抵禦百分比": 4.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 230,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 4,
+    "RawCumulative": {
+      "流派抵禦": 1280,
+      "指定流派抵禦百分比": 6,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 231,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 5,
+    "RawCumulative": {
+      "流派抵禦": 1600,
+      "指定流派抵禦百分比": 7.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 232,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 6,
+    "RawCumulative": {
+      "流派抵禦": 1920,
+      "指定流派抵禦百分比": 9,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 233,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-ZHIBI",
+    "Level": 7,
+    "RawCumulative": {
+      "流派抵禦": 2240,
+      "指定流派抵禦百分比": 10.5,
+      "targetProfession": "runtime selection"
+    },
+    "SourceRow": 234,
+    "LevelRecordId": "AL-COM-SEL-ZHIBI-L7"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 1,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 170,
+        "元素攻擊": -45,
+        "氣血上限": 1500
+      },
+      "疾電奔星": {
+        "攻擊": -70,
+        "元素攻擊": 110,
+        "氣血上限": 1500
+      }
+    },
+    "SourceRow": 235,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 2,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 340,
+        "元素攻擊": -90,
+        "氣血上限": 3000
+      },
+      "疾電奔星": {
+        "攻擊": -140,
+        "元素攻擊": 220,
+        "氣血上限": 3000
+      }
+    },
+    "SourceRow": 236,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 3,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 510,
+        "元素攻擊": -135,
+        "氣血上限": 4500
+      },
+      "疾電奔星": {
+        "攻擊": -210,
+        "元素攻擊": 330,
+        "氣血上限": 4500
+      }
+    },
+    "SourceRow": 237,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 4,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 680,
+        "元素攻擊": -180,
+        "氣血上限": 6000
+      },
+      "疾電奔星": {
+        "攻擊": -280,
+        "元素攻擊": 440,
+        "氣血上限": 6000
+      }
+    },
+    "SourceRow": 238,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 5,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 850,
+        "元素攻擊": -225,
+        "氣血上限": 7500
+      },
+      "疾電奔星": {
+        "攻擊": -350,
+        "元素攻擊": 550,
+        "氣血上限": 7500
+      }
+    },
+    "SourceRow": 239,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 6,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 1020,
+        "元素攻擊": -270,
+        "氣血上限": 9000
+      },
+      "疾電奔星": {
+        "攻擊": -420,
+        "元素攻擊": 660,
+        "氣血上限": 9000
+      }
+    },
+    "SourceRow": 240,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-OFFELE01",
+    "Level": 7,
+    "RawCumulative": {
+      "武耀靈威": {
+        "攻擊": 1190,
+        "元素攻擊": -315,
+        "氣血上限": 10500
+      },
+      "疾電奔星": {
+        "攻擊": -490,
+        "元素攻擊": 770,
+        "氣血上限": 10500
+      }
+    },
+    "SourceRow": 241,
+    "LevelRecordId": "AL-COM-SEL-OFFELE01-L7"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 1,
+    "RawCumulative": {
+      "首領克制": 55,
+      "全技能": {
+        "全技能增強": 100,
+        "氣血上限": 1500
+      },
+      "單體": {
+        "單體技能增強": 200,
+        "氣血上限": 1500
+      },
+      "群體": {
+        "群體技能增強": 200,
+        "氣血上限": 1500
+      },
+      "爆發": {
+        "爆發技能增強": 200,
+        "氣血上限": 1500
+      },
+      "持續": {
+        "持續技能增強": 200,
+        "氣血上限": 1500
+      }
+    },
+    "SourceRow": 242,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 2,
+    "RawCumulative": {
+      "首領克制": 110,
+      "全技能": {
+        "全技能增強": 200,
+        "氣血上限": 3000
+      },
+      "單體": {
+        "單體技能增強": 400,
+        "氣血上限": 3000
+      },
+      "群體": {
+        "群體技能增強": 400,
+        "氣血上限": 3000
+      },
+      "爆發": {
+        "爆發技能增強": 400,
+        "氣血上限": 3000
+      },
+      "持續": {
+        "持續技能增強": 400,
+        "氣血上限": 3000
+      }
+    },
+    "SourceRow": 244,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 3,
+    "RawCumulative": {
+      "首領克制": 165,
+      "全技能": {
+        "全技能增強": 300,
+        "氣血上限": 4500
+      },
+      "單體": {
+        "單體技能增強": 600,
+        "氣血上限": 4500
+      },
+      "群體": {
+        "群體技能增強": 600,
+        "氣血上限": 4500
+      },
+      "爆發": {
+        "爆發技能增強": 600,
+        "氣血上限": 4500
+      },
+      "持續": {
+        "持續技能增強": 600,
+        "氣血上限": 4500
+      }
+    },
+    "SourceRow": 246,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 4,
+    "RawCumulative": {
+      "首領克制": 220,
+      "全技能": {
+        "全技能增強": 400,
+        "氣血上限": 6000
+      },
+      "單體": {
+        "單體技能增強": 800,
+        "氣血上限": 6000
+      },
+      "群體": {
+        "群體技能增強": 800,
+        "氣血上限": 6000
+      },
+      "爆發": {
+        "爆發技能增強": 800,
+        "氣血上限": 6000
+      },
+      "持續": {
+        "持續技能增強": 800,
+        "氣血上限": 6000
+      }
+    },
+    "SourceRow": 248,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 5,
+    "RawCumulative": {
+      "首領克制": 275,
+      "全技能": {
+        "全技能增強": 500,
+        "氣血上限": 7500
+      },
+      "單體": {
+        "單體技能增強": 1000,
+        "氣血上限": 7500
+      },
+      "群體": {
+        "群體技能增強": 1000,
+        "氣血上限": 7500
+      },
+      "爆發": {
+        "爆發技能增強": 1000,
+        "氣血上限": 7500
+      },
+      "持續": {
+        "持續技能增強": 1000,
+        "氣血上限": 7500
+      }
+    },
+    "SourceRow": 250,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 6,
+    "RawCumulative": {
+      "首領克制": 330,
+      "全技能": {
+        "全技能增強": 600,
+        "氣血上限": 9000
+      },
+      "單體": {
+        "單體技能增強": 1200,
+        "氣血上限": 9000
+      },
+      "群體": {
+        "群體技能增強": 1200,
+        "氣血上限": 9000
+      },
+      "爆發": {
+        "爆發技能增強": 1200,
+        "氣血上限": 9000
+      },
+      "持續": {
+        "持續技能增強": 1200,
+        "氣血上限": 9000
+      }
+    },
+    "SourceRow": 252,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-XINGZHAO",
+    "Level": 7,
+    "RawCumulative": {
+      "首領克制": 385,
+      "全技能": {
+        "全技能增強": 700,
+        "氣血上限": 10500
+      },
+      "單體": {
+        "單體技能增強": 1400,
+        "氣血上限": 10500
+      },
+      "群體": {
+        "群體技能增強": 1400,
+        "氣血上限": 10500
+      },
+      "爆發": {
+        "爆發技能增強": 1400,
+        "氣血上限": 10500
+      },
+      "持續": {
+        "持續技能增強": 1400,
+        "氣血上限": 10500
+      }
+    },
+    "SourceRow": 254,
+    "LevelRecordId": "AL-COM-SEL-XINGZHAO-L7"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 1,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 50,
+        "氣血上限": 1500
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 1,
+        "氣血上限": 1500
+      }
+    },
+    "SourceRow": 243,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L1"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 2,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 100,
+        "氣血上限": 3000
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 2,
+        "氣血上限": 3000
+      }
+    },
+    "SourceRow": 245,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L2"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 3,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 150,
+        "氣血上限": 4500
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 3,
+        "氣血上限": 4500
+      }
+    },
+    "SourceRow": 247,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L3"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 4,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 200,
+        "氣血上限": 6000
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 4,
+        "氣血上限": 6000
+      }
+    },
+    "SourceRow": 249,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L4"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 5,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 250,
+        "氣血上限": 7500
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 5,
+        "氣血上限": 7500
+      }
+    },
+    "SourceRow": 251,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L5"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 6,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 300,
+        "氣血上限": 9000
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 6,
+        "氣血上限": 9000
+      }
+    },
+    "SourceRow": 253,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L6"
+  },
+  {
+    "NodeId": "ART-COM-SELECT-CRIT01",
+    "Level": 7,
+    "RawCumulative": {
+      "絕電誅鋒": {
+        "會心": 350,
+        "氣血上限": 10500
+      },
+      "刃影摧風": {
+        "會心傷害百分比": 7,
+        "氣血上限": 10500
+      }
+    },
+    "SourceRow": 255,
+    "LevelRecordId": "AL-COM-SEL-CRIT01-L7"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 1,
+    "RawCumulative": {
+      "命中": -40,
+      "全技能增強": 250,
+      "氣血上限": 1800
+    },
+    "SourceRow": 257,
+    "LevelRecordId": "AL-BLUE-N02-L1"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 2,
+    "RawCumulative": {
+      "命中": -80,
+      "全技能增強": 500,
+      "氣血上限": 3600
+    },
+    "SourceRow": 260,
+    "LevelRecordId": "AL-BLUE-N02-L2"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 3,
+    "RawCumulative": {
+      "命中": -120,
+      "全技能增強": 750,
+      "氣血上限": 5400
+    },
+    "SourceRow": 263,
+    "LevelRecordId": "AL-BLUE-N02-L3"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 4,
+    "RawCumulative": {
+      "命中": -160,
+      "全技能增強": 1000,
+      "氣血上限": 7200
+    },
+    "SourceRow": 266,
+    "LevelRecordId": "AL-BLUE-N02-L4"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 5,
+    "RawCumulative": {
+      "命中": -200,
+      "全技能增強": 1250,
+      "氣血上限": 9000
+    },
+    "SourceRow": 269,
+    "LevelRecordId": "AL-BLUE-N02-L5"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 6,
+    "RawCumulative": {
+      "命中": -240,
+      "全技能增強": 1500,
+      "氣血上限": 10800
+    },
+    "SourceRow": 272,
+    "LevelRecordId": "AL-BLUE-N02-L6"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 7,
+    "RawCumulative": {
+      "命中": -280,
+      "全技能增強": 1750,
+      "氣血上限": 12600
+    },
+    "SourceRow": 275,
+    "LevelRecordId": "AL-BLUE-N02-L7"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 8,
+    "RawCumulative": {
+      "命中": -320,
+      "全技能增強": 2000,
+      "氣血上限": 14400
+    },
+    "SourceRow": 280,
+    "LevelRecordId": "AL-ART-COM-BLUE-MOGONG-L8"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 9,
+    "RawCumulative": {
+      "命中": -360,
+      "全技能增強": 2250,
+      "氣血上限": 16200
+    },
+    "SourceRow": 281,
+    "LevelRecordId": "AL-ART-COM-BLUE-MOGONG-L9"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Level": 10,
+    "RawCumulative": {
+      "命中": -400,
+      "全技能增強": 2500,
+      "氣血上限": 18000
+    },
+    "SourceRow": 282,
+    "LevelRecordId": "AL-ART-COM-BLUE-MOGONG-L10"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 1,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 52,
+        "氣血上限": 1500
+      },
+      "凌烈風": {
+        "破防": 150,
+        "氣血上限": 1500
+      }
+    },
+    "SourceRow": 258,
+    "LevelRecordId": "AL-BLUE-SEL01-L1"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 2,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 104,
+        "氣血上限": 3000
+      },
+      "凌烈風": {
+        "破防": 300,
+        "氣血上限": 3000
+      }
+    },
+    "SourceRow": 261,
+    "LevelRecordId": "AL-BLUE-SEL01-L2"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 3,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 156,
+        "氣血上限": 4500
+      },
+      "凌烈風": {
+        "破防": 450,
+        "氣血上限": 4500
+      }
+    },
+    "SourceRow": 264,
+    "LevelRecordId": "AL-BLUE-SEL01-L3"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 4,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 208,
+        "氣血上限": 6000
+      },
+      "凌烈風": {
+        "破防": 600,
+        "氣血上限": 6000
+      }
+    },
+    "SourceRow": 267,
+    "LevelRecordId": "AL-BLUE-SEL01-L4"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 5,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 260,
+        "氣血上限": 7500
+      },
+      "凌烈風": {
+        "破防": 750,
+        "氣血上限": 7500
+      }
+    },
+    "SourceRow": 270,
+    "LevelRecordId": "AL-BLUE-SEL01-L5"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 6,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 312,
+        "氣血上限": 9000
+      },
+      "凌烈風": {
+        "破防": 900,
+        "氣血上限": 9000
+      }
+    },
+    "SourceRow": 273,
+    "LevelRecordId": "AL-BLUE-SEL01-L6"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 7,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 364,
+        "氣血上限": 10500
+      },
+      "凌烈風": {
+        "破防": 1050,
+        "氣血上限": 10500
+      }
+    },
+    "SourceRow": 276,
+    "LevelRecordId": "AL-BLUE-SEL01-L7"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 8,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 416,
+        "氣血上限": 12000
+      },
+      "凌烈風": {
+        "破防": 1200,
+        "氣血上限": 12000
+      }
+    },
+    "SourceRow": 283,
+    "LevelRecordId": "AL-ART-COM-BLUE-CHOICE01-L8"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 9,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 468,
+        "氣血上限": 13500
+      },
+      "凌烈風": {
+        "破防": 1350,
+        "氣血上限": 13500
+      }
+    },
+    "SourceRow": 284,
+    "LevelRecordId": "AL-ART-COM-BLUE-CHOICE01-L9"
+  },
+  {
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Level": 10,
+    "RawCumulative": {
+      "擊連鋒": {
+        "忽視元素抗性": 520,
+        "氣血上限": 15000
+      },
+      "凌烈風": {
+        "破防": 1500,
+        "氣血上限": 15000
+      }
+    },
+    "SourceRow": 285,
+    "LevelRecordId": "AL-ART-COM-BLUE-CHOICE01-L10"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Level": 1,
+    "RawCumulative": {
+      "輕功值削減": 2,
+      "輕功值回復": 3
+    },
+    "SourceRow": 286,
+    "LevelRecordId": "AL-CLASS-LY-UP01-L1"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Level": 2,
+    "RawCumulative": {
+      "輕功值削減": 4,
+      "輕功值回復": 6
+    },
+    "SourceRow": 287,
+    "LevelRecordId": "AL-CLASS-LY-UP01-L2"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Level": 3,
+    "RawCumulative": {
+      "輕功值削減": 6,
+      "輕功值回復": 9
+    },
+    "SourceRow": 288,
+    "LevelRecordId": "AL-CLASS-LY-UP01-L3"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Level": 4,
+    "RawCumulative": {
+      "輕功值削減": 8,
+      "輕功值回復": 12
+    },
+    "SourceRow": 289,
+    "LevelRecordId": "AL-CLASS-LY-UP01-L4"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Level": 5,
+    "RawCumulative": {
+      "輕功值削減": 10,
+      "輕功值回復": 15
+    },
+    "SourceRow": 290,
+    "LevelRecordId": "AL-CLASS-LY-UP01-L5"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Level": 1,
+    "RawCumulative": {
+      "冷卻時間降低秒": 1,
+      "互動增益最大層數": 1,
+      "每層命中": 40,
+      "每層首領克制": 120
+    },
+    "SourceRow": 291,
+    "LevelRecordId": "AL-CLASS-LY-UP02-L1"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Level": 2,
+    "RawCumulative": {
+      "冷卻時間降低秒": 1.5,
+      "互動增益最大層數": 2,
+      "每層命中": 40,
+      "每層首領克制": 120
+    },
+    "SourceRow": 292,
+    "LevelRecordId": "AL-CLASS-LY-UP02-L2"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Level": 3,
+    "RawCumulative": {
+      "冷卻時間降低秒": 2,
+      "互動增益最大層數": 3,
+      "每層命中": 40,
+      "每層首領克制": 120
+    },
+    "SourceRow": 293,
+    "LevelRecordId": "AL-CLASS-LY-UP02-L3"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Level": 4,
+    "RawCumulative": {
+      "冷卻時間降低秒": 2.5,
+      "互動增益最大層數": 4,
+      "每層命中": 40,
+      "每層首領克制": 120
+    },
+    "SourceRow": 294,
+    "LevelRecordId": "AL-CLASS-LY-UP02-L4"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Level": 5,
+    "RawCumulative": {
+      "冷卻時間降低秒": 3,
+      "互動增益最大層數": 5,
+      "每層命中": 40,
+      "每層首領克制": 120
+    },
+    "SourceRow": 295,
+    "LevelRecordId": "AL-CLASS-LY-UP02-L5"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN01",
+    "Level": 1,
+    "RawCumulative": {
+      "劍意追擊傷害提升百分比": 2
+    },
+    "SourceRow": 296,
+    "LevelRecordId": "AL-CLASS-LY-DN01-L1"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN01",
+    "Level": 2,
+    "RawCumulative": {
+      "劍意追擊傷害提升百分比": 4
+    },
+    "SourceRow": 297,
+    "LevelRecordId": "AL-CLASS-LY-DN01-L2"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN01",
+    "Level": 3,
+    "RawCumulative": {
+      "劍意追擊傷害提升百分比": 6
+    },
+    "SourceRow": 298,
+    "LevelRecordId": "AL-CLASS-LY-DN01-L3"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN01",
+    "Level": 4,
+    "RawCumulative": {
+      "劍意追擊傷害提升百分比": 8
+    },
+    "SourceRow": 299,
+    "LevelRecordId": "AL-CLASS-LY-DN01-L4"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN01",
+    "Level": 5,
+    "RawCumulative": {
+      "劍意追擊傷害提升百分比": 10
+    },
+    "SourceRow": 300,
+    "LevelRecordId": "AL-CLASS-LY-DN01-L5"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN02",
+    "Level": 1,
+    "RawCumulative": {
+      "攻速提升百分比": 15
+    },
+    "SourceRow": 301,
+    "LevelRecordId": "AL-CLASS-LY-DN02-L1"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN02",
+    "Level": 2,
+    "RawCumulative": {
+      "攻速提升百分比": 20
+    },
+    "SourceRow": 302,
+    "LevelRecordId": "AL-CLASS-LY-DN02-L2"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN02",
+    "Level": 3,
+    "RawCumulative": {
+      "攻速提升百分比": 25
+    },
+    "SourceRow": 303,
+    "LevelRecordId": "AL-CLASS-LY-DN02-L3"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN02",
+    "Level": 4,
+    "RawCumulative": {
+      "攻速提升百分比": 30
+    },
+    "SourceRow": 304,
+    "LevelRecordId": "AL-CLASS-LY-DN02-L4"
+  },
+  {
+    "NodeId": "ART-SLOT-CLASS-LY-DN02",
+    "Level": 5,
+    "RawCumulative": {
+      "攻速提升百分比": 35
+    },
+    "SourceRow": 305,
+    "LevelRecordId": "AL-CLASS-LY-DN02-L5"
+  }
+]

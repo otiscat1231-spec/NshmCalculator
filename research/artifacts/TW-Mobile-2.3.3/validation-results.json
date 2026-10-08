@@ -1,0 +1,59 @@
+{
+  "packId": "TW-Mobile-2.3.3",
+  "validatedDateTaipei": "2026-10-09",
+  "sourceSnapshotSha256": "8a96c2efc0c92f16748832d898b24d206e26f46fb894f5c5063e6aca8c90f033",
+  "exportFileSha256": "fd3fab922ceebeaf5c4fc6307fd962e24b0f5dcf0dbce97b906c605dcae97351",
+  "sourceReReadUnchanged": {
+    "27_神器2.3.3封版規格": true,
+    "20_神器節點主表": true,
+    "21_神器節點逐級": true
+  },
+  "deterministicRebuildMatches": true,
+  "publicExportContainsPrivateDriveLinks": false,
+  "counts": {
+    "commonNodes": 28,
+    "longYinNodes": 10,
+    "sourceLevelRows": 303,
+    "expandedLevelOptionRows": 475
+  },
+  "artifactTests": {
+    "total": 328,
+    "passed": 328,
+    "failed": 0,
+    "skipped": []
+  },
+  "nonBrowserRegression": {
+    "total": 1888,
+    "passed": 1887,
+    "failed": 0,
+    "skipped": [
+      {
+        "name": "PlausibleVersionTest",
+        "reason": "检测到文件版本号过旧，请确认是否没有实际更新"
+      }
+    ]
+  },
+  "legacyGoldenCases": 8,
+  "legacyGoldenOutputs": 1648,
+  "diagnosticCounts": {
+    "LEGACY_EFFECT_CONFLICT": 2,
+    "STALE_TOPOLOGY_STATUS": 4,
+    "STALE_MAX_LEVEL": 21,
+    "DUPLICATE_PROFESSION_WRAPPER": 10,
+    "RELEASE_FLAG_SCOPE": 1,
+    "CORE_UNRESOLVED": 1,
+    "DYNAMIC_SCOPE_UNRESOLVED": 1
+  },
+  "scope": {
+    "newUI": false,
+    "legacyFormulaChanged": false,
+    "cloudSheetWritten": false,
+    "pushedToGitHub": false
+  },
+  "limitations": [
+    "核心五維映射與取整仍待核",
+    "龍飛減傷作用範圍與時機仍待核",
+    "局部技能與ROOT文字機制保留，不接入DPS",
+    "只有龍吟職業覆寫"
+  ]
+}

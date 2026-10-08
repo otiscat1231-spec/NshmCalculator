@@ -1,0 +1,242 @@
+[
+  {
+    "Code": "LEGACY_EFFECT_CONFLICT",
+    "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+    "Source": "27_神器2.3.3封版規格",
+    "Detail": "現版全技能增強+50/級；Legacy克制收益公式不等價，不接入舊公式。"
+  },
+  {
+    "Code": "STALE_TOPOLOGY_STATUS",
+    "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+    "Source": "21_神器節點逐級",
+    "Detail": "逐級表仍標拓撲待補；本包父鏈採27封版明確ParentID。"
+  },
+  {
+    "Code": "LEGACY_EFFECT_CONFLICT",
+    "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+    "Source": "27_神器2.3.3封版規格",
+    "Detail": "現版全技能增強+50/級；Legacy克制收益公式不等價，不接入舊公式。"
+  },
+  {
+    "Code": "STALE_TOPOLOGY_STATUS",
+    "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+    "Source": "21_神器節點逐級",
+    "Detail": "逐級表仍標拓撲待補；本包父鏈採27封版明確ParentID。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S256",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S259",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S262",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S265",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S268",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S271",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+    "Source": "21_神器節點逐級!S274",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_TOPOLOGY_STATUS",
+    "NodeId": "ART-COM-WANJUN",
+    "Source": "21_神器節點逐級",
+    "Detail": "逐級表仍標拓撲待補；本包父鏈採27封版明確ParentID。"
+  },
+  {
+    "Code": "STALE_TOPOLOGY_STATUS",
+    "NodeId": "ART-COM-FENGHUA",
+    "Source": "21_神器節點逐級",
+    "Detail": "逐級表仍標拓撲待補；本包父鏈採27封版明確ParentID。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S257",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S260",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S263",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S266",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S269",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S272",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-MOGONG",
+    "Source": "21_神器節點逐級!S275",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S258",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S261",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S264",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S267",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S270",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S273",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "STALE_MAX_LEVEL",
+    "NodeId": "ART-COM-BLUE-CHOICE01",
+    "Source": "21_神器節點逐級!S276",
+    "Detail": "逐級JSON上限7；27封版為10。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Source": "21_神器節點逐級!S286",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Source": "21_神器節點逐級!S287",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Source": "21_神器節點逐級!S288",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Source": "21_神器節點逐級!S289",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP01",
+    "Source": "21_神器節點逐級!S290",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Source": "21_神器節點逐級!S291",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Source": "21_神器節點逐級!S292",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Source": "21_神器節點逐級!S293",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Source": "21_神器節點逐級!S294",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "DUPLICATE_PROFESSION_WRAPPER",
+    "NodeId": "ART-SLOT-CLASS-LY-UP02",
+    "Source": "21_神器節點逐級!S295",
+    "Detail": "逐級JSON重複龍吟包裝；使用27單層JSON，原值保留於私人快照。"
+  },
+  {
+    "Code": "RELEASE_FLAG_SCOPE",
+    "NodeId": "",
+    "Source": "20/21",
+    "Detail": "20/21的ReleaseReady仍為False，部分Status/備註仍待驗證；27封版是本包實作依據，不提升研究證據等級。"
+  },
+  {
+    "Code": "CORE_UNRESOLVED",
+    "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+    "Source": "27/21",
+    "Detail": "核心五維映射與滿級克制取整待核，缺明確输入即回傳未解析效果。"
+  },
+  {
+    "Code": "DYNAMIC_SCOPE_UNRESOLVED",
+    "NodeId": "ART-SLOT-CORE-D03-L",
+    "Source": "27",
+    "Detail": "龍飛減傷時機/範圍待核；技能百分比與Root文字機制保留為局部效果，不當全程面板/DPS。"
+  }
+]
