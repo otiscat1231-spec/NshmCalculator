@@ -1,0 +1,90 @@
+{
+  "phase": "2B",
+  "baseCommit": "cac31463c978f22bebc132c70db857eabb1006c4",
+  "branch": "tw-pve",
+  "validatedAt": "2026-10-09T09:04:24.598670+08:00",
+  "artifactPackId": "TW-Mobile-2.3.3",
+  "artifactPackSha256": "fd3fab922ceebeaf5c4fc6307fd962e24b0f5dcf0dbce97b906c605dcae97351",
+  "phase2AArtifactTests": {
+    "total": 328,
+    "passed": 328,
+    "failed": 0,
+    "skipped": []
+  },
+  "buildWiringTests": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "skipped": []
+  },
+  "nonBrowserRegression": {
+    "total": 1904,
+    "passed": 1903,
+    "failed": 0,
+    "skipped": [
+      {
+        "name": "PlausibleVersionTest",
+        "reason": "检测到文件版本号过旧，请确认是否没有实际更新"
+      }
+    ]
+  },
+  "browserUI": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": []
+  },
+  "browserChannel": "chrome",
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "legacyGolden": {
+    "cases": 8,
+    "outputs": 1648,
+    "result": "passed"
+  },
+  "build": {
+    "client": "passed",
+    "tests": "passed",
+    "newDependencies": false,
+    "existingWarning": "NU1902 NCalcSync 5.2.11"
+  },
+  "unchangedProtectedPaths": [
+    "NshmCalcuator/Shared/PveUtility.cs",
+    "NshmCalcuator/Shared/Research/PveComparison.cs",
+    "NshmCalcuator/Shared/Models/CalculatorModel/FormulaParam/Formula/PveFormula.cs",
+    "NshmCalculator.MudClient/wwwroot/data/config_pve.json",
+    "NshmCalculator.MudClient/wwwroot/data/pve/legacy/config_pve_original.json",
+    "NshmCalcuator/Shared/Research/Artifacts/ArtifactAggregator.cs",
+    "NshmCalcuator/Shared/Research/Artifacts/ArtifactBoardEngine.cs",
+    "NshmCalcuator/Shared/Research/Artifacts/ArtifactDataPack.cs",
+    "NshmCalculator.MudClient/wwwroot/data/artifacts/TW-Mobile-2.3.3/artifact-pack.json"
+  ],
+  "researchSheetWritten": false,
+  "panelInputs": "ResearchBuild.BaseAttributes + ArtifactAggregator.StaticAttributes",
+  "excludedFromPanelAndDps": [
+    "TriggeredAttributes",
+    "ScopedEffects",
+    "UnmodeledMechanics",
+    "TargetProfessionModifiers"
+  ],
+  "persistence": "Base panel and isolated artifact states only; final panel is a derived projection",
+  "gameValueConflictsAdded": [],
+  "sourceInterpretationCorrections": [
+    {
+      "source": "NshmCalculator.MudClient/wwwroot/data/config_pve.json",
+      "fields": [
+        "ST_015",
+        "FZJ_020"
+      ],
+      "finding": "ST_015 is already numeric all-skill enhancement; no Legacy formulas or values changed."
+    }
+  ],
+  "inheritedLimitations": [
+    "Only LY profession overrides are supplied",
+    "Core five-dimension mapping and rounding remain unverified",
+    "LongFei reduction scope and timing remain unverified",
+    "New artifact board is not connected to Legacy DPS"
+  ]
+}

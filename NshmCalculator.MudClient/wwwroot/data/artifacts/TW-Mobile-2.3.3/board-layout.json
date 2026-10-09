@@ -1,0 +1,196 @@
+{
+  "SchemaVersion": 1,
+  "PackId": "TW-Mobile-2.3.3",
+  "Slots": [
+    {
+      "PositionId": "ROOT-L",
+      "Column": 0,
+      "Row": 2
+    },
+    {
+      "PositionId": "M02",
+      "Column": 1,
+      "Row": 2
+    },
+    {
+      "PositionId": "M03",
+      "Column": 2,
+      "Row": 2
+    },
+    {
+      "PositionId": "CORE",
+      "Column": 3,
+      "Row": 2
+    },
+    {
+      "PositionId": "M05",
+      "Column": 4,
+      "Row": 2
+    },
+    {
+      "PositionId": "M06",
+      "Column": 5,
+      "Row": 2
+    },
+    {
+      "PositionId": "M07",
+      "Column": 6,
+      "Row": 2
+    },
+    {
+      "PositionId": "ROOT-U01",
+      "Column": 0,
+      "Row": 1
+    },
+    {
+      "PositionId": "ROOT-U02",
+      "Column": 0,
+      "Row": 0
+    },
+    {
+      "PositionId": "CLASS-LY-UP01",
+      "Column": 1,
+      "Row": 0
+    },
+    {
+      "PositionId": "CLASS-LY-UP02",
+      "Column": 2,
+      "Row": 0
+    },
+    {
+      "PositionId": "ROOT-D01",
+      "Column": 0,
+      "Row": 3
+    },
+    {
+      "PositionId": "ROOT-D02",
+      "Column": 0,
+      "Row": 4
+    },
+    {
+      "PositionId": "CLASS-LY-DN01",
+      "Column": 1,
+      "Row": 4
+    },
+    {
+      "PositionId": "CLASS-LY-DN02",
+      "Column": 2,
+      "Row": 4
+    },
+    {
+      "PositionId": "M02-D01",
+      "Column": 1,
+      "Row": 3
+    },
+    {
+      "PositionId": "M03-U01",
+      "Column": 2,
+      "Row": 1
+    },
+    {
+      "PositionId": "CORE-U01",
+      "Column": 3,
+      "Row": 1
+    },
+    {
+      "PositionId": "CORE-U02",
+      "Column": 3,
+      "Row": 0
+    },
+    {
+      "PositionId": "CORE-U03-L",
+      "Column": 4,
+      "Row": 0
+    },
+    {
+      "PositionId": "CORE-U03-R",
+      "Column": 5,
+      "Row": 0
+    },
+    {
+      "PositionId": "CORE-D01",
+      "Column": 3,
+      "Row": 3
+    },
+    {
+      "PositionId": "CORE-D02",
+      "Column": 3,
+      "Row": 4
+    },
+    {
+      "PositionId": "CORE-D03-L",
+      "Column": 4,
+      "Row": 4
+    },
+    {
+      "PositionId": "CORE-D03-R",
+      "Column": 5,
+      "Row": 4
+    },
+    {
+      "PositionId": "M05-BRANCH-WANJUN",
+      "Column": 4,
+      "Row": 1
+    },
+    {
+      "PositionId": "COMMON-SEL-PVP01",
+      "Column": 5,
+      "Row": 1
+    },
+    {
+      "PositionId": "COMMON-PATH-STAR",
+      "Column": 6,
+      "Row": 1
+    },
+    {
+      "PositionId": "COMMON-SEL-MINGGE",
+      "Column": 7,
+      "Row": 0
+    },
+    {
+      "PositionId": "COMMON-SEL-ZHIBI",
+      "Column": 7,
+      "Row": 1
+    },
+    {
+      "PositionId": "M06-BRANCH-FENGHUA",
+      "Column": 5,
+      "Row": 3
+    },
+    {
+      "PositionId": "COMMON-SEL-OFFELE01",
+      "Column": 6,
+      "Row": 3
+    },
+    {
+      "PositionId": "COMMON-PATH-TIANRUI",
+      "Column": 7,
+      "Row": 3
+    },
+    {
+      "PositionId": "COMMON-SEL-XINGZHAO",
+      "Column": 8,
+      "Row": 2
+    },
+    {
+      "PositionId": "COMMON-SEL-CRIT01",
+      "Column": 8,
+      "Row": 4
+    },
+    {
+      "PositionId": "BLUE-N01",
+      "Column": 0,
+      "Row": 6
+    },
+    {
+      "PositionId": "BLUE-N02",
+      "Column": 1,
+      "Row": 6
+    },
+    {
+      "PositionId": "BLUE-SEL01",
+      "Column": 2,
+      "Row": 6
+    }
+  ]
+}

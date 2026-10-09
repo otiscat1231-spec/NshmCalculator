@@ -2,10 +2,32 @@
 @using NshmCalculator.Shared.Research
 @using NshmCalculator.Shared.Models.CalculatorModel.FormulaParam.Params
 @using NshmCalculator.MudClient.Resources
+@using NshmCalculator.Shared.Research.Artifacts
+@using System.Globalization
 <MudPaper Class="pa-4">
     <MudText Typo="Typo.h6">@Title · @Profile.Name</MudText>
     <MudTextField T="string" Label="Build ID" @bind-Value="Build.BuildId" />
     <MudTextField T="string" Label="技能循環 ID（尚未確認可留空）" @bind-Value="Build.RotationId" />
+    @if (ArtifactEngine is not null)
+    {
+        <details class="mt-4" open>
+            <summary>基礎面板（未含本盤神器）</summary>
+            <MudText Typo="Typo.body2">請填未含本盤神器的數值。會傷以百分點輸入；未填保留未知。儲存時只保存基礎值與神器盤，最終值每次重新計算。</MudText>
+            <MudGrid Class="mt-2">
+                @foreach (var input in BuildAttributeLayer.Definitions(ArtifactEngine.Pack))
+                {
+                    <MudItem xs="12" sm="6"><label style="display:block;font-size:13px">
+                        @input.Label（@TwArtifactBoard.Unit(input.Unit)）
+                        <input type="number" step="any" aria-label="@Title 基礎 @input.Label"
+                               data-testid="base-@BuildTag-@input.Key" style="display:block;width:100%;padding:8px;border:1px solid var(--mud-palette-divider);border-radius:4px;background:var(--mud-palette-surface);color:inherit"
+                               value="@BaseValue(input.Key)" @onchange="e => ChangeBase(input.Key, e.Value?.ToString())" />
+                    </label></MudItem>
+                }
+            </MudGrid>
+            @if (_baseError is not null) { <MudAlert Severity="Severity.Error">@_baseError</MudAlert> }
+        </details>
+    }
+    <details class="mt-4"><summary>Legacy 候選模型輸入（獨立於新神器面板）</summary>
     <MudGrid Class="mt-2">
         @foreach (var input in TwPveText.CommonInputs)
         {
@@ -15,6 +37,7 @@
             }
         }
     </MudGrid>
+    </details>
     <MudExpansionPanels Class="mt-4"><MudExpansionPanel Text="進階設定：完整 Legacy 參數">
         <MudText Typo="Typo.body2">包含目標、技能占比、神器、內功、特質等全部模型輸入。職業欄由流派選擇控制。</MudText>
         <MudButton OnClick="LoadJson">載入目前參數</MudButton>
@@ -27,10 +50,24 @@
     [Parameter] public string Title { get; set; } = "";
     [Parameter] public ResearchBuild Build { get; set; } = new();
     [Parameter] public ProfessionProfile Profile { get; set; } = new();
+    [Parameter] public ArtifactBoardEngine? ArtifactEngine { get; set; }
+    [Parameter] public string BuildTag { get; set; } = "A";
+    [Parameter] public EventCallback Changed { get; set; }
     private string _json = "";
     private string? _error;
+    private string? _baseError;
+    private string BaseValue(string key) => Build.BaseAttributes.TryGetValue(key, out var value)
+        ? value.ToString(CultureInfo.InvariantCulture) : "";
+    private async Task ChangeBase(string key, string? text)
+    {
+        if (string.IsNullOrWhiteSpace(text)) Build.BaseAttributes.Remove(key);
+        else if (decimal.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)) Build.BaseAttributes[key] = value;
+        else { _baseError = "請輸入有效數字，或留空表示未知。"; return; }
+        _baseError = null;
+        await Changed.InvokeAsync();
+    }
     private void LoadJson() => _json = JsonSerializer.Serialize(Build.Parameters, new JsonSerializerOptions { WriteIndented = true });
-    private void ApplyJson()
+    private async Task ApplyJson()
     {
         try
         {
@@ -41,6 +78,7 @@
             values["KG_001"] = new ParamValue { NumberMode = false, StringValue = Build.LegacyMode };
             Build.Parameters = values;
             _error = null;
+            await Changed.InvokeAsync();
         }
         catch (Exception ex) { _error = ex.Message; }
     }

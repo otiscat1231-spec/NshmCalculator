@@ -47,6 +47,10 @@ public sealed class ResearchBuild
     public string LegacyMode { get; set; } = "";
     public string RotationId { get; set; } = "";
     public Dictionary<string, ParamValue> Parameters { get; set; } = new();
+    // Store the base only. Final panels are projections and must never be written back here.
+    public Dictionary<string, decimal> BaseAttributes { get; set; } = new();
+    public Artifacts.ArtifactBoardState? ArtifactState { get; set; }
+    public Dictionary<string, int> ArtifactAutoLevels { get; set; } = new();
 }
 // Build and target belong to the calibration identity; missing data never falls back to another profession.
 public sealed record CalibrationKey(string Server, string Platform, string GameVersion,

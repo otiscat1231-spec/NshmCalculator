@@ -7,6 +7,7 @@
 @using NshmCalculator.Shared.Models.CalculatorModel.CalculatorConfig
 @using NshmCalculator.MudClient.Resources
 @using NshmCalculator.MudClient.Components
+@using NshmCalculator.Shared.Research.Artifacts
 @inject HttpClient Client
 @inject ISyncLocalStorageService LocalStorage
 <PageTitle>@TwPveText.Title</PageTitle>
@@ -41,8 +42,20 @@
         }
         @if (_a is not null && _b is not null)
         {
-            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" /></MudItem></MudGrid>
-            <MudStack Row="true"><MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Calculate">比較模型值</MudButton><MudButton OnClick="Save">儲存此流派 A/B</MudButton><MudButton Href="/pve">原版 Legacy 計算器</MudButton></MudStack>
+            @if (_artifactEngine is not null && _artifactLayout is not null)
+            {
+                <MudStack Row="true">
+                    <MudButton Variant="@(_artifactB ? Variant.Outlined : Variant.Filled)" OnClick="() => SelectArtifactBuild(false)">編輯 Build A 神器</MudButton>
+                    <MudButton Variant="@(_artifactB ? Variant.Filled : Variant.Outlined)" OnClick="() => SelectArtifactBuild(true)">編輯 Build B 神器</MudButton>
+                </MudStack>
+                <TwArtifactBoard Build="@(_artifactB ? _b : _a)" Title="@(_artifactB ? "Build B" : "Build A")" Engine="_artifactEngine" Layout="_artifactLayout" Changed="BuildChanged" />
+                <TwAttributeComparison A="_a" B="_b" Engine="_artifactEngine" />
+            }
+            @if (_artifactError is not null) { <MudAlert Severity="Severity.Error">神器資料載入失敗：@_artifactError</MudAlert> }
+            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" ArtifactEngine="_artifactEngine" BuildTag="A" Changed="BuildChanged" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" ArtifactEngine="_artifactEngine" BuildTag="B" Changed="BuildChanged" /></MudItem></MudGrid>
+            <MudAlert Severity="Severity.Info">神器只接入上方最終面板比較。下方 Legacy 模型值使用獨立舊版輸入，尚未套用這張新神器盤。</MudAlert>
+            <MudStack Row="true"><MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Calculate">比較 Legacy 模型值</MudButton><MudButton OnClick="Save">儲存此流派 A/B</MudButton><MudButton Href="/pve">原版 Legacy 計算器</MudButton></MudStack>
+            @if (_saveMessage is not null) { <MudAlert Severity="Severity.Success" role="status">@_saveMessage</MudAlert> }
         }
         @if (_result is not null)
         {
@@ -66,12 +79,28 @@
     private ResearchBuild? _a, _b;
     private ComparisonResult? _result;
     private string? _error;
+    private ArtifactBoardEngine? _artifactEngine;
+    private ArtifactBoardLayout? _artifactLayout;
+    private string? _artifactError, _saveMessage;
+    private bool _artifactB;
     private PveDataPack Pack => _manifest!.DataPacks.Single(p => p.Id == _packId);
     private ProfessionProfile Profile => _manifest!.Professions.Single(p => p.Id == _professionId);
     private ProfessionProfile ProfileB => _manifest!.Professions.Single(p => p.Id == _professionB);
     protected override async Task OnInitializedAsync()
     {
-        try { _manifest = await Client.GetFromJsonAsync<ResearchManifest>("data/pve/manifest.json") ?? throw new Exception("無法載入資料索引"); _packId = _manifest.DataPacks[0].Id; _professionId = _manifest.DefaultProfessionId; _professionB = _professionId; await LoadPack(); }
+        try
+        {
+            _manifest = await Client.GetFromJsonAsync<ResearchManifest>("data/pve/manifest.json") ?? throw new Exception("無法載入資料索引");
+            _packId = _manifest.DataPacks[0].Id; _professionId = _manifest.DefaultProfessionId; _professionB = _professionId;
+            await LoadPack();
+            try
+            {
+                var artifacts = ArtifactDataPack.Load(await Client.GetStringAsync("data/artifacts/TW-Mobile-2.3.3/artifact-pack.json"));
+                _artifactEngine = new(artifacts);
+                _artifactLayout = ArtifactBoardLayout.Load(await Client.GetStringAsync("data/artifacts/TW-Mobile-2.3.3/board-layout.json"), artifacts);
+            }
+            catch (Exception ex) { _artifactError = ex.Message; }
+        }
         catch (Exception ex) { _error = ex.Message; }
     }
     private async Task ChangePack(string id) { _packId = id; await LoadPack(); }
@@ -85,10 +114,22 @@
     private void ResetPair(string? mode = null)
     {
         _mode = mode ?? Profile.LegacyModes.Keys.First(); _modeB = _mode; _professionB = _professionId;
-        _a = Example(Profile, _mode); _b = Example(Profile, _mode); _result = null; _error = null;
+        _a = Example(Profile, _mode); _b = Example(Profile, _mode); _result = null; _error = null; _saveMessage = null; _artifactB = false;
         var key = PveComparison.StorageKey(Pack, _professionId) + ":" + _mode;
         if (LocalStorage.ContainKey(key)) { var saved = LocalStorage.GetItem<ResearchBuild[]>(key); if (saved?.Length == 2 && saved.All(b => b.ProfessionId == _professionId && b.LegacyMode == _mode)) { _a = saved[0]; _b = saved[1]; } }
     }
-    private void Save() { if (_cross) { _error = "跨流派設定請分別切回各流派儲存，避免覆寫同流派基準。"; return; } LocalStorage.SetItem(PveComparison.StorageKey(Pack, _professionId) + ":" + _mode, new[] { _a, _b }); _error = null; }
+    private void SelectArtifactBuild(bool b) { _artifactB = b; }
+    private void BuildChanged() { _result = null; _saveMessage = null; }
+    private void Save()
+    {
+        try
+        {
+            if (_cross) throw new ArgumentException("跨流派設定請分別切回各流派儲存，避免覆寫同流派基準。");
+            if (_artifactEngine is not null) { BuildAttributeLayer.Project(_a!, _artifactEngine); BuildAttributeLayer.Project(_b!, _artifactEngine); }
+            LocalStorage.SetItem(PveComparison.StorageKey(Pack, _professionId) + ":" + _mode, new[] { _a, _b });
+            _error = null; _saveMessage = "已儲存此流派 A/B 基礎面板與神器盤。";
+        }
+        catch (Exception ex) { _error = ex.Message; _saveMessage = null; }
+    }
     private void Calculate() { try { _result = PveComparison.Compare(_configJson, _a!, Profile, _b!, ProfileB, _cross); _error = null; } catch (Exception ex) { _result = null; _error = ex.Message; } }
 }

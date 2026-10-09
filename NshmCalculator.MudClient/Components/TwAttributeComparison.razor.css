@@ -1,0 +1,9 @@
+.attribute-comparison { border: 1px solid var(--mud-palette-divider); border-radius: 10px; padding: 18px; background: var(--mud-palette-surface); }
+h3 { margin: 0 0 10px; }
+p, label { font-size: 13px; line-height: 1.7; color: var(--mud-palette-text-secondary); }
+label { display: flex; align-items: center; gap: 7px; margin: 12px 0; }
+.attribute-scroll { overflow-x: auto; }
+table { width: 100%; min-width: 450px; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--mud-palette-divider); vertical-align: top; }
+thead th { color: var(--mud-palette-text-secondary); font-size: 12px; }
+small { display: block; margin-top: 5px; color: var(--mud-palette-text-secondary); font-size: 11px; font-weight: normal; line-height: 1.6; }

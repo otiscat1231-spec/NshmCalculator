@@ -1,0 +1,42 @@
+@using System.Globalization
+@using NshmCalculator.Shared.Research
+@using NshmCalculator.Shared.Research.Artifacts
+<section class="attribute-comparison" data-testid="attribute-comparison">
+    <h3>A/B 最終面板比較</h3>
+    <p>基礎面板 + 常駐神器增量 = 最終面板。未填的基礎值保留未知；條件增益與技能機制未接入 DPS。</p>
+    <label><input type="checkbox" @bind="_differencesOnly" />只看有變化的屬性</label>
+    @if (_error is not null) { <p role="alert">@_error</p> }
+    else
+    {
+        <div class="attribute-scroll">
+            <table><thead><tr><th>屬性／單位</th><th>Build A</th><th>Build B</th><th>B − A</th></tr></thead>
+                <tbody>@foreach (var row in _rows.Where(r => !_differencesOnly || (r.FinalDifference is decimal diff && diff != 0) || r.ArtifactDifference != 0 || r.A.Base != r.B.Base))
+                {
+                    var d = _definitions.SingleOrDefault(d => d.Key == row.Key);
+                    <tr data-attribute="@row.Key">
+                        <th>@(d?.Label ?? row.Key)<small>@(d is null ? "單位待確認" : TwArtifactBoard.Unit(d.Unit))</small></th>
+                        <td><strong data-field="final-a">@Format(row.A.Final)</strong><small>基礎 @Format(row.A.Base)<br />神器 @Signed(row.A.Artifact)</small></td>
+                        <td><strong data-field="final-b">@Format(row.B.Final)</strong><small>基礎 @Format(row.B.Base)<br />神器 @Signed(row.B.Artifact)</small></td>
+                        <td><strong data-field="difference">@(row.FinalDifference is decimal diff ? Signed(diff) : "待補基礎值")</strong><small>神器差 @Signed(row.ArtifactDifference)</small></td>
+                    </tr>
+                }</tbody>
+            </table>
+        </div>
+    }
+</section>
+@code {
+    [Parameter, EditorRequired] public ResearchBuild A { get; set; } = new();
+    [Parameter, EditorRequired] public ResearchBuild B { get; set; } = new();
+    [Parameter, EditorRequired] public ArtifactBoardEngine Engine { get; set; } = default!;
+    private AttributeDefinition[] _definitions = Array.Empty<AttributeDefinition>();
+    private BuildAttributeDifference[] _rows = Array.Empty<BuildAttributeDifference>();
+    private string? _error;
+    private bool _differencesOnly;
+    protected override void OnParametersSet()
+    {
+        try { _definitions = BuildAttributeLayer.Definitions(Engine.Pack); _rows = BuildAttributeLayer.Compare(A, B, Engine); _error = null; }
+        catch (ArtifactRuleException ex) { _error = ex.Message; }
+    }
+    private static string Format(decimal? value) => value?.ToString("0.##", CultureInfo.InvariantCulture) ?? "未知";
+    private static string Signed(decimal value) => value.ToString("+0.##;-0.##;0", CultureInfo.InvariantCulture);
+}

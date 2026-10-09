@@ -1,0 +1,145 @@
+@using System.Globalization
+@using NshmCalculator.Shared.Research
+@using NshmCalculator.Shared.Research.Artifacts
+
+<section class="artifact-board" data-testid="artifact-board" aria-label="@Title 神器盤">
+    <div class="board-heading">
+        <div><h3>@Title 神器盤</h3><span>@Engine.Pack.Manifest.Id</span></div>
+        @if (_session is not null)
+        {
+            <strong data-testid="artifact-total">總神器點數：@_session.TotalCost 點</strong>
+        }
+    </div>
+    <p class="board-help">固定槽位，可左右捲動。點「＋」會補足唯一父鏈；框線與「自動」標記表示自動補點。初始選項為清單第一項，可隨時切換。</p>
+    @if (_error is not null) { <p class="board-error" role="alert" data-testid="artifact-error">@_error</p> }
+    @if (_session is null) { <p>目前只提供龍吟完整神器盤。共用槽位保留，其他流派內容待補。</p> }
+    @if (_session?.LastChanges.Any(c => c.Reason == "minimum-parent-chain") == true)
+    {
+        <p class="board-change" role="status" data-testid="artifact-autofill">
+            本次自動補點：@string.Join("、", _session.LastChanges.Where(c => c.Reason == "minimum-parent-chain")
+                .Select(c => $"{Engine.Node(c.NodeId).Name} Lv{c.BeforeLevel}→{c.AfterLevel}（+{c.PointDelta}點）"))
+        </p>
+    }
+    <div class="board-scroll" tabindex="0" aria-label="神器固定盤面，可左右捲動">
+        <div class="board-canvas" style="width:@(CanvasWidth)px;height:@(CanvasHeight)px">
+            <svg class="board-lines" width="@CanvasWidth" height="@CanvasHeight" aria-hidden="true">
+                @foreach (var visible in _slots.Where(s => s.Node?.ParentId is not null))
+                {
+                    var node = visible.Node!;
+                    var parent = _slots.SingleOrDefault(s => s.Node?.Id == node.ParentId);
+                    @if (parent is not null)
+                    {
+                        <line x1="@(parent.Slot.Column * ColumnStep + 88)" y1="@(parent.Slot.Row * RowStep + 90)"
+                              x2="@(visible.Slot.Column * ColumnStep + 88)" y2="@(visible.Slot.Row * RowStep + 90)"
+                              class="@(_session?.Level(node.Id) > 0 ? "edge-active" : "edge-idle")" />
+                    }
+                }
+            </svg>
+            @foreach (var visible in _slots)
+            {
+                var node = visible.Node;
+                var level = node is null ? 0 : _session?.Level(node.Id) ?? 0;
+                var autoLevel = node is null ? 0 : _session?.AutoLevel(node.Id) ?? 0;
+                var blocked = node is not null && _session?.BlockedByMutex(node.Id) == true;
+                <article @key="visible.Slot.PositionId" class="artifact-node @(level > 0 ? "node-active" : "") @(autoLevel > 0 ? "node-auto" : "") @(node?.UnlockType == "questItem" ? "node-quest" : "")"
+                         style="left:@(visible.Slot.Column * ColumnStep)px;top:@(visible.Slot.Row * RowStep)px"
+                         data-position="@visible.Slot.PositionId" data-level="@level" data-auto-level="@autoLevel">
+                    @if (node is null) { <strong>流派節點待補</strong><small>@visible.Slot.PositionId</small> }
+                    else
+                    {
+                        <button class="node-name" title="@node.Name" @onclick="() => _selected = node.Id">@node.Name</button>
+                        <small>Lv <b>@level</b> / @node.MaxLevel · 每級 @node.CostPerLevel 點</small>
+                        @if (node.Options.Count > 0)
+                        {
+                            <select aria-label="@node.Name 選項" value="@(_session?.State.Selections.GetValueOrDefault(node.Id))"
+                                    disabled="@(_session is null)" @onchange="e => Switch(node.Id, e.Value?.ToString() ?? string.Empty)">
+                                @foreach (var option in node.Options) { <option value="@option.Id">@option.Name</option> }
+                            </select>
+                        }
+                        else { <span class="node-kind">@(node.Shared ? "共用屬性" : "龍吟技能")</span> }
+                        <div class="node-controls">
+                            <button aria-label="@node.Name 減點" disabled="@(_session is null || level == 0)" @onclick="() => Change(node.Id, level - 1)">−</button>
+                            <span>@(level * node.CostPerLevel) 點</span>
+                            <button aria-label="@node.Name 加點" disabled="@(_session is null || blocked || level >= node.MaxLevel || (node.UnlockType == "questItem" && !_session.State.QuestUnlocks.GetValueOrDefault(node.Id)))"
+                                    @onclick="() => Change(node.Id, level + 1)">＋</button>
+                        </div>
+                        @if (blocked)
+                        {
+                            <button class="mutex-switch" @onclick="() => Replace(node.Id)">改點這邊（退還另一邊）</button>
+                        }
+                        else if (node.UnlockType == "questItem")
+                        {
+                            <label class="quest-switch"><input type="checkbox" checked="@(_session?.State.QuestUnlocks.GetValueOrDefault(node.Id) == true)"
+                                disabled="@(_session is null)" @onchange="e => Unlock(node.Id, e.Value is true)" />道具已解鎖 · 無父鏈</label>
+                        }
+                        else
+                        {
+                            <span class="node-parent" title="@(node.ParentId is null ? "根節點" : $"{Engine.Node(node.ParentId).Name} Lv{node.RequiredParentLevel}")">
+                                @(node.ParentId is null ? "根節點" : $"前置 Lv{node.RequiredParentLevel}")
+                                @(string.IsNullOrEmpty(node.MutualExclusionGroup) ? "" : " · 雙實體互斥")
+                            </span>
+                        }
+                        @if (autoLevel > 0) { <span class="auto-badge">自動補 @autoLevel 級</span> }
+                    }
+                </article>
+            }
+            <div class="quest-heading" style="top:@(5 * RowStep + 60)px">藍色節點 · 任務道具解鎖 · 不需要父鏈</div>
+        </div>
+    </div>
+    @if (_selected is not null)
+    {
+        var node = Engine.Node(_selected);
+        <details class="node-detail" open data-testid="artifact-details">
+            <summary>@node.Name · 節點說明</summary>
+            <p>@node.Status</p>
+            <p>@node.Notes</p>
+            @if (_session is not null)
+            {
+                var option = node.Options.SingleOrDefault(o => o.Id == _session.State.Selections.GetValueOrDefault(node.Id));
+                @if (!string.IsNullOrWhiteSpace(option?.Description)) { <p>@option.Description</p> }
+                var record = node.Levels.SingleOrDefault(l => l.Level == _session.Level(node.Id) && l.OptionId == (option?.Id ?? ""));
+                @if (record is not null)
+                {
+                    @foreach (var effect in record.Effects)
+                    {
+                        <p>@effect.Label：@effect.Amount.ToString("+0.##;-0.##;0", CultureInfo.InvariantCulture) @Unit(effect.Unit)
+                           · @(effect.Scope == "panel" ? "常駐面板" : "局部／條件效果，未接入傷害模型")</p>
+                    }
+                }
+            }
+        </details>
+    }
+</section>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Build A";
+    [Parameter, EditorRequired] public ResearchBuild Build { get; set; } = new();
+    [Parameter, EditorRequired] public ArtifactBoardEngine Engine { get; set; } = default!;
+    [Parameter, EditorRequired] public ArtifactBoardLayout Layout { get; set; } = default!;
+    [Parameter] public EventCallback Changed { get; set; }
+    private const int ColumnStep = 198, RowStep = 190;
+    private ArtifactBoardSession? _session;
+    private ResearchBuild? _current;
+    private ArtifactVisibleSlot[] _slots = Array.Empty<ArtifactVisibleSlot>();
+    private string? _error, _selected;
+    private int CanvasWidth => (Layout.Slots.Max(s => s.Column) + 1) * ColumnStep;
+    private int CanvasHeight => (Layout.Slots.Max(s => s.Row) + 1) * RowStep;
+    protected override void OnParametersSet()
+    {
+        if (ReferenceEquals(Build, _current)) return;
+        _current = Build; _selected = null; _error = null;
+        _slots = Layout.ForProfession(Engine.Pack, Build.ProfessionId);
+        try { _session = new(Build, Engine); }
+        catch (ArtifactRuleException ex) { _session = null; _error = ex.Message; }
+    }
+    private async Task Execute(Action action)
+    {
+        try { action(); _error = null; await Changed.InvokeAsync(); }
+        catch (ArtifactRuleException ex) { _error = ex.Message; }
+    }
+    private Task Change(string id, int level) => Execute(() => _session!.SetLevel(id, level));
+    private Task Switch(string id, string option) => Execute(() => _session!.SwitchOption(id, option));
+    private Task Replace(string id) => Execute(() => _session!.ReplaceExclusive(id));
+    private Task Unlock(string id, bool value) => Execute(() => _session!.SetQuestUnlocked(id, value));
+    public static string Unit(string unit) => unit == "percentagePoint" ? "百分點" : unit == "second" ? "秒" : unit == "stack" ? "層" : "點";
+}
