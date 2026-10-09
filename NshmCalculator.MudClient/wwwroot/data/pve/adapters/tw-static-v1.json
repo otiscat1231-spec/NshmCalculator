@@ -1,0 +1,186 @@
+{
+  "Id": "TW-FinalStatic-to-Legacy-v1",
+  "ArtifactPackId": "TW-Mobile-2.3.3",
+  "LegacyConfigSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+  "LegacyVersion": "4.0.0.3",
+  "LegacyInternalVersion": 20250302001,
+  "Mappings": [
+    {
+      "SourceKey": "attack",
+      "Label": "攻擊（代表值）",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_001",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "覆寫舊ST攻擊；舊神器攻擊收益禁止再次加入。Legacy仍會除面板攻擊%再乘最終攻擊%。"
+    },
+    {
+      "SourceKey": "bossSuppression",
+      "Label": "首領克制",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_002",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "覆寫舊ST首克；不推定怪物/建築克制合併。舊神器首克收益禁止再次加入。"
+    },
+    {
+      "SourceKey": "technicalSuppression",
+      "Label": "技巧克制",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_003",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "技巧克制独立；不得用流派克制替代。"
+    },
+    {
+      "SourceKey": "defensePenetration",
+      "Label": "面板破防",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_004",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "只映射靜態破防；斬焰、藥品、特質等Legacy額外破防仍是候選來源。"
+    },
+    {
+      "SourceKey": "elementAttack",
+      "Label": "元素攻擊",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_005",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "只映射靜態元素；Legacy仍會處理面板元素%與額外元素來源。"
+    },
+    {
+      "SourceKey": "ignoreElementResistance",
+      "Label": "忽視元素抗性",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_006",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "只映射忽視點數；不把穿透率寫入此欄。"
+    },
+    {
+      "SourceKey": "critical",
+      "Label": "會心",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_007",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "只映射會心點數；Legacy仍會處理面板會心%及額外會心。"
+    },
+    {
+      "SourceKey": "hit",
+      "Label": "命中",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_008",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "只映射命中點數；不把命中率寫入此欄。"
+    },
+    {
+      "SourceKey": "criticalDamage",
+      "Label": "會心傷害（完整倍率百分點）",
+      "SourceUnit": "percentagePoint",
+      "LegacyCode": "ST_009",
+      "LegacyUnit": "ratio",
+      "Divisor": 100,
+      "DuplicateRisk": "百分點÷100；例175→1.75，是完整會傷倍率而非額外75%；舊刃影收益不得再加。"
+    },
+    {
+      "SourceKey": "bossSuppressionPercent",
+      "Label": "首領克制百分比（不含倍率基底1）",
+      "SourceUnit": "percentagePoint",
+      "LegacyCode": "ST_010",
+      "LegacyUnit": "ratio",
+      "Divisor": 100,
+      "DuplicateRisk": "百分點÷100；例5→0.05；非首克點數，Legacy公式另加基底1。"
+    },
+    {
+      "SourceKey": "skillEnhancement.all",
+      "Label": "全技能增強",
+      "SourceUnit": "point",
+      "LegacyCode": "ST_015",
+      "LegacyUnit": "point",
+      "Divisor": 1,
+      "DuplicateRisk": "全技能點數單獨覆寫；SH_005占比由Legacy情境保留；不加上四種標籤。"
+    }
+  ],
+  "Unmapped": [
+    {
+      "SourceKey": "professionSuppression",
+      "Reason": "無獨立Legacy流派克制欄位；ST_003是技巧克制，不可替代。"
+    },
+    {
+      "SourceKey": "skillEnhancement.single",
+      "Reason": "Legacy只有ST_015全技能；保留標籤增量與有效值，不平均、不相加、不改SH_004。"
+    },
+    {
+      "SourceKey": "skillEnhancement.group",
+      "Reason": "Legacy只有ST_015全技能；保留標籤增量與有效值，不平均、不相加、不改SH_004。"
+    },
+    {
+      "SourceKey": "skillEnhancement.burst",
+      "Reason": "Legacy只有ST_015全技能；保留標籤增量與有效值，不平均、不相加、不改SH_004。"
+    },
+    {
+      "SourceKey": "skillEnhancement.sustained",
+      "Reason": "Legacy只有ST_015全技能；保留標籤增量與有效值，不平均、不相加、不改SH_004。"
+    }
+  ],
+  "DisabledInputs": [
+    {
+      "Code": "SQ_003",
+      "NumberMode": false,
+      "NumberValue": 0,
+      "StringValue": "刃影摧风"
+    },
+    {
+      "Code": "SQ_004",
+      "NumberMode": true,
+      "NumberValue": 0,
+      "StringValue": "0"
+    }
+  ],
+  "ExcludedResultCodes": [
+    "RF_SQ_001",
+    "RF_SQ_002",
+    "RF_SQ_003",
+    "RF_SQ_004",
+    "RF_SQ_005",
+    "RF_SQ_006",
+    "RF_SQ_007",
+    "RF_SQ_008",
+    "RF_SQ_009",
+    "RF_SQ_010",
+    "RF_SQ_011",
+    "RF_SQ_012",
+    "RF_SQ_014",
+    "RF_SQ_015",
+    "RF_SQ_016",
+    "RF_SQ_017",
+    "RF_SQ_018",
+    "RF_SQ_019",
+    "RF_SQ_020",
+    "RF_SQ_021",
+    "RF_SQ_023",
+    "RF_SQ_024",
+    "RF_SQ_025",
+    "RF_SQ_026",
+    "RF_SQ_027",
+    "RF_SQ_028",
+    "RF_SQ_029",
+    "RF_SQ_030"
+  ],
+  "EmbeddedFormulaConflicts": [
+    {
+      "Code": "FZJ_010",
+      "Name": "技强%",
+      "Term": "0.05*[SH_001]",
+      "InputCodes": [
+        "SH_001"
+      ],
+      "EvidenceCode": "RF_SQ_030",
+      "Reason": "Legacy無條件含流派技能占比×5%，RF_SQ_030將此項標作流派大節點收益；SQ=0不能移除。新盤M07此效果屬ScopedEffect，尚不允許進DPS。不得以SH_001=0補償，也不修改Legacy公式；阻止TW預測執行。"
+    }
+  ]
+}

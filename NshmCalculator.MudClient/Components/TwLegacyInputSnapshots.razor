@@ -1,0 +1,41 @@
+@using System.Globalization
+@using System.Text.Json
+@using NshmCalculator.Shared.Research
+<section class="pa-4 mud-paper" data-testid="legacy-input-snapshots">
+    <h3>TW 最終靜態面板 → Legacy 輸入快照</h3>
+    <p>僅映射輸入；未執行傷害公式，未校準 DPS。單體／群體／爆發／持續增強另存標籤，未加入全技能欄。</p>
+    @if (Pair is not null)
+    {
+        <p data-testid="mapped-input-status">A 缺少 @Pair.A.MissingInputs.Length 欄；B 缺少 @Pair.B.MissingInputs.Length 欄。目標、內功、特質及技能占比仍是 Legacy 候選情境。</p>
+        <p>禁止執行 TW 傷害預測：Legacy 公式內仍有無條件的流派神器 5% 項。已記錄衝突，尚未修改公式。</p>
+        @if (Pair.Warning is not null) { <p>@Pair.Warning</p> }
+        <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse">
+                <thead><tr><th>Legacy 欄位</th><th>TW 來源／單位</th><th>A 映射值</th><th>B 映射值</th><th>B−A</th></tr></thead>
+                <tbody>
+                @foreach (var row in Pair.Differences.Where(d => d.A.SourceKind == "TWFinalStaticPanel"))
+                {
+                    <tr data-mapped-code="@row.LegacyCode" style="border-top:1px solid var(--mud-palette-divider)">
+                        <td>@row.LegacyCode · @row.A.Label</td><td>@row.A.SourceKey（@row.A.SourceUnit → @row.A.LegacyUnit）</td>
+                        <td data-mapped-build="A">@Value(row.A.Input)</td><td data-mapped-build="B">@Value(row.B.Input)</td>
+                        <td data-mapped-field="difference">@(row.Difference?.ToString("0.####", CultureInfo.InvariantCulture) ?? "未知")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <details class="mt-3"><summary>未映射欄位與標籤（不套入 DPS）</summary>
+            @foreach (var omission in Pair.A.Omissions.Concat(Pair.B.Omissions).GroupBy(o => o.Key).Select(g => g.First()))
+            { <p>@omission.Key：@omission.Reason</p> }
+        </details>
+        <details class="mt-3"><summary>完整 A/B 輸入、逐欄来源及排除清單 JSON</summary>
+            <p>包含全部 Legacy 情境欄位、來源、舊神器停用前值及未接入的條件效果。可複製保存供研究核對。</p>
+            <textarea readonly aria-label="完整A/B映射輸入快照" data-testid="mapped-input-json" style="width:100%;height:24rem;font-family:monospace">@JsonSerializer.Serialize(Pair, new JsonSerializerOptions { WriteIndented = true })</textarea>
+        </details>
+    }
+</section>
+@code {
+    [Parameter] public LegacyInputPair? Pair { get; set; }
+    private static string Value(LegacyInputValue? value) => value is null ? "未知（不寫入）"
+        : value.NumberMode ? value.NumberValue.ToString("0.####", CultureInfo.InvariantCulture) : value.StringValue ?? "未知";
+}

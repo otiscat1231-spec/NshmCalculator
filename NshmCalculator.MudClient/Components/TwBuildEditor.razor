@@ -6,15 +6,15 @@
 @using System.Globalization
 <MudPaper Class="pa-4">
     <MudText Typo="Typo.h6">@Title · @Profile.Name</MudText>
-    <MudTextField T="string" Label="Build ID" @bind-Value="Build.BuildId" />
-    <MudTextField T="string" Label="技能循環 ID（尚未確認可留空）" @bind-Value="Build.RotationId" />
+    <MudTextField T="string" Label="Build ID" Value="Build.BuildId" ValueChanged="v => ChangeIdentity(true, v)" />
+    <MudTextField T="string" Label="技能循環 ID（尚未確認可留空）" Value="Build.RotationId" ValueChanged="v => ChangeIdentity(false, v)" />
     @if (ArtifactEngine is not null)
     {
         <details class="mt-4" open>
             <summary>基礎面板（未含本盤神器）</summary>
             <MudText Typo="Typo.body2">請填未含本盤神器的數值。會傷以百分點輸入；未填保留未知。儲存時只保存基礎值與神器盤，最終值每次重新計算。</MudText>
             <MudGrid Class="mt-2">
-                @foreach (var input in BuildAttributeLayer.Definitions(ArtifactEngine.Pack))
+                @foreach (var input in BuildAttributeLayer.Definitions(ArtifactEngine.Pack).Concat(LegacyAdapter?.AdditionalBaseDefinitions ?? []))
                 {
                     <MudItem xs="12" sm="6"><label style="display:block;font-size:13px">
                         @input.Label（@TwArtifactBoard.Unit(input.Unit)）
@@ -33,7 +33,7 @@
         {
             if (Build.Parameters.TryGetValue(input.Code, out var parameter))
             {
-                <MudItem xs="12" sm="6"><MudNumericField T="double" Label="@input.Label" @bind-Value="parameter.NumberValue" /></MudItem>
+                <MudItem xs="12" sm="6"><MudNumericField T="double" Label="@input.Label" Value="parameter.NumberValue" ValueChanged="v => ChangeLegacy(parameter, v)" /></MudItem>
             }
         }
     </MudGrid>
@@ -51,11 +51,19 @@
     [Parameter] public ResearchBuild Build { get; set; } = new();
     [Parameter] public ProfessionProfile Profile { get; set; } = new();
     [Parameter] public ArtifactBoardEngine? ArtifactEngine { get; set; }
+    [Parameter] public LegacyStaticInputAdapter? LegacyAdapter { get; set; }
     [Parameter] public string BuildTag { get; set; } = "A";
     [Parameter] public EventCallback Changed { get; set; }
     private string _json = "";
     private string? _error;
     private string? _baseError;
+    private async Task ChangeIdentity(bool buildId, string value) {
+        if (buildId) Build.BuildId = value; else Build.RotationId = value;
+        await Changed.InvokeAsync();
+    }
+    private async Task ChangeLegacy(ParamValue parameter, double value) {
+        parameter.NumberValue = value; await Changed.InvokeAsync();
+    }
     private string BaseValue(string key) => Build.BaseAttributes.TryGetValue(key, out var value)
         ? value.ToString(CultureInfo.InvariantCulture) : "";
     private async Task ChangeBase(string key, string? text)

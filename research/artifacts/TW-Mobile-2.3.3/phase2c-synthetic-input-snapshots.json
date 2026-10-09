@@ -1,0 +1,573 @@
+{
+  "Purpose": "Synthetic test fixture only; not user measurements; not DPS predictions",
+  "A": {
+    "BuildId": "TEST-SYNTHETIC-LY",
+    "ProfessionId": "LY",
+    "ArtifactPackId": "TW-Mobile-2.3.3",
+    "LegacyConfigSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+    "Status": "candidate-input-only; uncalibrated",
+    "EngineEvaluationAllowed": false,
+    "EmbeddedFormulaConflicts": [
+      {
+        "Code": "FZJ_010",
+        "Name": "技强%",
+        "Term": "0.05*[SH_001]",
+        "InputCodes": [
+          "SH_001"
+        ],
+        "EvidenceCode": "RF_SQ_030",
+        "Reason": "Legacy無條件含流派技能占比×5%，RF_SQ_030將此項標作流派大節點收益；SQ=0不能移除。新盤M07此效果屬ScopedEffect，尚不允許進DPS。不得以SH_001=0補償，也不修改Legacy公式；阻止TW預測執行。"
+      }
+    ]
+  },
+  "B": {
+    "BuildId": "TEST-SYNTHETIC-B",
+    "ProfessionId": "LY",
+    "ArtifactPackId": "TW-Mobile-2.3.3",
+    "LegacyConfigSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+    "Status": "candidate-input-only; uncalibrated",
+    "EngineEvaluationAllowed": false,
+    "EmbeddedFormulaConflicts": [
+      {
+        "Code": "FZJ_010",
+        "Name": "技强%",
+        "Term": "0.05*[SH_001]",
+        "InputCodes": [
+          "SH_001"
+        ],
+        "EvidenceCode": "RF_SQ_030",
+        "Reason": "Legacy無條件含流派技能占比×5%，RF_SQ_030將此項標作流派大節點收益；SQ=0不能移除。新盤M07此效果屬ScopedEffect，尚不允許進DPS。不得以SH_001=0補償，也不修改Legacy公式；阻止TW預測執行。"
+      }
+    ]
+  },
+  "Mappings": [
+    {
+      "LegacyCode": "ST_001",
+      "A": {
+        "LegacyCode": "ST_001",
+        "Label": "攻擊（代表值）",
+        "SourceKey": "attack",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 10000,
+        "Artifact": 0,
+        "Final": 10000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 10000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 21928,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "覆寫舊ST攻擊；舊神器攻擊收益禁止再次加入。Legacy仍會除面板攻擊%再乘最終攻擊%。"
+      },
+      "B": {
+        "LegacyCode": "ST_001",
+        "Label": "攻擊（代表值）",
+        "SourceKey": "attack",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 10500,
+        "Artifact": 0,
+        "Final": 10500,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 10500,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 21928,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "覆寫舊ST攻擊；舊神器攻擊收益禁止再次加入。Legacy仍會除面板攻擊%再乘最終攻擊%。"
+      },
+      "Difference": 500
+    },
+    {
+      "LegacyCode": "ST_002",
+      "A": {
+        "LegacyCode": "ST_002",
+        "Label": "首領克制",
+        "SourceKey": "bossSuppression",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 15511,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "覆寫舊ST首克；不推定怪物/建築克制合併。舊神器首克收益禁止再次加入。"
+      },
+      "B": {
+        "LegacyCode": "ST_002",
+        "Label": "首領克制",
+        "SourceKey": "bossSuppression",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 15511,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "覆寫舊ST首克；不推定怪物/建築克制合併。舊神器首克收益禁止再次加入。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_003",
+      "A": {
+        "LegacyCode": "ST_003",
+        "Label": "技巧克制",
+        "SourceKey": "technicalSuppression",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 8347,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "技巧克制独立；不得用流派克制替代。"
+      },
+      "B": {
+        "LegacyCode": "ST_003",
+        "Label": "技巧克制",
+        "SourceKey": "technicalSuppression",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 8347,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "技巧克制独立；不得用流派克制替代。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_004",
+      "A": {
+        "LegacyCode": "ST_004",
+        "Label": "面板破防",
+        "SourceKey": "defensePenetration",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 14986,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射靜態破防；斬焰、藥品、特質等Legacy額外破防仍是候選來源。"
+      },
+      "B": {
+        "LegacyCode": "ST_004",
+        "Label": "面板破防",
+        "SourceKey": "defensePenetration",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 14986,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射靜態破防；斬焰、藥品、特質等Legacy額外破防仍是候選來源。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_005",
+      "A": {
+        "LegacyCode": "ST_005",
+        "Label": "元素攻擊",
+        "SourceKey": "elementAttack",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 6387,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射靜態元素；Legacy仍會處理面板元素%與額外元素來源。"
+      },
+      "B": {
+        "LegacyCode": "ST_005",
+        "Label": "元素攻擊",
+        "SourceKey": "elementAttack",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 6387,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射靜態元素；Legacy仍會處理面板元素%與額外元素來源。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_006",
+      "A": {
+        "LegacyCode": "ST_006",
+        "Label": "忽視元素抗性",
+        "SourceKey": "ignoreElementResistance",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 2576,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射忽視點數；不把穿透率寫入此欄。"
+      },
+      "B": {
+        "LegacyCode": "ST_006",
+        "Label": "忽視元素抗性",
+        "SourceKey": "ignoreElementResistance",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 2576,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射忽視點數；不把穿透率寫入此欄。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_007",
+      "A": {
+        "LegacyCode": "ST_007",
+        "Label": "會心",
+        "SourceKey": "critical",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 8004,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射會心點數；Legacy仍會處理面板會心%及額外會心。"
+      },
+      "B": {
+        "LegacyCode": "ST_007",
+        "Label": "會心",
+        "SourceKey": "critical",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 8004,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射會心點數；Legacy仍會處理面板會心%及額外會心。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_008",
+      "A": {
+        "LegacyCode": "ST_008",
+        "Label": "命中",
+        "SourceKey": "hit",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": 0,
+        "Final": 1000,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1000,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 5320,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射命中點數；不把命中率寫入此欄。"
+      },
+      "B": {
+        "LegacyCode": "ST_008",
+        "Label": "命中",
+        "SourceKey": "hit",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 1000,
+        "Artifact": -120,
+        "Final": 880,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 880,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 5320,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "只映射命中點數；不把命中率寫入此欄。"
+      },
+      "Difference": -120
+    },
+    {
+      "LegacyCode": "ST_009",
+      "A": {
+        "LegacyCode": "ST_009",
+        "Label": "會心傷害（完整倍率百分點）",
+        "SourceKey": "criticalDamage",
+        "SourceUnit": "percentagePoint",
+        "LegacyUnit": "ratio",
+        "Base": 175,
+        "Artifact": 0,
+        "Final": 175,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1.75,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 1.947,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "百分點÷100；例175→1.75，是完整會傷倍率而非額外75%；舊刃影收益不得再加。"
+      },
+      "B": {
+        "LegacyCode": "ST_009",
+        "Label": "會心傷害（完整倍率百分點）",
+        "SourceKey": "criticalDamage",
+        "SourceUnit": "percentagePoint",
+        "LegacyUnit": "ratio",
+        "Base": 175,
+        "Artifact": 0,
+        "Final": 175,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 1.75,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 1.947,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "百分點÷100；例175→1.75，是完整會傷倍率而非額外75%；舊刃影收益不得再加。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_010",
+      "A": {
+        "LegacyCode": "ST_010",
+        "Label": "首領克制百分比（不含倍率基底1）",
+        "SourceKey": "bossSuppressionPercent",
+        "SourceUnit": "percentagePoint",
+        "LegacyUnit": "ratio",
+        "Base": 5,
+        "Artifact": 0,
+        "Final": 5,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 0.05,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 0.448,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "百分點÷100；例5→0.05；非首克點數，Legacy公式另加基底1。"
+      },
+      "B": {
+        "LegacyCode": "ST_010",
+        "Label": "首領克制百分比（不含倍率基底1）",
+        "SourceKey": "bossSuppressionPercent",
+        "SourceUnit": "percentagePoint",
+        "LegacyUnit": "ratio",
+        "Base": 5,
+        "Artifact": 0,
+        "Final": 5,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 0.05,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 0.448,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "百分點÷100；例5→0.05；非首克點數，Legacy公式另加基底1。"
+      },
+      "Difference": 0
+    },
+    {
+      "LegacyCode": "ST_015",
+      "A": {
+        "LegacyCode": "ST_015",
+        "Label": "全技能增強",
+        "SourceKey": "skillEnhancement.all",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 5600,
+        "Artifact": 0,
+        "Final": 5600,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 5600,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 750,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "全技能點數單獨覆寫；SH_005占比由Legacy情境保留；不加上四種標籤。"
+      },
+      "B": {
+        "LegacyCode": "ST_015",
+        "Label": "全技能增強",
+        "SourceKey": "skillEnhancement.all",
+        "SourceUnit": "point",
+        "LegacyUnit": "point",
+        "Base": 5600,
+        "Artifact": 750,
+        "Final": 6350,
+        "Input": {
+          "NumberMode": true,
+          "NumberValue": 6350,
+          "StringValue": null
+        },
+        "ReplacedLegacyInput": {
+          "NumberMode": true,
+          "NumberValue": 750,
+          "StringValue": null
+        },
+        "SourceKind": "TWFinalStaticPanel",
+        "Note": "全技能點數單獨覆寫；SH_005占比由Legacy情境保留；不加上四種標籤。"
+      },
+      "Difference": 750
+    }
+  ]
+}

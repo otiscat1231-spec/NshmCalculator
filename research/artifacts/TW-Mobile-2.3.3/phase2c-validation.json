@@ -1,0 +1,109 @@
+{
+  "baseCommit": "4f1ec79e9a62827d9f330302462d7074d3a0c906",
+  "branch": "tw-pve",
+  "phase": "2C",
+  "checkedAtUtc": "2026-10-09T01:54:27.249066+00:00",
+  "nonBrowser": {
+    "total": 1945,
+    "passed": 1944,
+    "failed": 0,
+    "skipped": [
+      "PlausibleVersionTest"
+    ],
+    "groups": {
+      "ArtifactPhase2ATest": {
+        "total": 25,
+        "passed": 25,
+        "failed": 0
+      },
+      "ArtifactSourceGoldenTest": {
+        "total": 303,
+        "passed": 303,
+        "failed": 0
+      },
+      "ArtifactPhase2BBuildTest": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "LegacyStaticInputAdapterTest": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0
+      },
+      "PveResearchTest": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      }
+    }
+  },
+  "browser": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "skipped": [],
+    "groups": {
+      "ArtifactBoardUiTests": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "LegacyInputSnapshotUiTests": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    }
+  },
+  "legacyGolden": {
+    "cases": 8,
+    "outputs": 1648,
+    "test": "LegacyAllOutputsRemainIdentical",
+    "unchanged": true
+  },
+  "protectedFiles": [
+    {
+      "path": "NshmCalcuator/Shared/PveUtility.cs",
+      "sha256": "082def1a8a771fd74a1efe3056608a4bc3ab8b658aee4fd45389e43357dbf0d4",
+      "unchangedRelativeToBase": true
+    },
+    {
+      "path": "NshmCalculator.MudClient/wwwroot/data/config_pve.json",
+      "sha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "unchangedRelativeToBase": true
+    },
+    {
+      "path": "NshmCalculator.MudClient/wwwroot/data/pve/legacy/config_pve_original.json",
+      "sha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "unchangedRelativeToBase": true
+    },
+    {
+      "path": "NshmCalculator.MudClient/wwwroot/data/artifacts/TW-Mobile-2.3.3/artifact-pack.json",
+      "sha256": "fd3fab922ceebeaf5c4fc6307fd962e24b0f5dcf0dbce97b906c605dcae97351",
+      "unchangedRelativeToBase": true
+    },
+    {
+      "path": "NshmCalculator.Test/TestData/pve_legacy_golden.json",
+      "sha256": "2c9cc240e3a562a952222b6e8985cadf35f7bb52b75c5dea2a501589f59195c8",
+      "unchangedRelativeToBase": true
+    }
+  ],
+  "frontInputCount": 163,
+  "directMappings": 11,
+  "excludedOldArtifactResultCodes": 28,
+  "embeddedFormulaConflicts": [
+    "FZJ_010: 0.05*[SH_001]; RF_SQ_030"
+  ],
+  "engineEvaluationAllowed": false,
+  "damageCalibrationPerformed": false,
+  "masterSheetModified": false,
+  "builds": [
+    "Shared/Test success",
+    "MudClient/WASM success"
+  ],
+  "inheritedBuildWarnings": [
+    "NU1902: existing NCalcSync 5.2.11 warning; dependency unchanged"
+  ],
+  "browserRuntime": "headless installed Chrome, isolated test contexts"
+}
