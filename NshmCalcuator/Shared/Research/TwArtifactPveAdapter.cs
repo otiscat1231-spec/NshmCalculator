@@ -19,6 +19,8 @@ public sealed class TwArtifactPreparedInputs
     public LegacyInputSnapshot Mapping { get; init; } = null!;
     public Dictionary<string, LegacyInputValue> Inputs { get; init; } = new();
     public TwLegacyIsolationProof Isolation { get; init; } = null!;
+    public TwTargetSnapshot? Target { get; init; }
+    public TwAnchorProjection? Anchor { get; init; }
     public string[] Missing { get; init; } = [];
     public string Status { get; init; } = "TW神器來源已隔離；局部候選模型，未校準DPS";
 }
@@ -31,12 +33,16 @@ public sealed class TwArtifactPveAdapter
     private readonly LegacyStaticInputAdapter mapper;
     private readonly TwArtifactEffectAdapter effects;
     private readonly TwLegacyIsolationProof proof;
+    private readonly TwTargetModel? targets;
+    private readonly TwActualPanelAdapter? actualPanels;
     private static bool OldArtifactCode(string code) => code.StartsWith("SQ_", StringComparison.Ordinal)
         || code.StartsWith("RF_SQ_", StringComparison.Ordinal) || code.StartsWith("FSQ_", StringComparison.Ordinal);
 
-    public TwArtifactPveAdapter(string legacyJson, LegacyStaticInputAdapter mapper, TwArtifactEffectAdapter effects)
+    public TwArtifactPveAdapter(string legacyJson, LegacyStaticInputAdapter mapper, TwArtifactEffectAdapter effects,
+        TwTargetModel? targets = null, TwActualPanelAdapter? actualPanels = null)
     {
         this.mapper = mapper; this.effects = effects;
+        this.targets = targets; this.actualPanels = actualPanels;
         if (Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(legacyJson))).ToLowerInvariant() != mapper.OriginalConfigSha256)
             throw new ArgumentException("TW overlay與映射層的Legacy來源不一致");
         var config = JsonSerializer.Deserialize<PveConfig>(legacyJson) ?? throw new ArgumentException("Legacy設定為空");
@@ -86,6 +92,7 @@ public sealed class TwArtifactPveAdapter
     }
     public TwArtifactPreparedInputs Prepare(ResearchBuild build, ProfessionProfile profile, TwArtifactEffectContext? context = null)
     {
+        if (targets is not null) throw new ArgumentException("產品TW模式只接受實際面板錨定與版本化TW目標；請使用PrepareAnchored");
         var projection = effects.Project(build, context);
         var mapping = mapper.CreateFromTwArtifact(build, profile, projection);
         var inputs = mapping.Inputs.Where(v => !OldArtifactCode(v.Key)).ToDictionary(v => v.Key, v => v.Value);
@@ -93,6 +100,35 @@ public sealed class TwArtifactPveAdapter
         var missing = InspectIsolatedConfig().FrontParamInfoArray.Select(f => f.Code).Except(inputs.Keys)
             .Concat(projection.Pending).Distinct().ToArray();
         return new() { Artifact = projection, Mapping = mapping, Inputs = inputs, Isolation = proof, Missing = missing };
+    }
+
+    public TwArtifactPreparedInputs PrepareAnchored(TwActualPanelAnchor anchor, ResearchBuild candidate,
+        ProfessionProfile profile, TwTargetSelection target, TwArtifactEffectContext? context = null)
+    {
+        if (targets is null || actualPanels is null) throw new ArgumentException("需要獨立TW目標與實際面板錨定層；不可回退Legacy");
+        var anchored = actualPanels.Project(anchor, candidate, context);
+        var panel = anchored.Artifact.Panel.ToDictionary(r => r.Key);
+        var selected = targets.Snapshot(target, panel.GetValueOrDefault("defensePenetration")?.Final,
+            panel.GetValueOrDefault("ignoreElementResistance")?.Final);
+        var mapping = mapper.CreateFromTwArtifact(candidate, profile, anchored.Artifact, selected);
+        var inputs = mapping.Inputs.Where(v => !OldArtifactCode(v.Key)).ToDictionary(v => v.Key, v => v.Value);
+        if (anchored.Artifact.ProfessionDamageRatio is { } ratio) inputs.Add(effects.ProfessionDamageInput, new(true, (double)ratio, null));
+        var missing = InspectIsolatedConfig().FrontParamInfoArray.Select(f => f.Code).Except(inputs.Keys)
+            .Concat(anchored.Artifact.Pending).Distinct().ToArray();
+        return new() { Artifact=anchored.Artifact, Mapping=mapping, Inputs=inputs, Isolation=proof, Missing=missing,
+            Target=selected, Anchor=anchored, Status="實際脫戰面板錨定；TW目標候選；非已校準DPS" };
+    }
+    public (TwArtifactPreparedInputs A, TwArtifactPreparedInputs B, LegacyInputPair Mapping) CompareAnchoredInputs(
+        TwActualPanelAnchor anchor, ResearchBuild candidate, ProfessionProfile profile, TwTargetSelection target)
+    {
+        if (actualPanels is null) throw new ArgumentException("缺實際面板錨定層");
+        var a=PrepareAnchored(anchor,actualPanels.Current(anchor),profile,target);
+        var b=PrepareAnchored(anchor,candidate,profile,target);
+        var fields=b.Mapping.Fields.ToDictionary(f=>f.LegacyCode);
+        var rows=a.Mapping.Fields.Select(f=>new LegacyInputDifference(f.LegacyCode,f,fields[f.LegacyCode],
+            f.Input?.NumberMode==true && fields[f.LegacyCode].Input?.NumberMode==true
+                ? fields[f.LegacyCode].Input!.NumberValue-f.Input.NumberValue : null)).ToArray();
+        return (a,b,new(a.Mapping,b.Mapping,rows,false,null));
     }
 
     private Dictionary<string, ParamValue> ExecutableInputs(TwArtifactPreparedInputs prepared)

@@ -1,0 +1,347 @@
+{
+  "BaseCommit": "4f1ef98eca702b0598b490f786bcabcec10d1f64",
+  "TargetPackId": "TW-Mobile-2.3.3-targets-v1",
+  "TargetDisplays": 22,
+  "TargetRegression": [
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-D-16057",
+      "Kind": "Defense",
+      "Input": 16057,
+      "ObservedDisplayPercent": 54.4,
+      "PredictedRawPercent": 54.4198539877864,
+      "PredictedDisplayPercent": 54.4,
+      "ResidualPercentagePoints": 0.019853987786399744,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-D-18135",
+      "Kind": "Defense",
+      "Input": 18135,
+      "ObservedDisplayPercent": 57.6,
+      "PredictedRawPercent": 57.64705882352941,
+      "PredictedDisplayPercent": 57.6,
+      "ResidualPercentagePoints": 0.047058823529411764,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-D-18855",
+      "Kind": "Defense",
+      "Input": 18855,
+      "ObservedDisplayPercent": 58.8,
+      "PredictedRawPercent": 58.84200196270854,
+      "PredictedDisplayPercent": 58.8,
+      "ResidualPercentagePoints": 0.04200196270853778,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-D-19635",
+      "Kind": "Defense",
+      "Input": 19635,
+      "ObservedDisplayPercent": 60.2,
+      "PredictedRawPercent": 60.18509254627314,
+      "PredictedDisplayPercent": 60.2,
+      "ResidualPercentagePoints": -0.014907453726863432,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-D-20355",
+      "Kind": "Defense",
+      "Input": 20355,
+      "ObservedDisplayPercent": 61.5,
+      "PredictedRawPercent": 61.47223637289863,
+      "PredictedDisplayPercent": 61.5,
+      "ResidualPercentagePoints": -0.027763627101375445,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-4051",
+      "Kind": "Element",
+      "Input": 4051,
+      "ObservedDisplayPercent": 77.1,
+      "PredictedRawPercent": 77.11002364326167,
+      "PredictedDisplayPercent": 77.1,
+      "ResidualPercentagePoints": 0.010023643261670424,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-2890",
+      "Kind": "Element",
+      "Input": 2890,
+      "ObservedDisplayPercent": 68.4,
+      "PredictedRawPercent": 68.37973572577893,
+      "PredictedDisplayPercent": 68.4,
+      "ResidualPercentagePoints": -0.020264274221073676,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-1696",
+      "Kind": "Element",
+      "Input": 1696,
+      "ObservedDisplayPercent": 61.2,
+      "PredictedRawPercent": 61.24819845394593,
+      "PredictedDisplayPercent": 61.2,
+      "ResidualPercentagePoints": 0.04819845394593178,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-1158",
+      "Kind": "Element",
+      "Input": 1158,
+      "ObservedDisplayPercent": 58.5,
+      "PredictedRawPercent": 58.49914487131356,
+      "PredictedDisplayPercent": 58.5,
+      "ResidualPercentagePoints": -0.0008551286864389104,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-4571",
+      "Kind": "Element",
+      "Input": 4571,
+      "ObservedDisplayPercent": 81.8,
+      "PredictedRawPercent": 81.78690149880445,
+      "PredictedDisplayPercent": 81.8,
+      "ResidualPercentagePoints": -0.01309850119554441,
+      "Passed": true
+    },
+    {
+      "TargetId": "Hero",
+      "ObservationId": "Hero-E-4746",
+      "Kind": "Element",
+      "Input": 4746,
+      "ObservedDisplayPercent": 83.5,
+      "PredictedRawPercent": 83.49109960111925,
+      "PredictedDisplayPercent": 83.5,
+      "ResidualPercentagePoints": -0.008900398880752515,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-D-16057",
+      "Kind": "Defense",
+      "Input": 16057,
+      "ObservedDisplayPercent": 55.9,
+      "PredictedRawPercent": 55.90638044126416,
+      "PredictedDisplayPercent": 55.9,
+      "ResidualPercentagePoints": 0.0063804412641621944,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-D-16647",
+      "Kind": "Defense",
+      "Input": 16647,
+      "ObservedDisplayPercent": 56.9,
+      "PredictedRawPercent": 56.88688284835342,
+      "PredictedDisplayPercent": 56.9,
+      "ResidualPercentagePoints": -0.013117151646578245,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-D-18135",
+      "Kind": "Defense",
+      "Input": 18135,
+      "ObservedDisplayPercent": 59.5,
+      "PredictedRawPercent": 59.49436730416558,
+      "PredictedDisplayPercent": 59.5,
+      "ResidualPercentagePoints": -0.005632695834424941,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-D-18855",
+      "Kind": "Defense",
+      "Input": 18855,
+      "ObservedDisplayPercent": 60.8,
+      "PredictedRawPercent": 60.830440587449935,
+      "PredictedDisplayPercent": 60.8,
+      "ResidualPercentagePoints": 0.030440587449933245,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-D-20355",
+      "Kind": "Defense",
+      "Input": 20355,
+      "ObservedDisplayPercent": 63.8,
+      "PredictedRawPercent": 63.78581363004172,
+      "PredictedDisplayPercent": 63.8,
+      "ResidualPercentagePoints": -0.014186369958275382,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-4051",
+      "Kind": "Element",
+      "Input": 4051,
+      "ObservedDisplayPercent": 79.2,
+      "PredictedRawPercent": 79.22155688622755,
+      "PredictedDisplayPercent": 79.2,
+      "ResidualPercentagePoints": 0.02155688622754491,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-2890",
+      "Kind": "Element",
+      "Input": 2890,
+      "ObservedDisplayPercent": 69.6,
+      "PredictedRawPercent": 69.55104615708127,
+      "PredictedDisplayPercent": 69.6,
+      "ResidualPercentagePoints": -0.04895384291872568,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-1696",
+      "Kind": "Element",
+      "Input": 1696,
+      "ObservedDisplayPercent": 61.8,
+      "PredictedRawPercent": 61.79355441382531,
+      "PredictedDisplayPercent": 61.8,
+      "ResidualPercentagePoints": -0.006445586174684726,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-1158",
+      "Kind": "Element",
+      "Input": 1158,
+      "ObservedDisplayPercent": 58.8,
+      "PredictedRawPercent": 58.836609445877436,
+      "PredictedDisplayPercent": 58.8,
+      "ResidualPercentagePoints": 0.03660944587743485,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-4571",
+      "Kind": "Element",
+      "Input": 4571,
+      "ObservedDisplayPercent": 84.5,
+      "PredictedRawPercent": 84.48275862068965,
+      "PredictedDisplayPercent": 84.5,
+      "ResidualPercentagePoints": -0.017241379310344827,
+      "Passed": true
+    },
+    {
+      "TargetId": "Honor",
+      "ObservationId": "Honor-E-4746",
+      "Kind": "Element",
+      "Input": 4746,
+      "ObservedDisplayPercent": 86.4,
+      "PredictedRawPercent": 86.41410842586545,
+      "PredictedDisplayPercent": 86.4,
+      "ResidualPercentagePoints": 0.01410842586544742,
+      "Passed": true
+    }
+  ],
+  "NonBrowser": {
+    "total": "2023",
+    "executed": "2022",
+    "passed": "2022",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  },
+  "Browser": {
+    "total": "16",
+    "executed": "16",
+    "passed": "16",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  },
+  "NonBrowserSuites": {
+    "ArtifactPhase2ATest": 25,
+    "ArtifactPhase2BBuildTest": 16,
+    "ArtifactSourceGoldenTest": 303,
+    "GlobalConfigTest": 5,
+    "IndexTest": 1,
+    "LegacyStaticInputAdapterTest": 41,
+    "PveConfigTest": 40,
+    "PveResearchTest": 4,
+    "TreatUtilityRegressionTest": 1500,
+    "TreatUtilityTest": 10,
+    "TwArtifactEffectAdapterTest": 44,
+    "TwTargetAndActualPanelTest": 34
+  },
+  "GoldenCases": 8,
+  "GoldenOutputs": 1648,
+  "ProtectedFiles": {
+    "NshmCalculator.MudClient/wwwroot/data/artifacts/TW-Mobile-2.3.3/artifact-pack.json": {
+      "WindowsCheckoutSha256": "fd3fab922ceebeaf5c4fc6307fd962e24b0f5dcf0dbce97b906c605dcae97351",
+      "GitBlobSha256": "8188fd2b45b25cdb315d6373ee688d7db42ee54f8c319dd40983c93c8aa8cbf7",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.MudClient/wwwroot/data/config_pve.json": {
+      "WindowsCheckoutSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "GitBlobSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.MudClient/wwwroot/data/pve/legacy/config_pve_original.json": {
+      "WindowsCheckoutSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "GitBlobSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "ContentMatchesBase": true
+    },
+    "NshmCalcuator/Shared/PveUtility.cs": {
+      "WindowsCheckoutSha256": "082def1a8a771fd74a1efe3056608a4bc3ab8b658aee4fd45389e43357dbf0d4",
+      "GitBlobSha256": "63b860b2c5147a36bc9d658e0ae634082ef400d8c970fe7159587dbe8bb3ea38",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.Test/TestData/pve_legacy_golden.json": {
+      "WindowsCheckoutSha256": "2c9cc240e3a562a952222b6e8985cadf35f7bb52b75c5dea2a501589f59195c8",
+      "GitBlobSha256": "96d85a4b1aba9a77c9861fd02f63cac1bd1538cc5e8081e02423a4cf5ee727df",
+      "ContentMatchesBase": true
+    }
+  },
+  "LegacyManifestUnchanged": true,
+  "Skipped": [
+    "PlausibleVersionTest: inherited historical date check"
+  ],
+  "InheritedBuildWarning": "NU1902: NCalcSync 5.2.11; dependency unchanged",
+  "Unmodeled": [
+    "five dimensions to profession combat stats",
+    "other TW target fields",
+    "skill shares/tags",
+    "RotationEffect DPS",
+    "optimizer",
+    "DPS calibration"
+  ],
+  "AnchorVersionBindings": [
+    "ArtifactPackId",
+    "EffectPolicyId",
+    "CoreRuleId",
+    "SnapshotSha256"
+  ]
+}

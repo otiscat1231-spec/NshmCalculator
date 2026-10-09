@@ -8,18 +8,18 @@
     <MudText Typo="Typo.h6">@Title · @Profile.Name</MudText>
     <MudTextField T="string" Label="Build ID" Value="Build.BuildId" ValueChanged="v => ChangeIdentity(true, v)" />
     <MudTextField T="string" Label="技能循環 ID（尚未確認可留空）" Value="Build.RotationId" ValueChanged="v => ChangeIdentity(false, v)" />
-    @if (ArtifactEngine is not null)
+    @if (ArtifactEngine is not null && (!ActualPanel || BuildTag == "A"))
     {
         <details class="mt-4" open>
-            <summary>基礎面板（未含本盤神器）</summary>
-            <MudText Typo="Typo.body2">請填未含本盤神器的數值。會傷以百分點輸入；未填保留未知。儲存時只保存基礎值與神器盤，最終值每次重新計算。</MudText>
+            <summary>@(ActualPanel ? "目前遊戲實際脫戰面板（已含目前神器）" : "基礎面板（未含本盤神器）")</summary>
+            <MudText Typo="Typo.body2">@(ActualPanel ? "直接填目前遊戲實際脫戰面板，避免短暫Buff，不需要拆神器。會傷以百分點輸入；未填保留未知。完成目前盤配置後建立錨點。" : "請填未含本盤神器的數值。會傷以百分點輸入；未填保留未知。")</MudText>
             <MudGrid Class="mt-2">
                 @foreach (var input in BuildAttributeLayer.Definitions(ArtifactEngine.Pack).Concat(LegacyAdapter?.AdditionalBaseDefinitions ?? []))
                 {
                     <MudItem xs="12" sm="6"><label style="display:block;font-size:13px">
                         @input.Label（@TwArtifactBoard.Unit(input.Unit)）
-                        <input type="number" step="any" aria-label="@Title 基礎 @input.Label"
-                               data-testid="base-@BuildTag-@input.Key" style="display:block;width:100%;padding:8px;border:1px solid var(--mud-palette-divider);border-radius:4px;background:var(--mud-palette-surface);color:inherit"
+                        <input type="number" step="any" aria-label="@Title @(ActualPanel ? "實際" : "基礎") @input.Label"
+                               data-testid="@(ActualPanel ? $"observed-{BuildTag}-{input.Key}" : $"base-{BuildTag}-{input.Key}")" style="display:block;width:100%;padding:8px;border:1px solid var(--mud-palette-divider);border-radius:4px;background:var(--mud-palette-surface);color:inherit"
                                value="@BaseValue(input.Key)" @onchange="e => ChangeBase(input.Key, e.Value?.ToString())" />
                     </label></MudItem>
                 }
@@ -27,20 +27,21 @@
             @if (_baseError is not null) { <MudAlert Severity="Severity.Error">@_baseError</MudAlert> }
         </details>
     }
-    @if (TwEffects is not null && Build.ProfessionId == "LY")
+    @if (TwEffects is not null && Build.ProfessionId == "LY" && (!ActualPanel || BuildTag == "A"))
     {
-        <details class="mt-4"><summary>五維基礎值（未含眾法歸一）</summary>
-            <p>五個獨立數值；Lv5 首克使用版本化候選規則。留空保留未知，不從 Legacy 合併欄補值。</p>
+        <details class="mt-4"><summary>@(ActualPanel ? "目前遊戲實際五維（已含目前眾法歸一）" : "五維基礎值（未含眾法歸一）")</summary>
+            <p>五個獨立数值；Lv5 首克使用版本化候選規則。留空保留未知，不從 Legacy 合併欄補值。@(ActualPanel ? "候選五維使用候選CORE−目前CORE差量；五維轉攻擊等間接變化仍未建模。" : "")</p>
             @foreach (var dimension in TwEffects.DimensionNames)
             {
                 <label style="display:block">@dimension.Value
                     <input type="number" min="0" step="any" data-testid="five-@BuildTag-@dimension.Key"
-                        value="@(Build.BaseFiveDimensions.TryGetValue(dimension.Key, out var v) ? v.ToString(CultureInfo.InvariantCulture) : "")"
+                        value="@(FiveValues.TryGetValue(dimension.Key, out var v) ? v.ToString(CultureInfo.InvariantCulture) : "")"
                         @onchange="e => ChangeFive(dimension.Key, e.Value?.ToString())" />
                 </label>
             }
         </details>
     }
+    @if (ActualPanel && BuildTag == "B") { <p>候選面板由固定錨點＋神器差量產生；不另填候選面板，避免修改目前錨點。</p> }
     <details class="mt-4"><summary>Legacy 候選模型輸入（獨立於新神器面板）</summary>
     <MudGrid Class="mt-2">
         @foreach (var input in TwPveText.CommonInputs)
@@ -61,6 +62,9 @@
     </MudExpansionPanel></MudExpansionPanels>
 </MudPaper>
 @code {
+    [Parameter] public bool ActualPanel { get; set; }
+    private Dictionary<string,decimal> PanelValues => ActualPanel ? Build.ObservedAttributes : Build.BaseAttributes;
+    private Dictionary<string,decimal> FiveValues => ActualPanel ? Build.ObservedFiveDimensions : Build.BaseFiveDimensions;
     [Parameter] public string Title { get; set; } = "";
     [Parameter] public ResearchBuild Build { get; set; } = new();
     [Parameter] public ProfessionProfile Profile { get; set; } = new();
@@ -79,20 +83,20 @@
     private async Task ChangeLegacy(ParamValue parameter, double value) {
         parameter.NumberValue = value; await Changed.InvokeAsync();
     }
-    private string BaseValue(string key) => Build.BaseAttributes.TryGetValue(key, out var value)
+    private string BaseValue(string key) => PanelValues.TryGetValue(key, out var value)
         ? value.ToString(CultureInfo.InvariantCulture) : "";
     private async Task ChangeFive(string key, string? text)
     {
-        if (string.IsNullOrWhiteSpace(text)) Build.BaseFiveDimensions.Remove(key);
+        if (string.IsNullOrWhiteSpace(text)) FiveValues.Remove(key);
         else if (decimal.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && value >= 0)
-            Build.BaseFiveDimensions[key] = value;
+            FiveValues[key] = value;
         else { _baseError = "五維請填非負數字，或留空表示未知。"; return; }
         _baseError = null; await Changed.InvokeAsync();
     }
     private async Task ChangeBase(string key, string? text)
     {
-        if (string.IsNullOrWhiteSpace(text)) Build.BaseAttributes.Remove(key);
-        else if (decimal.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)) Build.BaseAttributes[key] = value;
+        if (string.IsNullOrWhiteSpace(text)) PanelValues.Remove(key);
+        else if (decimal.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)) PanelValues[key] = value;
         else { _baseError = "請輸入有效數字，或留空表示未知。"; return; }
         _baseError = null;
         await Changed.InvokeAsync();

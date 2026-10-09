@@ -3,6 +3,7 @@
 <section class="pa-4 mud-paper" data-testid="tw-artifact-execution">
     <h3>TW 新盤神器來源與候選執行輸入</h3>
     <p>舊 SQ／FSQ／RF_SQ 已隔離；保留 Legacy 技能占比與平均化方法。此處不輸出 DPS。</p>
+    @if(A.Anchor is {} anchor) { <p>固定錨點 @anchor.AnchorId；候選面板 = 實際面板 + 候選神器 − 目前神器。未建模五維的其他面板影響。</p> }
     @foreach (var entry in new[] { ("A", A), ("B", B) })
     {
         var projection = entry.Item2.Artifact;

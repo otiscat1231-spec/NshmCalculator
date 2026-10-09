@@ -89,26 +89,25 @@ public class ArtifactBoardUiTests : PageTest
     [Test] public async Task SwitchingSignedOptionUpdatesABAndSaveReloadDoesNotApplyTwice()
     {
         await Open();
-        await Page.GetByTestId("base-A-attack").FillAsync("100");
-        await Page.GetByTestId("base-A-attack").BlurAsync();
-        await Page.GetByTestId("base-B-attack").FillAsync("100");
-        await Page.GetByTestId("base-B-attack").BlurAsync();
+        await Page.GetByTestId("observed-A-attack").FillAsync("1000");
+        await Page.GetByTestId("observed-A-attack").BlurAsync();
         await Slot("COMMON-SEL-OFFELE01").Locator("select").SelectOptionAsync("OFFELE01-ATK");
         await Add("COMMON-SEL-OFFELE01").ClickAsync();
-        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("270");
+        await Page.GetByTestId("capture-anchor").ClickAsync();
+        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("1000");
+        await Expect(Panel("attack", "final-b")).ToHaveTextAsync("1000");
+        await Page.GetByRole(AriaRole.Button, new() { Name = "編輯 Build B 神器", Exact = true }).ClickAsync();
         await Slot("COMMON-SEL-OFFELE01").Locator("select").SelectOptionAsync("OFFELE01-ELE");
         await Level("COMMON-SEL-OFFELE01", 1);
-        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("30");
-        await Expect(Panel("attack", "final-b")).ToHaveTextAsync("100");
-        await Expect(Panel("attack", "difference")).ToHaveTextAsync("+70");
-        await Page.GetByRole(AriaRole.Button, new() { Name = "編輯 Build B 神器", Exact = true }).ClickAsync();
-        await Level("COMMON-SEL-OFFELE01", 0);
+        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("1000");
+        await Expect(Panel("attack", "final-b")).ToHaveTextAsync("760");
+        await Expect(Panel("attack", "difference")).ToHaveTextAsync("-240");
         await Add("BLUE-N02").ClickAsync();
         await Page.GetByRole(AriaRole.Button, new() { Name = "儲存此流派 A/B", Exact = true }).ClickAsync();
-        await Expect(Page.GetByText("已儲存此流派 A/B 基礎面板與神器盤。")).ToBeVisibleAsync();
+        await Expect(Page.GetByText("已分開儲存實際面板錨點、目前盤、候選盤與TW目標。")).ToBeVisibleAsync();
         await Page.ReloadAsync();
-        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("30", new() { Timeout = 60_000 });
-        await Expect(Panel("attack", "final-b")).ToHaveTextAsync("100");
+        await Expect(Panel("attack", "final-a")).ToHaveTextAsync("1000", new() { Timeout = 60_000 });
+        await Expect(Panel("attack", "final-b")).ToHaveTextAsync("760");
         await Expect(Slot("CORE")).ToHaveAttributeAsync("data-auto-level", "1");
         await Expect(Panel("hit", "final-a")).ToHaveTextAsync("未知");
     }

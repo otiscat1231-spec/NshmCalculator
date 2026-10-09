@@ -24,6 +24,7 @@
                 @foreach (var p in _manifest.Professions) { <MudSelectItem T="string" Value="@p.Id">@p.Name</MudSelectItem> }
             </MudSelect></MudItem>
         </MudGrid>
+        @if (IsTw && _targets is not null && _target is not null) { <TwTargetInspector Model="_targets" Selection="_target" Changed="ChangeTarget" A="_twA" B="_twB" /> }
         <MudText Typo="Typo.body2">資料：@Pack.DataVersion｜模型：@Pack.ModelVersion｜目標：@Pack.TargetDataVersion</MudText>
         <MudAlert Severity="Severity.Info">@Pack.Note @TwPveText.LegacyExample</MudAlert>
         <MudSelect T="string" Label="流派套路／姿態" Value="_mode" ValueChanged="ChangeMode">
@@ -49,10 +50,18 @@
                     <MudButton Variant="@(_artifactB ? Variant.Filled : Variant.Outlined)" OnClick="() => SelectArtifactBuild(true)">編輯 Build B 神器</MudButton>
                 </MudStack>
                 <TwArtifactBoard Build="@(_artifactB ? _b : _a)" Title="@(_artifactB ? "Build B" : "Build A")" Engine="_artifactEngine" Layout="_artifactLayout" Changed="BuildChanged" />
-                <TwAttributeComparison A="_a" B="_b" Engine="_artifactEngine" />
+                <TwAttributeComparison A="_a" B="_b" Engine="_artifactEngine" ActualPanel="IsTw" Anchor="_anchor" ActualAdapter="_actualPanels" />
             }
             @if (_artifactError is not null) { <MudAlert Severity="Severity.Error">神器資料載入失敗：@_artifactError</MudAlert> }
-            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" BuildTag="A" Changed="BuildChanged" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" BuildTag="B" Changed="BuildChanged" /></MudItem></MudGrid>
+            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" ActualPanel="IsTw" BuildTag="A" Changed="BuildChanged" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" ActualPanel="IsTw" BuildTag="B" Changed="BuildChanged" /></MudItem></MudGrid>
+            @if (IsTw) {
+                <MudAlert Severity="Severity.Info">輸入目前實際脫戰面板（已含神器），避免短暫Buff，並確認 Build A 是目前實際盤。不需要拆掉神器。</MudAlert>
+                <MudButton data-testid="capture-anchor" OnClick="CaptureAnchor">@(_anchor is null ? "建立錨點，並以目前盤初始化候選盤" : "更新目前錨點（保留候選盤）")</MudButton>
+                @if (_anchor is not null) {
+                    <p data-testid="anchor-status">錨點 @_anchor.Id · @(_actualPanels!.Matches(_anchor,_a) ? "目前資料一致" : "目前資料已修改，請明確更新錨點；舊錨點仍保留")</p>
+                    <MudButton data-testid="copy-current-candidate" OnClick="CopyCurrentToCandidate">候選盤複製固定目前盤</MudButton>
+                }
+            }
             @if (_legacyAdapter is not null)
             {
                 <MudButton Variant="Variant.Filled" data-testid="generate-mapped-inputs" OnClick="GenerateMappedInputs">產生 A/B 映射輸入快照</MudButton>
@@ -95,6 +104,10 @@
     private TwArtifactEffectAdapter? _twEffects;
     private TwArtifactPveAdapter? _twAdapter;
     private TwArtifactPreparedInputs? _twA, _twB;
+    private TwTargetModel? _targets;
+    private TwTargetSelection? _target;
+    private TwActualPanelAdapter? _actualPanels;
+    private TwActualPanelAnchor? _anchor;
     private bool IsTw => _packId == "TW-candidate";
     private string? _mappingError;
     private bool _artifactB;
@@ -118,7 +131,10 @@
                     _legacyAdapter = new(_configJson, _mappingJson, _artifactEngine);
                     _effectPolicyJson = await Client.GetStringAsync("data/artifacts/TW-Mobile-2.3.3/effect-policy-v1.json");
                     _twEffects = new(_artifactEngine, _effectPolicyJson);
-                    _twAdapter = new(_configJson, _legacyAdapter, _twEffects);
+                    _targets = new(await Client.GetStringAsync("data/pve/targets/tw-mobile-2.3.3-v1.json"));
+                    _actualPanels = new(_artifactEngine,_twEffects);
+                    _target ??= new(_targets.Id,"Hero");
+                    _twAdapter = new(_configJson, _legacyAdapter, _twEffects,_targets,_actualPanels);
                 } catch (Exception ex) { _mappingError = ex.Message; }
             }
             catch (Exception ex) { _artifactError = ex.Message; }
@@ -131,7 +147,7 @@
         if (_artifactEngine is not null && _mappingJson.Length > 0) {
             _legacyAdapter = null; _twAdapter = null; _mappingError = null;
             try { _legacyAdapter = new(_configJson, _mappingJson, _artifactEngine);
-                if (_twEffects is not null) _twAdapter = new(_configJson, _legacyAdapter, _twEffects); }
+                if (_twEffects is not null) _twAdapter = new(_configJson, _legacyAdapter, _twEffects,_targets,_actualPanels); }
             catch (Exception ex) { _mappingError = ex.Message; }
         }
     }
@@ -145,8 +161,16 @@
     {
         _mode = mode ?? Profile.LegacyModes.Keys.First(); _modeB = _mode; _professionB = _professionId;
         _a = Example(Profile, _mode); _b = Example(Profile, _mode); _result = null; _inputPair = null; _twA = null; _twB = null; _error = null; _saveMessage = null; _artifactB = false;
-        var key = PveComparison.StorageKey(Pack, _professionId) + ":" + _mode;
-        if (LocalStorage.ContainKey(key)) { var saved = LocalStorage.GetItem<ResearchBuild[]>(key); if (saved?.Length == 2 && saved.All(b => b.ProfessionId == _professionId && b.LegacyMode == _mode)) { _a = saved[0]; _b = saved[1]; } }
+        _anchor=null; _target=_targets is null ? null : new(_targets.Id,"Hero");
+        var key = StorageKey();
+        if (IsTw && LocalStorage.ContainKey(key)) {
+            var saved=LocalStorage.GetItem<TwActualPanelSession>(key);
+            if(saved?.Current.ProfessionId==_professionId && saved.Current.LegacyMode==_mode
+                && saved.Candidate.ProfessionId==_professionId && saved.Candidate.LegacyMode==_mode) {
+                _a=saved.Current;_b=saved.Candidate;_anchor=saved.Anchor;_target=saved.Target;
+            }
+        }
+        if (!IsTw && LocalStorage.ContainKey(key)) { var saved = LocalStorage.GetItem<ResearchBuild[]>(key); if (saved?.Length == 2 && saved.All(b => b.ProfessionId == _professionId && b.LegacyMode == _mode)) { _a = saved[0]; _b = saved[1]; } }
     }
     private void SelectArtifactBuild(bool b) { _artifactB = b; }
     private void BuildChanged() { _result = null; _inputPair = null; _twA = null; _twB = null; _saveMessage = null; }
@@ -154,7 +178,9 @@
         try {
             if (IsTw) {
                 if (_twAdapter is null) throw new ArgumentException("TW神器來源接線未載入，不回退舊神器");
-                var pair = _twAdapter.CompareInputs(_a!, Profile, _b!, ProfileB);
+                if (_anchor is null || _target is null || _actualPanels is null) throw new ArgumentException("請先確認目前盤並建立實際面板錨點");
+                if (!_actualPanels.Matches(_anchor,_a!)) throw new ArgumentException("目前實際資料已變更，請明確更新錨點；不自動覆寫");
+                var pair = _twAdapter.CompareAnchoredInputs(_anchor, _b!, ProfileB, _target);
                 _twA = pair.A; _twB = pair.B; _inputPair = pair.Mapping;
             } else _inputPair = _legacyAdapter!.Compare(_a!, Profile, _b!, ProfileB, _cross);
             _error = null;
@@ -167,10 +193,32 @@
         {
             if (_cross) throw new ArgumentException("跨流派設定請分別切回各流派儲存，避免覆寫同流派基準。");
             if (_artifactEngine is not null) { BuildAttributeLayer.Project(_a!, _artifactEngine); BuildAttributeLayer.Project(_b!, _artifactEngine); }
-            LocalStorage.SetItem(PveComparison.StorageKey(Pack, _professionId) + ":" + _mode, new[] { _a, _b });
-            _error = null; _saveMessage = "已儲存此流派 A/B 基礎面板與神器盤。";
+            if (IsTw) {
+                if (_anchor is null || _actualPanels is null || !_actualPanels.Matches(_anchor,_a!)) throw new ArgumentException("請先建立／更新目前錨點再儲存");
+                LocalStorage.SetItem(StorageKey(),new TwActualPanelSession { Current=_a!,Candidate=_b!,Anchor=_anchor,Target=_target });
+            } else LocalStorage.SetItem(StorageKey(),new[] { _a,_b });
+            _error = null; _saveMessage = IsTw ? "已分開儲存實際面板錨點、目前盤、候選盤與TW目標。" : "已儲存此流派 A/B 基礎面板與神器盤。";
         }
         catch (Exception ex) { _error = ex.Message; _saveMessage = null; }
+    }
+    private string StorageKey()=>PveComparison.StorageKey(Pack,_professionId)+":"+_mode+(IsTw ? ":actual-anchor-v1" : "");
+    private void ChangeTarget(string id) {
+        try { _targets!.Snapshot(new(_targets.Id,id),null,null);_target=new(_targets.Id,id);BuildChanged();_error=null; }
+        catch(Exception ex) { _error=ex.Message; }
+    }
+    private void CaptureAnchor() {
+        try {
+            if(_actualPanels is null) throw new ArgumentException("錨定規格尚未載入");
+            var first=_anchor is null;
+            var captured=_actualPanels.Capture(_a!);
+            _anchor=captured;
+            if(first) { _b=TwActualPanelAdapter.Copy(_a!);_b.BuildId="CANDIDATE-"+_a!.BuildId; }
+            BuildChanged();_error=null;
+        } catch(Exception ex) { _error=ex.Message; }
+    }
+    private void CopyCurrentToCandidate() {
+        try { _b=_actualPanels!.Current(_anchor!);_b.BuildId="CANDIDATE-"+_b.BuildId;BuildChanged();_error=null; }
+        catch(Exception ex) { _error=ex.Message; }
     }
     private void Calculate() { try { _result = PveComparison.Compare(_configJson, _a!, Profile, _b!, ProfileB, _cross); _error = null; } catch (Exception ex) { _result = null; _error = ex.Message; } }
 }

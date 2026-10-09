@@ -108,6 +108,9 @@ public sealed class TwArtifactEffectAdapter
     private readonly TwArtifactEffectPolicy policy;
     private readonly Func<IReadOnlyDictionary<string, decimal>, decimal, decimal> coreAlgorithm;
     public string PolicyId => policy.Id;
+    public string PackId => policy.PackId;
+    public string CoreRuleId => policy.CoreRule.Id;
+    public decimal CoreIncrementPerLevel => policy.CoreRule.IncrementPerLevel;
     public string ProfessionDamageInput => policy.ProfessionDamageInput;
     public IReadOnlyDictionary<string, string> DimensionNames => new Dictionary<string, string>(policy.CoreRule.DimensionNames);
     internal Dictionary<string, string> EquivalentFunctions => new(policy.EquivalentFunctions);

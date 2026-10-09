@@ -51,6 +51,10 @@ public sealed class ResearchBuild
     public Dictionary<string, decimal> BaseAttributes { get; set; } = new();
     // Five independent values before this board's CORE. Never infer these from Legacy's four fields.
     public Dictionary<string, decimal> BaseFiveDimensions { get; set; } = new();
+    // Actual out-of-combat readings already include the equipped current artifact board.
+    // Separate from historical bare-base inputs: never silently reinterpret older saved builds.
+    public Dictionary<string, decimal> ObservedAttributes { get; set; } = new();
+    public Dictionary<string, decimal> ObservedFiveDimensions { get; set; } = new();
     public Artifacts.ArtifactBoardState? ArtifactState { get; set; }
     public Dictionary<string, int> ArtifactAutoLevels { get; set; } = new();
 }

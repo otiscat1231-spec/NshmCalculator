@@ -1,0 +1,227 @@
+{
+  "Id": "TW-Mobile-2.3.3-targets-v1",
+  "SchemaVersion": 1,
+  "Server": "TW",
+  "Platform": "mobile",
+  "GameVersion": "2.3.3",
+  "Status": "研究候選",
+  "DefenseAlgorithm": "remaining-defense-offset-v1",
+  "ElementAlgorithm": "remaining-element-v1",
+  "DefenseOffset": 0.1,
+  "DefenseFormula": "K_D / (K_D + max(D - P, 0)) - 0.1",
+  "ElementFormula": "K_E / (K_E + max(E - I, 0))",
+  "DisplayDecimals": 1,
+  "DisplayRounding": "AwayFromZero",
+  "DisplayRoundingStatus": "顯示精度回歸用候選捨入方式，未確認遊戲內部捨入實作",
+  "RatioCandidates": {
+    "K_D/D": "approximately 0.89; research only, never used as parameter source",
+    "K_E/E": "approximately 1.143; research only, never used as parameter source"
+  },
+  "SourceID": "USER-Phase2D-B",
+  "UnknownTargetFields": [
+    "bossResistance",
+    "criticalResistance",
+    "block",
+    "hitConstant",
+    "criticalConstant1",
+    "criticalConstant2",
+    "minimumAttack",
+    "targetUnit"
+  ],
+  "Targets": [
+    {
+      "Id": "Hero",
+      "Name": "Hero",
+      "Status": "研究候選；顯示點回歸驗證，非最終遊戲公式",
+      "Defense": 31555,
+      "DefenseConstant": 28060,
+      "ElementResistance": 6132.5,
+      "ElementConstant": 7012,
+      "ElementResistanceRange": [
+        6130,
+        6135
+      ],
+      "ElementConstantRange": [
+        7004,
+        7020
+      ],
+      "ParameterChoice": "Hero元素參數採使用者範圍中點，未調整觀察值",
+      "Observations": [
+        {
+          "Id": "Hero-D-16057",
+          "Kind": "Defense",
+          "Input": 16057,
+          "DisplayPercent": 54.4,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-D-18135",
+          "Kind": "Defense",
+          "Input": 18135,
+          "DisplayPercent": 57.6,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-D-18855",
+          "Kind": "Defense",
+          "Input": 18855,
+          "DisplayPercent": 58.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-D-19635",
+          "Kind": "Defense",
+          "Input": 19635,
+          "DisplayPercent": 60.2,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-D-20355",
+          "Kind": "Defense",
+          "Input": 20355,
+          "DisplayPercent": 61.5,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-4051",
+          "Kind": "Element",
+          "Input": 4051,
+          "DisplayPercent": 77.1,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-2890",
+          "Kind": "Element",
+          "Input": 2890,
+          "DisplayPercent": 68.4,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-1696",
+          "Kind": "Element",
+          "Input": 1696,
+          "DisplayPercent": 61.2,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-1158",
+          "Kind": "Element",
+          "Input": 1158,
+          "DisplayPercent": 58.5,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-4571",
+          "Kind": "Element",
+          "Input": 4571,
+          "DisplayPercent": 81.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Hero-E-4746",
+          "Kind": "Element",
+          "Input": 4746,
+          "DisplayPercent": 83.5,
+          "SourceID": "USER-Phase2D-B"
+        }
+      ]
+    },
+    {
+      "Id": "Honor",
+      "Name": "Honor",
+      "Status": "研究候選；顯示點回歸驗證，非最終遊戲公式",
+      "Defense": 29779,
+      "DefenseConstant": 26526,
+      "ElementResistance": 5786,
+      "ElementConstant": 6615,
+      "ElementResistanceRange": [
+        5786,
+        5786
+      ],
+      "ElementConstantRange": [
+        6615,
+        6615
+      ],
+      "ParameterChoice": "使用使用者提供的目標候選參數",
+      "Observations": [
+        {
+          "Id": "Honor-D-16057",
+          "Kind": "Defense",
+          "Input": 16057,
+          "DisplayPercent": 55.9,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-D-16647",
+          "Kind": "Defense",
+          "Input": 16647,
+          "DisplayPercent": 56.9,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-D-18135",
+          "Kind": "Defense",
+          "Input": 18135,
+          "DisplayPercent": 59.5,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-D-18855",
+          "Kind": "Defense",
+          "Input": 18855,
+          "DisplayPercent": 60.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-D-20355",
+          "Kind": "Defense",
+          "Input": 20355,
+          "DisplayPercent": 63.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-4051",
+          "Kind": "Element",
+          "Input": 4051,
+          "DisplayPercent": 79.2,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-2890",
+          "Kind": "Element",
+          "Input": 2890,
+          "DisplayPercent": 69.6,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-1696",
+          "Kind": "Element",
+          "Input": 1696,
+          "DisplayPercent": 61.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-1158",
+          "Kind": "Element",
+          "Input": 1158,
+          "DisplayPercent": 58.8,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-4571",
+          "Kind": "Element",
+          "Input": 4571,
+          "DisplayPercent": 84.5,
+          "SourceID": "USER-Phase2D-B"
+        },
+        {
+          "Id": "Honor-E-4746",
+          "Kind": "Element",
+          "Input": 4746,
+          "DisplayPercent": 86.4,
+          "SourceID": "USER-Phase2D-B"
+        }
+      ]
+    }
+  ]
+}

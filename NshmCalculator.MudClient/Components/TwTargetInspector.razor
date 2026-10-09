@@ -1,0 +1,23 @@
+@using NshmCalculator.Shared.Research
+<section class="pa-4 mud-paper" data-testid="tw-target-model">
+    <h3>TW Hero／Honor 目標（研究候選）</h3>
+    <label>目標 <select data-testid="tw-target-select" value="@Selection.TargetId" @onchange="SelectTarget">
+        @foreach(var t in Model.Definitions) { <option value="@t.Id">@t.Name · 研究候選</option> }
+    </select></label>
+    @{ var target=Model.Snapshot(Selection,null,null); }
+    <p>版本 @target.PackId；@target.Status。獨立於Legacy目標，不以比例推算常數。</p>
+    @foreach(var f in target.Fields.Where(f=>f.Value is not null)) { <span style="display:inline-block;margin-right:1rem">@f.Key：@f.Value</span> }
+    <p>@target.Name 元素抗性範圍 @string.Join("～",target.ElementResistanceRange)；元素常數範圍 @string.Join("～",target.ElementConstantRange)。其他目標條件保留未知。</p>
+    @if(A?.Target is {} a && B?.Target is {} b) {
+        <p data-testid="target-ratios-a">目前盤：防穿 @(a.DefenseDisplayPercent?.ToString("0.0") ?? "未知")%；元素穿透 @(a.ElementDisplayPercent?.ToString("0.0") ?? "未知")%</p>
+        <p data-testid="target-ratios-b">候選盤：防穿 @(b.DefenseDisplayPercent?.ToString("0.0") ?? "未知")%；元素穿透 @(b.ElementDisplayPercent?.ToString("0.0") ?? "未知")%</p>
+    }
+</section>
+@code {
+    private Task SelectTarget(ChangeEventArgs e)=>Changed.InvokeAsync(e.Value?.ToString() ?? "");
+    [Parameter] public TwTargetModel Model { get; set; }=null!;
+    [Parameter] public TwTargetSelection Selection { get; set; }=null!;
+    [Parameter] public EventCallback<string> Changed { get; set; }
+    [Parameter] public TwArtifactPreparedInputs? A { get; set; }
+    [Parameter] public TwArtifactPreparedInputs? B { get; set; }
+}

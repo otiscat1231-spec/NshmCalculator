@@ -28,13 +28,13 @@
       "Server": "台服",
       "Platform": "手遊",
       "GameVersion": "目前版本待確認",
-      "DataVersion": "TW-candidate-1",
-      "ModelVersion": "upstream-d831d871",
-      "TargetDataVersion": "Repo候選；未套台服實測",
+      "DataVersion": "TW-actual-panel-v1",
+      "ModelVersion": "tw-actual-anchor-v1",
+      "TargetDataVersion": "TW-Mobile-2.3.3-targets-v1",
       "CalibrationVersion": "未校準",
       "ConfigPath": "data/pve/legacy/config_pve_original.json",
-      "Source": "dellbeat/NshmCalculator",
-      "Note": "台服研究骨架沿用 Legacy 4.0.0.3；數值尚非台服已確認公式。"
+      "Source": "使用者Phase2D-B目標顯示點／TW-Mobile-2.3.3神器；Legacy僅保留方法",
+      "Note": "TW採實際脫戰面板＋目前盤錨定。Hero／Honor為研究候選，缺少目標條件保留未知，未校準DPS。"
     },
     {
       "Id": "Legacy",

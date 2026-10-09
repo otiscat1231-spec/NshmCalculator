@@ -113,16 +113,19 @@ public sealed class LegacyStaticInputAdapter
         => CreateCore(build, profile, additionalInjections, null);
 
     // Internal bridge accepts only a projection made by the TW effect adapter, not arbitrary Legacy deltas.
-    internal LegacyInputSnapshot CreateFromTwArtifact(ResearchBuild build, ProfessionProfile profile, TwArtifactProjection projection)
-        => CreateCore(build, profile, null, projection);
+    internal LegacyInputSnapshot CreateFromTwArtifact(ResearchBuild build, ProfessionProfile profile, TwArtifactProjection projection, TwTargetSnapshot? target = null)
+        => CreateCore(build, profile, null, projection, target);
 
     private LegacyInputSnapshot CreateCore(ResearchBuild build, ProfessionProfile profile,
-        IEnumerable<LegacyAttributeSource>? additionalInjections, TwArtifactProjection? projection)
+        IEnumerable<LegacyAttributeSource>? additionalInjections, TwArtifactProjection? projection, TwTargetSnapshot? target = null)
     {
         if (build.ProfessionId != profile.Id || !profile.LegacyModes.ContainsKey(build.LegacyMode)
             || !config.FrontParamInfoArray.Single(f => f.Code == "KG_001").Options.Contains(build.LegacyMode))
             throw new ArgumentException("Build與流派／套路不符");
         var fronts = config.FrontParamInfoArray.ToDictionary(f => f.Code);
+        var targetFields = target?.Fields.ToDictionary(f => f.Code);
+        if (targetFields is not null && !targetFields.Keys.ToHashSet().SetEquals(fronts.Keys.Where(k => k.StartsWith("BO_"))))
+            throw new ArgumentException("TW目標欄位必須完整隔離Legacy BO輸入");
         if (build.Parameters.Keys.Except(fronts.Keys).Any())
             throw new ArgumentException("TW模式只能接收已盤點的Legacy前端欄位；不得注入內部公式或等效收益");
         var panel = (projection?.Panel ?? BuildAttributeLayer.Project(build, engine)).ToDictionary(r => r.Key);
@@ -145,6 +148,10 @@ public sealed class LegacyStaticInputAdapter
                         + (projection is null ? "" : $"；TW效果接線 {projection.PolicyId}／{projection.CoreRuleId}；條件增量另見projection追蹤"));
                 if (value is not null) sources.Add(new(front.Code, "TWFinalStaticPanel", rule.SourceKey));
             }
+            else if (targetFields?.TryGetValue(front.Code, out var tf) == true)
+                field = new(front.Code, front.Name, tf.Key, "point", "point", null, null, null,
+                    tf.Value is decimal v ? new(true, (double)v, null) : null, original, "TWTargetCandidate",
+                    $"{target!.PackId}/{target.TargetId}；{tf.Status}；不使用Legacy目標補值");
             else if (disabled.TryGetValue(front.Code, out var off))
                 field = new(front.Code, front.Name, null, "", "", null, null, null,
                     new(off.NumberMode, off.NumberValue, off.StringValue), original, "DisabledLegacyArtifact",
