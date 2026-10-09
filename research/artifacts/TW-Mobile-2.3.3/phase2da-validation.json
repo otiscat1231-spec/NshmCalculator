@@ -1,0 +1,86 @@
+{
+  "BaseCommit": "a0a31843d95f32249e1375766af22b011ea1e3d6",
+  "NonBrowser": {
+    "total": "1989",
+    "executed": "1988",
+    "passed": "1988",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  },
+  "Browser": {
+    "total": "14",
+    "executed": "14",
+    "passed": "14",
+    "failed": "0",
+    "error": "0",
+    "timeout": "0",
+    "aborted": "0",
+    "inconclusive": "0",
+    "passedButRunAborted": "0",
+    "notRunnable": "0",
+    "notExecuted": "0",
+    "disconnected": "0",
+    "warning": "0",
+    "completed": "0",
+    "inProgress": "0",
+    "pending": "0"
+  },
+  "NonBrowserSuites": {
+    "ArtifactPhase2ATest": 25,
+    "ArtifactPhase2BBuildTest": 16,
+    "ArtifactSourceGoldenTest": 303,
+    "GlobalConfigTest": 5,
+    "IndexTest": 1,
+    "LegacyStaticInputAdapterTest": 41,
+    "PveConfigTest": 40,
+    "PveResearchTest": 4,
+    "TreatUtilityRegressionTest": 1500,
+    "TreatUtilityTest": 10,
+    "TwArtifactEffectAdapterTest": 44
+  },
+  "GoldenCases": 8,
+  "GoldenOutputs": 1648,
+  "ProtectedFiles": {
+    "NshmCalculator.MudClient/wwwroot/data/artifacts/TW-Mobile-2.3.3/artifact-pack.json": {
+      "WindowsCheckoutSha256": "fd3fab922ceebeaf5c4fc6307fd962e24b0f5dcf0dbce97b906c605dcae97351",
+      "GitBlobSha256": "8188fd2b45b25cdb315d6373ee688d7db42ee54f8c319dd40983c93c8aa8cbf7",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.MudClient/wwwroot/data/config_pve.json": {
+      "WindowsCheckoutSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "GitBlobSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.MudClient/wwwroot/data/pve/legacy/config_pve_original.json": {
+      "WindowsCheckoutSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "GitBlobSha256": "b291e208e17102b369adaf5f10bb38d70b0b528b13722dc857f36b2b3d2941e4",
+      "ContentMatchesBase": true
+    },
+    "NshmCalcuator/Shared/PveUtility.cs": {
+      "WindowsCheckoutSha256": "082def1a8a771fd74a1efe3056608a4bc3ab8b658aee4fd45389e43357dbf0d4",
+      "GitBlobSha256": "63b860b2c5147a36bc9d658e0ae634082ef400d8c970fe7159587dbe8bb3ea38",
+      "ContentMatchesBase": true
+    },
+    "NshmCalculator.Test/TestData/pve_legacy_golden.json": {
+      "WindowsCheckoutSha256": "2c9cc240e3a562a952222b6e8985cadf35f7bb52b75c5dea2a501589f59195c8",
+      "GitBlobSha256": "96d85a4b1aba9a77c9861fd02f63cac1bd1538cc5e8081e02423a4cf5ee727df",
+      "ContentMatchesBase": true
+    }
+  },
+  "Skipped": [
+    "PlausibleVersionTest: existing historical-date plausibility test"
+  ],
+  "InheritedBuildWarning": "NU1902: NCalcSync 5.2.11; dependency unchanged",
+  "Calibration": "not calibrated; partial candidate model only"
+}

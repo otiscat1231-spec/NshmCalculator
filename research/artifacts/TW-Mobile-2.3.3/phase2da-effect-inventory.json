@@ -1,0 +1,1985 @@
+{
+  "PolicyId": "TW-Mobile-2.3.3-effects-v1",
+  "CoreRule": {
+    "Id": "TW-Mobile-2.3.3-core-floor-each-v1",
+    "Status": "暫定候選",
+    "Algorithm": "floor-each-v1",
+    "DimensionNames": {
+      "constitution": "根骨",
+      "strength": "力量",
+      "spirit": "氣海",
+      "agility": "身法",
+      "endurance": "耐力"
+    },
+    "IncrementPerLevel": 9,
+    "BonusLevel": 5,
+    "BossFactor": 0.1,
+    "InputBasis": "未含本盤眾法歸一；公式使用加點後各維數值",
+    "Source": "使用者Phase2D-A指示：Lv1～5每級每維+9；Lv5首克逐維floor(各維×0.1)，可版本化替換；流派克制屬PvP不接PVE"
+  },
+  "Nodes": [
+    {
+      "NodeId": "ART-6e037e7d-9964-4eb4-b9b6-e23f54856b17",
+      "PositionId": "ROOT-U02",
+      "Name": "困鬥",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:elementAttack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R144",
+        "21_神器節點逐級!R145",
+        "21_神器節點逐級!R146",
+        "21_神器節點逐級!R147",
+        "21_神器節點逐級!R148",
+        "21_神器節點逐級!R149",
+        "21_神器節點逐級!R150",
+        "21_神器節點逐級!R151",
+        "21_神器節點逐級!R152",
+        "21_神器節點逐級!R153"
+      ]
+    },
+    {
+      "NodeId": "ART-38881547-6083-4557-951f-820bc18de959",
+      "PositionId": "M02",
+      "Name": "矯準",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:critical",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R10",
+        "21_神器節點逐級!R11",
+        "21_神器節點逐級!R12",
+        "21_神器節點逐級!R13",
+        "21_神器節點逐級!R4",
+        "21_神器節點逐級!R5",
+        "21_神器節點逐級!R6",
+        "21_神器節點逐級!R7",
+        "21_神器節點逐級!R8",
+        "21_神器節點逐級!R9"
+      ]
+    },
+    {
+      "NodeId": "ART-1253991a-ead5-4088-a736-5d06a7df4de2",
+      "PositionId": "ROOT-U01",
+      "Name": "御心",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:block",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:hit",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R134",
+        "21_神器節點逐級!R135",
+        "21_神器節點逐級!R136",
+        "21_神器節點逐級!R137",
+        "21_神器節點逐級!R138",
+        "21_神器節點逐級!R139",
+        "21_神器節點逐級!R140",
+        "21_神器節點逐級!R141",
+        "21_神器節點逐級!R142",
+        "21_神器節點逐級!R143"
+      ]
+    },
+    {
+      "NodeId": "ART-e1945d4c-49c2-49aa-a87f-dbe11cd8981e",
+      "PositionId": "ROOT-D01",
+      "Name": "化解",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:critical",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R154",
+        "21_神器節點逐級!R155",
+        "21_神器節點逐級!R156",
+        "21_神器節點逐級!R157",
+        "21_神器節點逐級!R158",
+        "21_神器節點逐級!R159",
+        "21_神器節點逐級!R160",
+        "21_神器節點逐級!R161",
+        "21_神器節點逐級!R162",
+        "21_神器節點逐級!R163"
+      ]
+    },
+    {
+      "NodeId": "ART-ef5aaf89-2b6c-4327-8394-69938203689d",
+      "PositionId": "M02-D01",
+      "Name": "百戰",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:allElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:elementAttack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R114",
+        "21_神器節點逐級!R115",
+        "21_神器節點逐級!R116",
+        "21_神器節點逐級!R117",
+        "21_神器節點逐級!R118",
+        "21_神器節點逐級!R119",
+        "21_神器節點逐級!R120",
+        "21_神器節點逐級!R121",
+        "21_神器節點逐級!R122",
+        "21_神器節點逐級!R123"
+      ]
+    },
+    {
+      "NodeId": "ART-9d3d259e-be8c-4e7d-9049-3a8b2235231f",
+      "PositionId": "M03-U01",
+      "Name": "枕戈",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:allElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:defensePenetration",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R124",
+        "21_神器節點逐級!R125",
+        "21_神器節點逐級!R126",
+        "21_神器節點逐級!R127",
+        "21_神器節點逐級!R128",
+        "21_神器節點逐級!R129",
+        "21_神器節點逐級!R130",
+        "21_神器節點逐級!R131",
+        "21_神器節點逐級!R132",
+        "21_神器節點逐級!R133"
+      ]
+    },
+    {
+      "NodeId": "ART-e3f8e26c-67e2-43fb-a595-d997c192c7f3",
+      "PositionId": "ROOT-D02",
+      "Name": "沉舟",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:defense",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:elementAttack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R164",
+        "21_神器節點逐級!R165",
+        "21_神器節點逐級!R166",
+        "21_神器節點逐級!R167",
+        "21_神器節點逐級!R168",
+        "21_神器節點逐級!R169",
+        "21_神器節點逐級!R170",
+        "21_神器節點逐級!R171",
+        "21_神器節點逐級!R172",
+        "21_神器節點逐級!R173"
+      ]
+    },
+    {
+      "NodeId": "ART-7fc8fcea-e009-4cfe-939a-b49fec3209ba",
+      "PositionId": "CORE-U01",
+      "Name": "不動",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:defense",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.all",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R54",
+        "21_神器節點逐級!R55",
+        "21_神器節點逐級!R56",
+        "21_神器節點逐級!R57",
+        "21_神器節點逐級!R58",
+        "21_神器節點逐級!R59",
+        "21_神器節點逐級!R60",
+        "21_神器節點逐級!R61",
+        "21_神器節點逐級!R62",
+        "21_神器節點逐級!R63"
+      ]
+    },
+    {
+      "NodeId": "ART-f1171817-6272-47a8-bd51-9b008779eb52",
+      "PositionId": "M05",
+      "Name": "護佑",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:ignoreElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R29",
+        "21_神器節點逐級!R30",
+        "21_神器節點逐級!R31",
+        "21_神器節點逐級!R32",
+        "21_神器節點逐級!R33",
+        "21_神器節點逐級!R34",
+        "21_神器節點逐級!R35",
+        "21_神器節點逐級!R36",
+        "21_神器節點逐級!R37",
+        "21_神器節點逐級!R38"
+      ]
+    },
+    {
+      "NodeId": "ART-ad6cbb96-523e-4db0-abb7-cd032efcc6ab",
+      "PositionId": "M06",
+      "Name": "禍斗",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:critical",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R39",
+        "21_神器節點逐級!R40",
+        "21_神器節點逐級!R41",
+        "21_神器節點逐級!R42",
+        "21_神器節點逐級!R43",
+        "21_神器節點逐級!R44",
+        "21_神器節點逐級!R45",
+        "21_神器節點逐級!R46",
+        "21_神器節點逐級!R47",
+        "21_神器節點逐級!R48"
+      ]
+    },
+    {
+      "NodeId": "ART-9363b1bd-442a-429b-95d1-be076bb4b2a3",
+      "PositionId": "COMMON-PATH-TIANRUI",
+      "Name": "天瑞",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:attack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:bossResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R204",
+        "21_神器節點逐級!R205",
+        "21_神器節點逐級!R206",
+        "21_神器節點逐級!R207",
+        "21_神器節點逐級!R208",
+        "21_神器節點逐級!R209",
+        "21_神器節點逐級!R210",
+        "21_神器節點逐級!R211",
+        "21_神器節點逐級!R212",
+        "21_神器節點逐級!R213"
+      ]
+    },
+    {
+      "NodeId": "ART-a446d2ad-9e9c-4197-8988-c2b646a90a1b",
+      "PositionId": "CORE-D01",
+      "Name": "鐵壁",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:allElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.all",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R84",
+        "21_神器節點逐級!R85",
+        "21_神器節點逐級!R86",
+        "21_神器節點逐級!R87",
+        "21_神器節點逐級!R88",
+        "21_神器節點逐級!R89",
+        "21_神器節點逐級!R90",
+        "21_神器節點逐級!R91",
+        "21_神器節點逐級!R92",
+        "21_神器節點逐級!R93"
+      ]
+    },
+    {
+      "NodeId": "ART-8ee16c2f-8e3a-4700-a073-fea48645b3e3",
+      "PositionId": "M03",
+      "Name": "禦敵",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:ignoreElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R14",
+        "21_神器節點逐級!R15",
+        "21_神器節點逐級!R16",
+        "21_神器節點逐級!R17",
+        "21_神器節點逐級!R18",
+        "21_神器節點逐級!R19",
+        "21_神器節點逐級!R20",
+        "21_神器節點逐級!R21",
+        "21_神器節點逐級!R22",
+        "21_神器節點逐級!R23"
+      ]
+    },
+    {
+      "NodeId": "ART-f104e4af-d809-4802-84cd-60420990417a",
+      "PositionId": "CORE-U02",
+      "Name": "速刃",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:allElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:ignoreElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R64",
+        "21_神器節點逐級!R65",
+        "21_神器節點逐級!R66",
+        "21_神器節點逐級!R67",
+        "21_神器節點逐級!R68",
+        "21_神器節點逐級!R69",
+        "21_神器節點逐級!R70",
+        "21_神器節點逐級!R71",
+        "21_神器節點逐級!R72",
+        "21_神器節點逐級!R73"
+      ]
+    },
+    {
+      "NodeId": "ART-257f2040-2b3d-493c-88f1-2a76ee5794fd",
+      "PositionId": "CORE-D02",
+      "Name": "歸心",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:allElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:elementAttack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R100",
+        "21_神器節點逐級!R101",
+        "21_神器節點逐級!R102",
+        "21_神器節點逐級!R103",
+        "21_神器節點逐級!R94",
+        "21_神器節點逐級!R95",
+        "21_神器節點逐級!R96",
+        "21_神器節點逐級!R97",
+        "21_神器節點逐級!R98",
+        "21_神器節點逐級!R99"
+      ]
+    },
+    {
+      "NodeId": "ART-7bee77af-49be-4800-9ac5-a7c900421da6",
+      "PositionId": "COMMON-PATH-STAR",
+      "Name": "星曜",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:attack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:professionResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R184",
+        "21_神器節點逐級!R185",
+        "21_神器節點逐級!R186",
+        "21_神器節點逐級!R187",
+        "21_神器節點逐級!R188",
+        "21_神器節點逐級!R189",
+        "21_神器節點逐級!R190",
+        "21_神器節點逐級!R191",
+        "21_神器節點逐級!R192",
+        "21_神器節點逐級!R193"
+      ]
+    },
+    {
+      "NodeId": "ART-02385d00-faf7-49c8-b6ba-28984900a6f3",
+      "PositionId": "BLUE-N01",
+      "Name": "凝玉勁",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:hit",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R256",
+        "21_神器節點逐級!R259",
+        "21_神器節點逐級!R262",
+        "21_神器節點逐級!R265",
+        "21_神器節點逐級!R268",
+        "21_神器節點逐級!R271",
+        "21_神器節點逐級!R274",
+        "21_神器節點逐級!R277",
+        "21_神器節點逐級!R278",
+        "21_神器節點逐級!R279"
+      ]
+    },
+    {
+      "NodeId": "ART-07b750bf-5d37-4d97-a662-52b14720b95e",
+      "PositionId": "CORE",
+      "Name": "眾法歸一",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "ConditionalAverage",
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "mechanic:fiveDimensions.displayIncrement",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "使用本次使用者確認的每維增量；不建立五維到戰鬥面板通用轉換",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "coreSuppressionAtMax",
+          "Category": "ConditionalAverage",
+          "Targets": [
+            "PvE.bossSuppression"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "版本化候選公式，只產生PVE首克，不產生流派克制"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R24",
+        "21_神器節點逐級!R25",
+        "21_神器節點逐級!R26",
+        "21_神器節點逐級!R27",
+        "21_神器節點逐級!R28"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-WANJUN",
+      "PositionId": "M05-BRANCH-WANJUN",
+      "Name": "萬鈞",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:criticalResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:professionResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R174",
+        "21_神器節點逐級!R175",
+        "21_神器節點逐級!R176",
+        "21_神器節點逐級!R177",
+        "21_神器節點逐級!R178",
+        "21_神器節點逐級!R179",
+        "21_神器節點逐級!R180",
+        "21_神器節點逐級!R181",
+        "21_神器節點逐級!R182",
+        "21_神器節點逐級!R183"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-FENGHUA",
+      "PositionId": "M06-BRANCH-FENGHUA",
+      "Name": "風華",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:criticalResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:defense",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R194",
+        "21_神器節點逐級!R195",
+        "21_神器節點逐級!R196",
+        "21_神器節點逐級!R197",
+        "21_神器節點逐級!R198",
+        "21_神器節點逐級!R199",
+        "21_神器節點逐級!R200",
+        "21_神器節點逐級!R201",
+        "21_神器節點逐級!R202",
+        "21_神器節點逐級!R203"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-PVP01",
+      "PositionId": "COMMON-SEL-PVP01",
+      "Name": "持盾千鈞／酣歌劍起",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "ConditionalAverage",
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:professionResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:professionSuppression",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "triggeredPanel:professionResistance",
+          "Category": "ConditionalAverage",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "保留auto/manual/off與覆盖率接口；PvP效果不進PVE",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "triggeredPanel:professionSuppression",
+          "Category": "ConditionalAverage",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "保留auto/manual/off與覆盖率接口；PvP效果不進PVE",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "PVP01-DEF",
+          "Name": "持盾千鈞",
+          "Aliases": [],
+          "Description": ""
+        },
+        {
+          "Id": "PVP01-OFF",
+          "Name": "酣歌劍起",
+          "Aliases": [],
+          "Description": ""
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R214",
+        "21_神器節點逐級!R215",
+        "21_神器節點逐級!R216",
+        "21_神器節點逐級!R217",
+        "21_神器節點逐級!R218",
+        "21_神器節點逐級!R219",
+        "21_神器節點逐級!R220"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-MINGGE",
+      "PositionId": "COMMON-SEL-MINGGE",
+      "Name": "鳴戈",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:professionSuppression",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "targetProfession:targetProfessionSuppression",
+          "Category": "Unmodeled",
+          "Targets": [
+            "target.profession"
+          ],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "指定流派PvP效果，不進PVE",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "鐵衣",
+          "Name": "鐵衣",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "血河",
+          "Name": "血河",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "素問",
+          "Name": "素問",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "九靈",
+          "Name": "九靈",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "龍吟",
+          "Name": "龍吟",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "碎夢",
+          "Name": "碎夢",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "神相",
+          "Name": "神相",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "玄機",
+          "Name": "玄機",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "潮光",
+          "Name": "潮光",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R221",
+        "21_神器節點逐級!R222",
+        "21_神器節點逐級!R223",
+        "21_神器節點逐級!R224",
+        "21_神器節點逐級!R225",
+        "21_神器節點逐級!R226",
+        "21_神器節點逐級!R227"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-ZHIBI",
+      "PositionId": "COMMON-SEL-ZHIBI",
+      "Name": "知彼",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:professionResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "targetProfession:targetProfessionResistance",
+          "Category": "Unmodeled",
+          "Targets": [
+            "target.profession"
+          ],
+          "Domain": "PvP",
+          "LegacyShareCode": "",
+          "Note": "指定流派PvP效果，不進PVE",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "鐵衣",
+          "Name": "鐵衣",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "血河",
+          "Name": "血河",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "素問",
+          "Name": "素問",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "九靈",
+          "Name": "九靈",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "龍吟",
+          "Name": "龍吟",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "碎夢",
+          "Name": "碎夢",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "神相",
+          "Name": "神相",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "玄機",
+          "Name": "玄機",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        },
+        {
+          "Id": "潮光",
+          "Name": "潮光",
+          "Aliases": [],
+          "Description": "目標流派；不代表角色流派"
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R228",
+        "21_神器節點逐級!R229",
+        "21_神器節點逐級!R230",
+        "21_神器節點逐級!R231",
+        "21_神器節點逐級!R232",
+        "21_神器節點逐級!R233",
+        "21_神器節點逐級!R234"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-OFFELE01",
+      "PositionId": "COMMON-SEL-OFFELE01",
+      "Name": "武耀靈威／疾電奔星",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:attack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:elementAttack",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "OFFELE01-ATK",
+          "Name": "武耀靈威",
+          "Aliases": [],
+          "Description": ""
+        },
+        {
+          "Id": "OFFELE01-ELE",
+          "Name": "疾電奔星",
+          "Aliases": [],
+          "Description": ""
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R235",
+        "21_神器節點逐級!R236",
+        "21_神器節點逐級!R237",
+        "21_神器節點逐級!R238",
+        "21_神器節點逐級!R239",
+        "21_神器節點逐級!R240",
+        "21_神器節點逐級!R241"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-XINGZHAO",
+      "PositionId": "COMMON-SEL-XINGZHAO",
+      "Name": "星照",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:bossSuppression",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.all",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.burst",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.group",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.single",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.sustained",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "全技能",
+          "Name": "全技能",
+          "Aliases": [
+            "星照·沖流"
+          ],
+          "Description": ""
+        },
+        {
+          "Id": "單體",
+          "Name": "單體",
+          "Aliases": [
+            "星照·振韻"
+          ],
+          "Description": ""
+        },
+        {
+          "Id": "群體",
+          "Name": "群體",
+          "Aliases": [
+            "星照·斂光"
+          ],
+          "Description": ""
+        },
+        {
+          "Id": "爆發",
+          "Name": "爆發",
+          "Aliases": [
+            "星照·碎瓊"
+          ],
+          "Description": ""
+        },
+        {
+          "Id": "持續",
+          "Name": "持續",
+          "Aliases": [
+            "星照·織光"
+          ],
+          "Description": ""
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R242",
+        "21_神器節點逐級!R244",
+        "21_神器節點逐級!R246",
+        "21_神器節點逐級!R248",
+        "21_神器節點逐級!R250",
+        "21_神器節點逐級!R252",
+        "21_神器節點逐級!R254"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-SELECT-CRIT01",
+      "PositionId": "COMMON-SEL-CRIT01",
+      "Name": "絕電誅鋒／刃影摧風",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:critical",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:criticalDamage",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "絕電誅鋒",
+          "Name": "絕電誅鋒",
+          "Aliases": [],
+          "Description": ""
+        },
+        {
+          "Id": "刃影摧風",
+          "Name": "刃影摧風",
+          "Aliases": [],
+          "Description": ""
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R243",
+        "21_神器節點逐級!R245",
+        "21_神器節點逐級!R247",
+        "21_神器節點逐級!R249",
+        "21_神器節點逐級!R251",
+        "21_神器節點逐級!R253",
+        "21_神器節點逐級!R255"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-BLUE-MOGONG",
+      "PositionId": "BLUE-N02",
+      "Name": "墨攻",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:hit",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:skillEnhancement.all",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R257",
+        "21_神器節點逐級!R260",
+        "21_神器節點逐級!R263",
+        "21_神器節點逐級!R266",
+        "21_神器節點逐級!R269",
+        "21_神器節點逐級!R272",
+        "21_神器節點逐級!R275",
+        "21_神器節點逐級!R280",
+        "21_神器節點逐級!R281",
+        "21_神器節點逐級!R282"
+      ]
+    },
+    {
+      "NodeId": "ART-COM-BLUE-CHOICE01",
+      "PositionId": "BLUE-SEL01",
+      "Name": "擊連鋒／凌烈風",
+      "ProfessionId": "",
+      "Shared": true,
+      "Categories": [
+        "StaticPanel"
+      ],
+      "Effects": [
+        {
+          "Key": "panel:defensePenetration",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:ignoreElementResistance",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "panel:maxHealth",
+          "Category": "StaticPanel",
+          "Targets": [],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+          "RequiredRootOption": ""
+        }
+      ],
+      "Options": [
+        {
+          "Id": "擊連鋒",
+          "Name": "擊連鋒",
+          "Aliases": [],
+          "Description": ""
+        },
+        {
+          "Id": "凌烈風",
+          "Name": "凌烈風",
+          "Aliases": [],
+          "Description": ""
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R258",
+        "21_神器節點逐級!R261",
+        "21_神器節點逐級!R264",
+        "21_神器節點逐級!R267",
+        "21_神器節點逐級!R270",
+        "21_神器節點逐級!R273",
+        "21_神器節點逐級!R276",
+        "21_神器節點逐級!R283",
+        "21_神器節點逐級!R284",
+        "21_神器節點逐級!R285"
+      ]
+    },
+    {
+      "NodeId": "ART-5648928c-1386-405b-939e-1238ab3f8bbf",
+      "PositionId": "M07",
+      "Name": "破空·威霆",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "TaggedSkillDamage",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:professionSkill.damageIncrease",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.professionSkills"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "SH_001",
+          "Note": "資料係數×Legacy流派技能占比；只注入一次",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "skill:professionSkill.damageReduction",
+          "Category": "Unmodeled",
+          "Targets": [
+            "incoming.professionSkills"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "防禦效果，非PVE輸出增傷",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R49",
+        "21_神器節點逐級!R50",
+        "21_神器節點逐級!R51",
+        "21_神器節點逐級!R52",
+        "21_神器節點逐級!R53"
+      ]
+    },
+    {
+      "NodeId": "ART-8900a962-1302-46c0-b173-884a85b492e9",
+      "PositionId": "ROOT-L",
+      "Name": "左側起始大節點／流派特殊二選一",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [
+        {
+          "Id": "LY-ROOT-A",
+          "Name": "誅邪·借天劍",
+          "Aliases": [],
+          "Description": "強化技能誅邪。普攻打出縱橫劍氣，無需吸劍即可直接召回3柄氣劍；但誅邪不再獲得「萬劍誅邪」印記，無法重置驚雷冷卻。"
+        },
+        {
+          "Id": "LY-ROOT-B",
+          "Name": "雷龍·震闕",
+          "Aliases": [],
+          "Description": "雷龍天翔獲得分支技能雷龍·震闕；騰空多段劍斬，最後縱劍一閃並於身邊插下3把氣劍，對怪物造成額外傷害。技能期間獲得免控、不可選中和傷害減免，附近敵人不少於5名時獲得無敵。釋放雷龍天翔、雷龍·震闕時獲得35%玩家傷害減免。釋放驚雷可疊加「震闕」層數，最多9層；消耗3層「震闕」可替代誅邪召回1把氣劍。釋放誅邪時，若驚雷冷卻時間大於3.5秒，則自動消耗1層「萬劍誅邪」印記更新驚雷。"
+        }
+      ],
+      "SourceRows": [
+        "21_神器節點逐級!R3"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CORE-U03-L",
+      "PositionId": "CORE-U03-L",
+      "Name": "吟風·風朔",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "TaggedSkillDamage",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:swordQi.monsterExtraDamage",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.swordQi.monster"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "需誅邪·借天劍分支、劍氣技能群占比與疊加規則",
+          "RequiredRootOption": "LY-ROOT-A"
+        },
+        {
+          "Key": "skill:yinFeng.damageIncrease",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.yinFeng"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺吟風傷害占比及疊加規則",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R74",
+        "21_神器節點逐級!R75",
+        "21_神器節點逐級!R76",
+        "21_神器節點逐級!R77",
+        "21_神器節點逐級!R78"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CORE-U03-R",
+      "PositionId": "CORE-U03-R",
+      "Name": "誅邪·建武",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "TaggedSkillDamage",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:swordIntent.pursuitDamageIncrease",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.swordIntent.pursuit"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺劍意追擊占比；不同節點同群增傷疊加方式未驗證",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "skill:zhuXie.damageIncrease",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.zhuXie"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺誅邪傷害占比及疊加規則",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R79",
+        "21_神器節點逐級!R80",
+        "21_神器節點逐級!R81",
+        "21_神器節點逐級!R82",
+        "21_神器節點逐級!R83"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CORE-D03-L",
+      "PositionId": "CORE-D03-L",
+      "Name": "龍飛·雲躍",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:longFei.damageReduction",
+          "Category": "Unmodeled",
+          "Targets": [
+            "LY.longFei.incomingDamage"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "減傷與技能邊界未完整驗證；非輸出倍率",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R104",
+        "21_神器節點逐級!R105",
+        "21_神器節點逐級!R106",
+        "21_神器節點逐級!R107",
+        "21_神器節點逐級!R108"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CORE-D03-R",
+      "PositionId": "CORE-D03-R",
+      "Name": "雷龍·霜徹",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "TaggedSkillDamage",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:leiLong.monsterExtraDamage",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.leiLong.shuangChe.monster"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "保留技能分支標識；缺傷害占比與適用技能邊界",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "skill:leiLong.shieldHealth",
+          "Category": "Unmodeled",
+          "Targets": [
+            "LY.leiLong.shield"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "護盾效果，非輸出倍率",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R109",
+        "21_神器節點逐級!R110",
+        "21_神器節點逐級!R111",
+        "21_神器節點逐級!R112",
+        "21_神器節點逐級!R113"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CLASS-LY-UP01",
+      "PositionId": "CLASS-LY-UP01",
+      "Name": "吟風·劍自來",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:yinFeng.lightnessRecovery",
+          "Category": "Unmodeled",
+          "Targets": [
+            "self.lightness"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "輕功回復不作輸出增傷",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "skill:yinFeng.lightnessReduction",
+          "Category": "Unmodeled",
+          "Targets": [
+            "target.lightness"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "輕功機制不作輸出增傷",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R286",
+        "21_神器節點逐級!R287",
+        "21_神器節點逐級!R288",
+        "21_神器節點逐級!R289",
+        "21_神器節點逐級!R290"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CLASS-LY-UP02",
+      "PositionId": "CLASS-LY-UP02",
+      "Name": "驚雷·怒劍",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "ConditionalAverage",
+        "RotationEffect",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "mechanic:jingLei.interactionMaxStacks",
+          "Category": "ConditionalAverage",
+          "Targets": [
+            "LY.jingLei.interaction"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "只提供上限，不推定實際平均層數",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "skill:jingLei.cooldownReduction",
+          "Category": "RotationEffect",
+          "Targets": [
+            "LY.jingLei"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺循環、施放頻率、資源與時間軸；不乘總DPS",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "interactionStacks",
+          "Category": "ConditionalAverage",
+          "Targets": [
+            "LY.jingLei.interaction"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "新盘每層收益×明確平均層數／層數分布；缺覆蓋與層數時不假設滿層"
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R291",
+        "21_神器節點逐級!R292",
+        "21_神器節點逐級!R293",
+        "21_神器節點逐級!R294",
+        "21_神器節點逐級!R295"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CLASS-LY-DN01",
+      "PositionId": "CLASS-LY-DN01",
+      "Name": "白虹·貫日",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "TaggedSkillDamage",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:swordIntent.pursuitDamageIncrease",
+          "Category": "TaggedSkillDamage",
+          "Targets": [
+            "LY.swordIntent.pursuit"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺劍意追擊占比；不同節點同群增傷疊加方式未驗證",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R296",
+        "21_神器節點逐級!R297",
+        "21_神器節點逐級!R298",
+        "21_神器節點逐級!R299",
+        "21_神器節點逐級!R300"
+      ]
+    },
+    {
+      "NodeId": "ART-SLOT-CLASS-LY-DN02",
+      "PositionId": "CLASS-LY-DN02",
+      "Name": "劍蕩·不盡鋒",
+      "ProfessionId": "LY",
+      "Shared": false,
+      "Categories": [
+        "RotationEffect",
+        "Unmodeled"
+      ],
+      "Effects": [
+        {
+          "Key": "skill:jianDang.attackSpeedIncrease",
+          "Category": "RotationEffect",
+          "Targets": [
+            "LY.jianDang"
+          ],
+          "Domain": "PvE",
+          "LegacyShareCode": "",
+          "Note": "缺攻速對動作、命中次數、循環的映射；不乘總DPS",
+          "RequiredRootOption": ""
+        },
+        {
+          "Key": "runtime",
+          "Category": "Unmodeled",
+          "Targets": [],
+          "Domain": "PvE",
+          "Note": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+        }
+      ],
+      "Options": [],
+      "SourceRows": [
+        "21_神器節點逐級!R301",
+        "21_神器節點逐級!R302",
+        "21_神器節點逐級!R303",
+        "21_神器節點逐級!R304",
+        "21_神器節點逐級!R305"
+      ]
+    }
+  ]
+}

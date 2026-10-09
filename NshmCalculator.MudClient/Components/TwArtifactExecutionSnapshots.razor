@@ -1,0 +1,28 @@
+@using System.Text.Json
+@using NshmCalculator.Shared.Research
+<section class="pa-4 mud-paper" data-testid="tw-artifact-execution">
+    <h3>TW 新盤神器來源與候選執行輸入</h3>
+    <p>舊 SQ／FSQ／RF_SQ 已隔離；保留 Legacy 技能占比與平均化方法。此處不輸出 DPS。</p>
+    @foreach (var entry in new[] { ("A", A), ("B", B) })
+    {
+        var projection = entry.Item2.Artifact;
+        <h4>Build @entry.Item1</h4>
+        <p>規格 @projection.PolicyId；五維規則 @projection.CoreRuleId（暫定候選）</p>
+        <p>破空·威霆係數：@(projection.ProfessionDamageRatio?.ToString("0.####") ?? "未知")；保留 SH_001 技能占比。</p>
+        <p>待補輸入／情境：@string.Join("、", entry.Item2.Missing)</p>
+        <p>眾法歸一首克候選：@(projection.FiveDimensions.CandidateBossSuppression?.ToString() ?? "未知")</p>
+        @foreach (var dimension in projection.FiveDimensions.Dimensions)
+        { <p>@dimension.Name：@(dimension.Base?.ToString() ?? "未知") + @dimension.Artifact = @(dimension.Final?.ToString() ?? "未知")</p> }
+        <details><summary>已加點神器效果分類</summary>
+            @foreach (var effect in projection.Effects)
+            { <p>@effect.Name · @effect.Key：@effect.Category；@effect.Status；@effect.Note</p> }
+        </details>
+    }
+    <details><summary>完整 TW A/B 執行輸入與隔離證據 JSON</summary>
+        <textarea readonly data-testid="tw-execution-json" aria-label="TW執行輸入快照" style="width:100%;height:24rem;font-family:monospace">@JsonSerializer.Serialize(new { A, B }, new JsonSerializerOptions { WriteIndented = true })</textarea>
+    </details>
+</section>
+@code {
+    [Parameter] public TwArtifactPreparedInputs A { get; set; } = null!;
+    [Parameter] public TwArtifactPreparedInputs B { get; set; } = null!;
+}

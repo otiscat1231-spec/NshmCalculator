@@ -1,0 +1,424 @@
+{
+  "Id": "TW-Mobile-2.3.3-effects-v1",
+  "SchemaVersion": 1,
+  "PackId": "TW-Mobile-2.3.3",
+  "PackSourceSnapshotSha256": "8a96c2efc0c92f16748832d898b24d206e26f46fb894f5c5063e6aca8c90f033",
+  "SupportedProfession": "LY",
+  "CoreRule": {
+    "Id": "TW-Mobile-2.3.3-core-floor-each-v1",
+    "Status": "暫定候選",
+    "Algorithm": "floor-each-v1",
+    "DimensionNames": {
+      "constitution": "根骨",
+      "strength": "力量",
+      "spirit": "氣海",
+      "agility": "身法",
+      "endurance": "耐力"
+    },
+    "IncrementPerLevel": 9,
+    "BonusLevel": 5,
+    "BossFactor": 0.1,
+    "InputBasis": "未含本盤眾法歸一；公式使用加點後各維數值",
+    "Source": "使用者Phase2D-A指示：Lv1～5每級每維+9；Lv5首克逐維floor(各維×0.1)，可版本化替換；流派克制屬PvP不接PVE"
+  },
+  "Routes": {
+    "panel:elementAttack": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:maxHealth": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:critical": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:hit": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:block": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:allElementResistance": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:defensePenetration": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:defense": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:skillEnhancement.all": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:ignoreElementResistance": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:attack": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:bossResistance": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:professionResistance": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "mechanic:fiveDimensions.displayIncrement": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "使用本次使用者確認的每維增量；不建立五維到戰鬥面板通用轉換",
+      "RequiredRootOption": ""
+    },
+    "panel:criticalResistance": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:professionSuppression": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "triggeredPanel:professionResistance": {
+      "Category": "ConditionalAverage",
+      "Targets": [],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "保留auto/manual/off與覆盖率接口；PvP效果不進PVE",
+      "RequiredRootOption": ""
+    },
+    "triggeredPanel:professionSuppression": {
+      "Category": "ConditionalAverage",
+      "Targets": [],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "保留auto/manual/off與覆盖率接口；PvP效果不進PVE",
+      "RequiredRootOption": ""
+    },
+    "targetProfession:targetProfessionSuppression": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "target.profession"
+      ],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "指定流派PvP效果，不進PVE",
+      "RequiredRootOption": ""
+    },
+    "targetProfession:targetProfessionResistance": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "target.profession"
+      ],
+      "Domain": "PvP",
+      "LegacyShareCode": "",
+      "Note": "指定流派PvP效果，不進PVE",
+      "RequiredRootOption": ""
+    },
+    "panel:bossSuppression": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:skillEnhancement.single": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:skillEnhancement.group": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:skillEnhancement.burst": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:skillEnhancement.sustained": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "panel:criticalDamage": {
+      "Category": "StaticPanel",
+      "Targets": [],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "進既有靜態面板映射；無欄位的屬性保留，不混成其他屬性",
+      "RequiredRootOption": ""
+    },
+    "skill:professionSkill.damageIncrease": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.professionSkills"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "SH_001",
+      "Note": "資料係數×Legacy流派技能占比；只注入一次",
+      "RequiredRootOption": ""
+    },
+    "skill:professionSkill.damageReduction": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "incoming.professionSkills"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "防禦效果，非PVE輸出增傷",
+      "RequiredRootOption": ""
+    },
+    "skill:yinFeng.damageIncrease": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.yinFeng"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "缺吟風傷害占比及疊加規則",
+      "RequiredRootOption": ""
+    },
+    "skill:swordQi.monsterExtraDamage": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.swordQi.monster"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "需誅邪·借天劍分支、劍氣技能群占比與疊加規則",
+      "RequiredRootOption": "LY-ROOT-A"
+    },
+    "skill:zhuXie.damageIncrease": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.zhuXie"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "缺誅邪傷害占比及疊加規則",
+      "RequiredRootOption": ""
+    },
+    "skill:swordIntent.pursuitDamageIncrease": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.swordIntent.pursuit"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "缺劍意追擊占比；不同節點同群增傷疊加方式未驗證",
+      "RequiredRootOption": ""
+    },
+    "skill:longFei.damageReduction": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "LY.longFei.incomingDamage"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "減傷與技能邊界未完整驗證；非輸出倍率",
+      "RequiredRootOption": ""
+    },
+    "skill:leiLong.monsterExtraDamage": {
+      "Category": "TaggedSkillDamage",
+      "Targets": [
+        "LY.leiLong.shuangChe.monster"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "保留技能分支標識；缺傷害占比與適用技能邊界",
+      "RequiredRootOption": ""
+    },
+    "skill:leiLong.shieldHealth": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "LY.leiLong.shield"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "護盾效果，非輸出倍率",
+      "RequiredRootOption": ""
+    },
+    "skill:yinFeng.lightnessReduction": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "target.lightness"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "輕功機制不作輸出增傷",
+      "RequiredRootOption": ""
+    },
+    "skill:yinFeng.lightnessRecovery": {
+      "Category": "Unmodeled",
+      "Targets": [
+        "self.lightness"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "輕功回復不作輸出增傷",
+      "RequiredRootOption": ""
+    },
+    "skill:jingLei.cooldownReduction": {
+      "Category": "RotationEffect",
+      "Targets": [
+        "LY.jingLei"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "缺循環、施放頻率、資源與時間軸；不乘總DPS",
+      "RequiredRootOption": ""
+    },
+    "mechanic:jingLei.interactionMaxStacks": {
+      "Category": "ConditionalAverage",
+      "Targets": [
+        "LY.jingLei.interaction"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "只提供上限，不推定實際平均層數",
+      "RequiredRootOption": ""
+    },
+    "skill:jianDang.attackSpeedIncrease": {
+      "Category": "RotationEffect",
+      "Targets": [
+        "LY.jianDang"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "缺攻速對動作、命中次數、循環的映射；不乘總DPS",
+      "RequiredRootOption": ""
+    }
+  },
+  "SpecialRoutes": {
+    "coreSuppressionAtMax": {
+      "Category": "ConditionalAverage",
+      "Targets": [
+        "PvE.bossSuppression"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "版本化候選公式，只產生PVE首克，不產生流派克制"
+    },
+    "interactionStacks": {
+      "Category": "ConditionalAverage",
+      "Targets": [
+        "LY.jingLei.interaction"
+      ],
+      "Domain": "PvE",
+      "LegacyShareCode": "",
+      "Note": "新盘每層收益×明確平均層數／層數分布；缺覆蓋與層數時不假設滿層"
+    }
+  },
+  "NodeRuntimeNotes": {
+    "ART-5648928c-1386-405b-939e-1238ab3f8bbf": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-8900a962-1302-46c0-b173-884a85b492e9": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CORE-U03-L": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CORE-U03-R": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CORE-D03-L": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CORE-D03-R": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CLASS-LY-UP01": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CLASS-LY-UP02": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CLASS-LY-DN01": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS",
+    "ART-SLOT-CLASS-LY-DN02": "技能替換、氣劍、分支連動與觸發時序仍保留原Model；不自動換算總DPS"
+  },
+  "ProfessionDamageKey": "professionSkill.damageIncrease",
+  "ProfessionDamageInput": "TW_ART_PROF_DAMAGE_RATIO",
+  "EquivalentFunctions": {
+    "attack": "FHX_005",
+    "elementAttack": "FHX_007",
+    "hit": "FHX_002",
+    "critical": "FHX_001",
+    "defensePenetration": "FHX_004",
+    "ignoreElementResistance": "FHX_003",
+    "criticalDamage": "FHX_009",
+    "bossSuppression": "FHX_006",
+    "technicalSuppression": "FHX_019",
+    "skillEnhancement.all": "FHX_019"
+  }
+}

@@ -33,6 +33,13 @@ public class LegacyInputSnapshotUiTests : PageTest
         Assert.That(a.GetProperty("EngineEvaluationAllowed").GetBoolean(), Is.False);
         Assert.That(a.GetProperty("EmbeddedFormulaConflicts")[0].GetProperty("Code").GetString(), Is.EqualTo("FZJ_010"));
         Assert.That(a.TryGetProperty("Dps", out _), Is.False);
+        await Page.GetByText("完整 TW A/B 執行輸入與隔離證據 JSON", new() { Exact = true }).ClickAsync();
+        using var tw = JsonDocument.Parse(await Page.GetByTestId("tw-execution-json").InputValueAsync());
+        var execution = tw.RootElement.GetProperty("A");
+        Assert.That(execution.GetProperty("Inputs").TryGetProperty("SQ_004", out _), Is.False);
+        Assert.That(execution.GetProperty("Inputs").GetProperty("TW_ART_PROF_DAMAGE_RATIO").GetProperty("NumberValue").GetDouble(), Is.Zero);
+        Assert.That(execution.GetProperty("Isolation").GetProperty("TwFormula").GetString(), Does.Not.Contain("0.05*[SH_001]"));
+        await Expect(Page.GetByText("比較 Legacy 模型值",new() { Exact=true })).ToHaveCountAsync(0);
         Assert.That(await Page.GetByText("Build 比較結果", new() { Exact = true }).CountAsync(), Is.Zero);
     }
 
@@ -63,4 +70,23 @@ public class LegacyInputSnapshotUiTests : PageTest
         Assert.That(a.GetProperty("EffectiveTaggedSkillEnhancement").GetProperty("burst").GetDecimal(), Is.EqualTo(5800));
         Assert.That(a.GetProperty("ExcludedResultCodes").GetArrayLength(), Is.EqualTo(28));
     }
+    [Test] public async Task NewProfessionNodeCoefficientAndFiveInputsUseTwPipeline()
+    {
+        await Open();
+        await Page.GetByText("五維基礎值（未含眾法歸一）",new() { Exact=true }).First.ClickAsync();
+        foreach(var key in new[]{"constitution","strength","spirit","agility","endurance"}) {
+            await Page.GetByTestId($"five-A-{key}").FillAsync("104");
+            await Page.GetByTestId($"five-A-{key}").PressAsync("Tab");
+        }
+        var node = Page.Locator("[data-position='M07']");
+        await node.Locator(".node-controls button").Last.ClickAsync();
+        await Page.GetByTestId("generate-mapped-inputs").ClickAsync();
+        await Page.GetByText("完整 TW A/B 執行輸入與隔離證據 JSON",new() { Exact=true }).ClickAsync();
+        using var json=JsonDocument.Parse(await Page.GetByTestId("tw-execution-json").InputValueAsync());
+        var a=json.RootElement.GetProperty("A");
+        Assert.That(a.GetProperty("Inputs").GetProperty("TW_ART_PROF_DAMAGE_RATIO").GetProperty("NumberValue").GetDouble(),Is.EqualTo(.01));
+        Assert.That(a.GetProperty("Artifact").GetProperty("FiveDimensions").GetProperty("Dimensions")[0].GetProperty("Base").GetDecimal(),Is.EqualTo(104));
+        Assert.That(a.GetProperty("Isolation").GetProperty("RemovedResultFormulas").GetArrayLength(),Is.EqualTo(28));
+    }
+
 }

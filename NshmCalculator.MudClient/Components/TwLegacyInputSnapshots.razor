@@ -7,7 +7,8 @@
     @if (Pair is not null)
     {
         <p data-testid="mapped-input-status">A 缺少 @Pair.A.MissingInputs.Length 欄；B 缺少 @Pair.B.MissingInputs.Length 欄。目標、內功、特質及技能占比仍是 Legacy 候選情境。</p>
-        <p>禁止執行 TW 傷害預測：Legacy 公式內仍有無條件的流派神器 5% 項。已記錄衝突，尚未修改公式。</p>
+        @if (TwIsolationResolved) { <p>此表是面板映射核對層。下方 TW 執行輸入使用獨立設定副本，已移除舊神器入口及固定 5%；仍未校準 DPS。</p> }
+        else { <p>禁止執行 TW 傷害預測：Legacy 公式內仍有無條件的流派神器 5% 項。已記錄衝突，尚未修改公式。</p> }
         @if (Pair.Warning is not null) { <p>@Pair.Warning</p> }
         <div style="overflow-x:auto">
             <table style="width:100%;border-collapse:collapse">
@@ -29,13 +30,14 @@
             { <p>@omission.Key：@omission.Reason</p> }
         </details>
         <details class="mt-3"><summary>完整 A/B 輸入、逐欄来源及排除清單 JSON</summary>
-            <p>包含全部 Legacy 情境欄位、來源、舊神器停用前值及未接入的條件效果。可複製保存供研究核對。</p>
+            <p>保留 Phase 2C 映射與原設定衝突證據；這份中間核對資料不是 TW 執行輸入。TW 執行輸入另列於下方。</p>
             <textarea readonly aria-label="完整A/B映射輸入快照" data-testid="mapped-input-json" style="width:100%;height:24rem;font-family:monospace">@JsonSerializer.Serialize(Pair, new JsonSerializerOptions { WriteIndented = true })</textarea>
         </details>
     }
 </section>
 @code {
     [Parameter] public LegacyInputPair? Pair { get; set; }
+    [Parameter] public bool TwIsolationResolved { get; set; }
     private static string Value(LegacyInputValue? value) => value is null ? "未知（不寫入）"
         : value.NumberMode ? value.NumberValue.ToString("0.####", CultureInfo.InvariantCulture) : value.StringValue ?? "未知";
 }

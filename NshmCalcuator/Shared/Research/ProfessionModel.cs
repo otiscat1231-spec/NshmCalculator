@@ -49,6 +49,8 @@ public sealed class ResearchBuild
     public Dictionary<string, ParamValue> Parameters { get; set; } = new();
     // Store the base only. Final panels are projections and must never be written back here.
     public Dictionary<string, decimal> BaseAttributes { get; set; } = new();
+    // Five independent values before this board's CORE. Never infer these from Legacy's four fields.
+    public Dictionary<string, decimal> BaseFiveDimensions { get; set; } = new();
     public Artifacts.ArtifactBoardState? ArtifactState { get; set; }
     public Dictionary<string, int> ArtifactAutoLevels { get; set; } = new();
 }

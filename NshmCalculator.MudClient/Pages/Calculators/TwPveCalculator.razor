@@ -52,15 +52,16 @@
                 <TwAttributeComparison A="_a" B="_b" Engine="_artifactEngine" />
             }
             @if (_artifactError is not null) { <MudAlert Severity="Severity.Error">神器資料載入失敗：@_artifactError</MudAlert> }
-            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" BuildTag="A" Changed="BuildChanged" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" BuildTag="B" Changed="BuildChanged" /></MudItem></MudGrid>
+            <MudGrid><MudItem xs="12" md="6"><TwBuildEditor @key="_a" Title="目前 Build A" Build="_a" Profile="Profile" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" BuildTag="A" Changed="BuildChanged" /></MudItem><MudItem xs="12" md="6"><TwBuildEditor @key="_b" Title="候選 Build B" Build="_b" Profile="ProfileB" ArtifactEngine="_artifactEngine" LegacyAdapter="_legacyAdapter" TwEffects="@(IsTw ? _twEffects : null)" BuildTag="B" Changed="BuildChanged" /></MudItem></MudGrid>
             @if (_legacyAdapter is not null)
             {
                 <MudButton Variant="Variant.Filled" data-testid="generate-mapped-inputs" OnClick="GenerateMappedInputs">產生 A/B 映射輸入快照</MudButton>
-                @if (_inputPair is not null) { <TwLegacyInputSnapshots Pair="_inputPair" /> }
+                @if (_inputPair is not null) { <TwLegacyInputSnapshots Pair="_inputPair" TwIsolationResolved="@(IsTw && _twA is not null)" /> }
             }
+            @if (_twA is not null && _twB is not null) { <TwArtifactExecutionSnapshots A="_twA" B="_twB" /> }
             @if (_mappingError is not null) { <MudAlert Severity="Severity.Error">映射規格載入失敗：@_mappingError</MudAlert> }
-            <MudAlert Severity="Severity.Info">上方快照只輸出新神器最終靜態面板的映射輸入。下方 Legacy 模型值仍使用獨立舊版示範輸入。</MudAlert>
-            <MudStack Row="true"><MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Calculate">比較 Legacy 模型值</MudButton><MudButton OnClick="Save">儲存此流派 A/B</MudButton><MudButton Href="/pve">原版 Legacy 計算器</MudButton></MudStack>
+            <MudAlert Severity="Severity.Info">TW 快照使用新神器來源，保留候選模型情境，未校準 DPS。要使用原有計算方式，請切換 Legacy 資料版本或開啟原版計算器。</MudAlert>
+            <MudStack Row="true">@if (!IsTw) { <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Calculate">比較 Legacy 模型值</MudButton> }<MudButton OnClick="Save">儲存此流派 A/B</MudButton><MudButton Href="/pve">原版 Legacy 計算器</MudButton></MudStack>
             @if (_saveMessage is not null) { <MudAlert Severity="Severity.Success" role="status">@_saveMessage</MudAlert> }
         }
         @if (_result is not null)
@@ -90,7 +91,11 @@
     private string? _artifactError, _saveMessage;
     private LegacyStaticInputAdapter? _legacyAdapter;
     private LegacyInputPair? _inputPair;
-    private string _mappingJson = "";
+    private string _mappingJson = "", _effectPolicyJson = "";
+    private TwArtifactEffectAdapter? _twEffects;
+    private TwArtifactPveAdapter? _twAdapter;
+    private TwArtifactPreparedInputs? _twA, _twB;
+    private bool IsTw => _packId == "TW-candidate";
     private string? _mappingError;
     private bool _artifactB;
     private PveDataPack Pack => _manifest!.DataPacks.Single(p => p.Id == _packId);
@@ -111,6 +116,9 @@
                 try {
                     _mappingJson = await Client.GetStringAsync("data/pve/adapters/tw-static-v1.json");
                     _legacyAdapter = new(_configJson, _mappingJson, _artifactEngine);
+                    _effectPolicyJson = await Client.GetStringAsync("data/artifacts/TW-Mobile-2.3.3/effect-policy-v1.json");
+                    _twEffects = new(_artifactEngine, _effectPolicyJson);
+                    _twAdapter = new(_configJson, _legacyAdapter, _twEffects);
                 } catch (Exception ex) { _mappingError = ex.Message; }
             }
             catch (Exception ex) { _artifactError = ex.Message; }
@@ -121,8 +129,9 @@
     private async Task LoadPack() {
         _configJson = await Client.GetStringAsync(Pack.ConfigPath); ResetPair();
         if (_artifactEngine is not null && _mappingJson.Length > 0) {
-            _legacyAdapter = null; _mappingError = null;
-            try { _legacyAdapter = new(_configJson, _mappingJson, _artifactEngine); }
+            _legacyAdapter = null; _twAdapter = null; _mappingError = null;
+            try { _legacyAdapter = new(_configJson, _mappingJson, _artifactEngine);
+                if (_twEffects is not null) _twAdapter = new(_configJson, _legacyAdapter, _twEffects); }
             catch (Exception ex) { _mappingError = ex.Message; }
         }
     }
@@ -135,15 +144,22 @@
     private void ResetPair(string? mode = null)
     {
         _mode = mode ?? Profile.LegacyModes.Keys.First(); _modeB = _mode; _professionB = _professionId;
-        _a = Example(Profile, _mode); _b = Example(Profile, _mode); _result = null; _inputPair = null; _error = null; _saveMessage = null; _artifactB = false;
+        _a = Example(Profile, _mode); _b = Example(Profile, _mode); _result = null; _inputPair = null; _twA = null; _twB = null; _error = null; _saveMessage = null; _artifactB = false;
         var key = PveComparison.StorageKey(Pack, _professionId) + ":" + _mode;
         if (LocalStorage.ContainKey(key)) { var saved = LocalStorage.GetItem<ResearchBuild[]>(key); if (saved?.Length == 2 && saved.All(b => b.ProfessionId == _professionId && b.LegacyMode == _mode)) { _a = saved[0]; _b = saved[1]; } }
     }
     private void SelectArtifactBuild(bool b) { _artifactB = b; }
-    private void BuildChanged() { _result = null; _inputPair = null; _saveMessage = null; }
+    private void BuildChanged() { _result = null; _inputPair = null; _twA = null; _twB = null; _saveMessage = null; }
     private void GenerateMappedInputs() {
-        try { _inputPair = _legacyAdapter!.Compare(_a!, Profile, _b!, ProfileB, _cross); _error = null; }
-        catch (Exception ex) { _inputPair = null; _error = ex.Message; }
+        try {
+            if (IsTw) {
+                if (_twAdapter is null) throw new ArgumentException("TW神器來源接線未載入，不回退舊神器");
+                var pair = _twAdapter.CompareInputs(_a!, Profile, _b!, ProfileB);
+                _twA = pair.A; _twB = pair.B; _inputPair = pair.Mapping;
+            } else _inputPair = _legacyAdapter!.Compare(_a!, Profile, _b!, ProfileB, _cross);
+            _error = null;
+        }
+        catch (Exception ex) { _inputPair = null; _twA = null; _twB = null; _error = ex.Message; }
     }
     private void Save()
     {

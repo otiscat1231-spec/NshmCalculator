@@ -27,6 +27,20 @@
             @if (_baseError is not null) { <MudAlert Severity="Severity.Error">@_baseError</MudAlert> }
         </details>
     }
+    @if (TwEffects is not null && Build.ProfessionId == "LY")
+    {
+        <details class="mt-4"><summary>五維基礎值（未含眾法歸一）</summary>
+            <p>五個獨立數值；Lv5 首克使用版本化候選規則。留空保留未知，不從 Legacy 合併欄補值。</p>
+            @foreach (var dimension in TwEffects.DimensionNames)
+            {
+                <label style="display:block">@dimension.Value
+                    <input type="number" min="0" step="any" data-testid="five-@BuildTag-@dimension.Key"
+                        value="@(Build.BaseFiveDimensions.TryGetValue(dimension.Key, out var v) ? v.ToString(CultureInfo.InvariantCulture) : "")"
+                        @onchange="e => ChangeFive(dimension.Key, e.Value?.ToString())" />
+                </label>
+            }
+        </details>
+    }
     <details class="mt-4"><summary>Legacy 候選模型輸入（獨立於新神器面板）</summary>
     <MudGrid Class="mt-2">
         @foreach (var input in TwPveText.CommonInputs)
@@ -52,6 +66,7 @@
     [Parameter] public ProfessionProfile Profile { get; set; } = new();
     [Parameter] public ArtifactBoardEngine? ArtifactEngine { get; set; }
     [Parameter] public LegacyStaticInputAdapter? LegacyAdapter { get; set; }
+    [Parameter] public TwArtifactEffectAdapter? TwEffects { get; set; }
     [Parameter] public string BuildTag { get; set; } = "A";
     [Parameter] public EventCallback Changed { get; set; }
     private string _json = "";
@@ -66,6 +81,14 @@
     }
     private string BaseValue(string key) => Build.BaseAttributes.TryGetValue(key, out var value)
         ? value.ToString(CultureInfo.InvariantCulture) : "";
+    private async Task ChangeFive(string key, string? text)
+    {
+        if (string.IsNullOrWhiteSpace(text)) Build.BaseFiveDimensions.Remove(key);
+        else if (decimal.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && value >= 0)
+            Build.BaseFiveDimensions[key] = value;
+        else { _baseError = "五維請填非負數字，或留空表示未知。"; return; }
+        _baseError = null; await Changed.InvokeAsync();
+    }
     private async Task ChangeBase(string key, string? text)
     {
         if (string.IsNullOrWhiteSpace(text)) Build.BaseAttributes.Remove(key);

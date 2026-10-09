@@ -75,6 +75,7 @@ public sealed class LegacyStaticInputAdapter
     private readonly PveConfig config;
     private readonly LegacyMappingSpec spec;
     private readonly ArtifactBoardEngine engine;
+    public string OriginalConfigSha256 => spec.LegacyConfigSha256;
     public LegacyFieldMapping[] Mappings => spec.Mappings.ToArray();
     public AttributeDefinition[] AdditionalBaseDefinitions => spec.Mappings
         .Select(m => new AttributeDefinition(m.SourceKey, m.Label, m.SourceUnit))
@@ -109,6 +110,14 @@ public sealed class LegacyStaticInputAdapter
 
     public LegacyInputSnapshot Create(ResearchBuild build, ProfessionProfile profile,
         IEnumerable<LegacyAttributeSource>? additionalInjections = null)
+        => CreateCore(build, profile, additionalInjections, null);
+
+    // Internal bridge accepts only a projection made by the TW effect adapter, not arbitrary Legacy deltas.
+    internal LegacyInputSnapshot CreateFromTwArtifact(ResearchBuild build, ProfessionProfile profile, TwArtifactProjection projection)
+        => CreateCore(build, profile, null, projection);
+
+    private LegacyInputSnapshot CreateCore(ResearchBuild build, ProfessionProfile profile,
+        IEnumerable<LegacyAttributeSource>? additionalInjections, TwArtifactProjection? projection)
     {
         if (build.ProfessionId != profile.Id || !profile.LegacyModes.ContainsKey(build.LegacyMode)
             || !config.FrontParamInfoArray.Single(f => f.Code == "KG_001").Options.Contains(build.LegacyMode))
@@ -116,7 +125,7 @@ public sealed class LegacyStaticInputAdapter
         var fronts = config.FrontParamInfoArray.ToDictionary(f => f.Code);
         if (build.Parameters.Keys.Except(fronts.Keys).Any())
             throw new ArgumentException("TW模式只能接收已盤點的Legacy前端欄位；不得注入內部公式或等效收益");
-        var panel = BuildAttributeLayer.Project(build, engine).ToDictionary(r => r.Key);
+        var panel = (projection?.Panel ?? BuildAttributeLayer.Project(build, engine)).ToDictionary(r => r.Key);
         var fields = new List<LegacyFieldSnapshot>();
         var inputs = new Dictionary<string, LegacyInputValue>();
         var sources = new List<LegacyAttributeSource>();
@@ -132,7 +141,8 @@ public sealed class LegacyStaticInputAdapter
                 var value = row.Final is decimal final ? new LegacyInputValue(true, (double)(final / rule.Divisor), null) : null;
                 field = new(front.Code, rule.Label, rule.SourceKey, rule.SourceUnit, rule.LegacyUnit,
                     row.Base, row.Artifact, row.Final, value, original, "TWFinalStaticPanel",
-                    value is null ? "基礎值未知；不沿用舊面板、不以0補值" : rule.DuplicateRisk);
+                    value is null ? "基礎值未知；不沿用舊面板、不以0補值" : rule.DuplicateRisk
+                        + (projection is null ? "" : $"；TW效果接線 {projection.PolicyId}／{projection.CoreRuleId}；條件增量另見projection追蹤"));
                 if (value is not null) sources.Add(new(front.Code, "TWFinalStaticPanel", rule.SourceKey));
             }
             else if (disabled.TryGetValue(front.Code, out var off))
@@ -189,9 +199,11 @@ public sealed class LegacyStaticInputAdapter
             Warnings = ["僅映射輸入，未呼叫Legacy engine；不是已校準DPS。",
                 "基礎面板契約：不得包含本盤神器；數值本身無法辨識未申報的重複增量。",
                 "ST_015只吃全技能；單體／群體／爆發／持續增強保存為標籤，暫不降階成全技能。",
-                "TriggeredAttributes／ScopedEffects／UnmodeledMechanics／目標流派限定效果全部未接入。",
+                projection is null ? "TriggeredAttributes／ScopedEffects／UnmodeledMechanics／目標流派限定效果全部未接入。"
+                    : "Phase2D-A：面板含新盤明確條件平均與CORE候選首克；指定技能／Rotation／PvP仍獨立保留。",
                 "LegacyContext含舊版內功、藥品、裝備、特質及技能占比；不能視為台服已驗證。",
-                "FZJ_010內嵌舊神器流派5%未能由前端停用；TW預測執行禁止，SH_001原樣保留。",
+                projection is null ? "FZJ_010內嵌舊神器流派5%未能由前端停用；TW預測執行禁止，SH_001原樣保留。"
+                    : "原設定FZJ_010衝突保留作歷史證據；只可交由TW獨立overlay執行，禁止交回原設定。",
                 "attack必須由使用者提供代表攻擊值；不推定最小／最大攻擊的平均或其抽樣分布。"]
         };
         Validate(result);

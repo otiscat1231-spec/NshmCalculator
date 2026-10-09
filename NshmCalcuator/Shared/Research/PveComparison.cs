@@ -9,7 +9,7 @@ public sealed record ComparisonResult(double ModelA, double ModelB, double? Rati
 
 public static class PveComparison
 {
-    private static readonly object EngineGate = new();
+    internal static readonly object EngineGate = new();
     public const string CrossProfessionWarning = "跨流派比較，需各自完成模型校準";
 
     public static Dictionary<string, ParamValue> CopyParameters(Dictionary<string, ParamValue> source) =>
